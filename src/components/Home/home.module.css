@@ -1,0 +1,25 @@
+.back_ground {
+	position: fixed;
+	/* background-image: linear-gradient(#111111, #2b153a, #083c49); */
+	background-color: #121212;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro_box {
+	background-color: #121212;
+	border: 1px solid #ffffff;
+	border-radius: 1rem;
+	padding: 1rem;
+	color: #f0ddc1;
+
+	z-index: 10;
+}
+
+.info_name {
+	font-size: large;
+}
