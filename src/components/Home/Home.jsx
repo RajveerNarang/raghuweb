@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import home from './home.module.css'
 import Stars from './Stars'
@@ -6,12 +7,19 @@ import Stars from './Stars'
 function Home() {
 	return (
 		<div className={home.back_ground} >
-			<Stars />
+			<Stars limit='275' />
 			<div className={home.intro_box}>
 				<div className={home.info_name}>Hi,I'm Raghunandan</div>
 				<div className={home.info_content}>
-					I'm a Full Stack Developer, who have a great interest in frontend than backend developement
+					I'm a Full Stack Developer, who have a great interest in frontend than backend developement.<br />
+					You will know more about me by clicking different sections in navbar.
 				</div>
+			</div>
+			<div className={home.nav_block_container}>
+				<Link to='/about' className={`${home.nav_block} ${home.about}`}>About</Link>
+				<Link to='/contact' className={`${home.nav_block} ${home.contact}`}>Contact</Link>
+				<Link to='/skills' className={`${home.nav_block} ${home.skills}`}>Skills</Link>
+				<Link to='/projects' className={`${home.nav_block} ${home.projects}`}>Projects</Link>
 			</div>
 		</div>
 	)

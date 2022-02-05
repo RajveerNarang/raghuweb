@@ -1,27 +1,81 @@
 .back_ground {
 	position: fixed;
-	/* background-image: linear-gradient(#111111, #2b153a, #083c49); */
 	background-color: #121212;
 	width: 100%;
 	height: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .intro_box {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -25%);
+
 	background-color: #121212;
 	border: 1px solid #ffffff;
 	border-radius: 1rem;
-	padding: 1rem;
+	box-shadow: 0 0 1rem #9ff1eb;
+	padding: 1.5rem;
 	color: #f0ddc1;
-
-	font-size: 3rem;
 
 	z-index: 10;
 }
 
 .info_name {
-	font-size: large;
+	margin: 0.5rem 0;
+	font-size: 2rem;
+}
+
+.info_content {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+.nav_block {
+	color: #f0ddc1;
+	padding: 0.5rem;
+	background-color: #121212;
+
+	border: 1px solid #ffffff;
+	border-radius: 1rem;
+	position: absolute;
+	animation: float 2.5s infinite ease-in-out;
+	text-decoration: none;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0);
+		box-shadow: 0 0.2rem 0.5rem #9ff1eb;
+	}
+	50% {
+		transform: translateY(-0.5rem);
+		box-shadow: 0 0.5rem 1rem #9ff1eb;
+	}
+	100% {
+		transform: translateY(0);
+		box-shadow: 0 0.2rem 0.5rem #9ff1eb;
+	}
+}
+
+.about {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	transform: translate(-5%, -50%);
+}
+.contact {
+	position: absolute;
+	top: 65%;
+	left: 30%;
+}
+.skills {
+	position: absolute;
+	top: 65%;
+	right: 30%;
+}
+.projects {
+	position: absolute;
+	top: 50%;
+	right: 10%;
 }

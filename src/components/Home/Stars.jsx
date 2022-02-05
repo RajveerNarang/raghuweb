@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-function Stars() {
+function Stars({limit}) {
 
 	const starRef = useRef(null)
 
@@ -18,15 +18,15 @@ function Stars() {
 		
 		const draw = (frameCount) => {
 			stars.map((star, index) => {
-				if (index % 2 === 0) {
+				if (index % 3 === 0) {
 					ctx.fillStyle = '#ffffff'
 					ctx.beginPath()
-					ctx.arc(star.posX, star.posY, star.radius * Math.sin(frameCount*0.03)**2, 0, 2 * Math.PI)
+					ctx.arc(star.posX, star.posY, star.radius * Math.sin(frameCount*0.05)**2, 0, 2 * Math.PI)
 					ctx.fill()
 				} else {
 					ctx.fillStyle = '#ffffff'
 					ctx.beginPath()
-					ctx.arc(star.posX, star.posY, star.radius * Math.sin(frameCount*0.05)**2, 0, 2 * Math.PI)
+					ctx.arc(star.posX, star.posY, star.radius * Math.sin(frameCount*0.03)**2, 0, 2 * Math.PI)
 					ctx.fill()
 				}
 				return 'Success'
@@ -38,7 +38,7 @@ function Stars() {
 			canvas.height = window.innerHeight
 			
 			stars = []
-			for (let i = 0; i < 250; i++) {
+			for (let i = 0; i < limit; i++) {
 				const margins = {
 					posX: Math.random() * window.innerWidth,
 					posY: Math.random() * window.innerHeight,
@@ -68,7 +68,7 @@ function Stars() {
 			window.removeEventListener('resize', setSize)
 		}
 			
-	}, []);
+	}, [limit]);
 	
 
 	return <canvas ref={starRef} ></canvas>;
