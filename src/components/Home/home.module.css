@@ -3,6 +3,8 @@
 	background-color: #121212;
 	width: 100%;
 	height: 100%;
+
+	top: 2em;
 }
 
 .intro_box {
@@ -13,31 +15,31 @@
 
 	background-color: #121212;
 	border: 1px solid #ffffff;
-	border-radius: 1rem;
-	box-shadow: 0 0 1rem #9ff1eb;
-	padding: 1.5rem;
+	border-radius: 1em;
+	box-shadow: 0 0 1em 0.5em #0bf775;
+	padding: 1.5em;
 	color: #f0ddc1;
 
 	z-index: 10;
 }
 
 .info_name {
-	margin: 0.5rem 0;
-	font-size: 2rem;
+	margin: 0.5em 0;
+	font-size: 2em;
 }
 
 .info_content {
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 .nav_block {
 	color: #f0ddc1;
-	padding: 0.5rem;
+	padding: 0.5em;
 	background-color: #121212;
 
 	border: 1px solid #ffffff;
-	border-radius: 1rem;
+	border-radius: 1em;
 	position: absolute;
 	animation: float 2.5s infinite ease-in-out;
 	text-decoration: none;
@@ -46,36 +48,103 @@
 @keyframes float {
 	0% {
 		transform: translateY(0);
-		box-shadow: 0 0.2rem 0.5rem #9ff1eb;
 	}
 	50% {
-		transform: translateY(-0.5rem);
-		box-shadow: 0 0.5rem 1rem #9ff1eb;
+		transform: translateY(-0.5em);
 	}
 	100% {
 		transform: translateY(0);
-		box-shadow: 0 0.2rem 0.5rem #9ff1eb;
+	}
+}
+@media screen and (max-width: 1500px) {
+	.about {
+		position: absolute;
+		top: calc(50% + 3em);
+		left: calc(50% - 20em);
+		animation-delay: 1s;
+		box-shadow: 0 0 0.5em 0.3em #9ff1eb;
+	}
+	.contact {
+		position: absolute;
+		top: calc(50% + 11em);
+		left: calc(50% - 18em);
+		animation-delay: 2s;
+		box-shadow: 0 0 0.5em 0.3em #fa65cd;
+	}
+	.skills {
+		position: absolute;
+		top: calc(50% + 3em);
+		right: calc(50% - 20em);
+		animation-delay: 1.5s;
+		box-shadow: 0 0 0.5em 0.3em #f1b84e;
+	}
+	.projects {
+		position: absolute;
+		top: calc(50% + 11em);
+		right: calc(50% - 18em);
+		animation-delay: 0.5s;
+		box-shadow: 0 0 0.5em 0.3em #d0f138;
 	}
 }
 
-.about {
-	position: absolute;
-	top: 50%;
-	left: 5%;
-	transform: translate(-5%, -50%);
+@media screen and (max-width: 1000px) {
+	.about {
+		position: absolute;
+		top: calc(50% + 3em);
+		left: calc(50% - 12em);
+		animation-delay: 1s;
+		box-shadow: 0 0 0.5em 0.3em #9ff1eb;
+	}
+	.contact {
+		position: absolute;
+		top: calc(50% + 11em);
+		left: calc(50% - 10em);
+		animation-delay: 2s;
+		box-shadow: 0 0 0.5em 0.3em #fa65cd;
+	}
+	.skills {
+		position: absolute;
+		top: calc(50% + 3em);
+		right: calc(50% - 12em);
+		animation-delay: 1.5s;
+		box-shadow: 0 0 0.5em 0.3em #f1b84e;
+	}
+	.projects {
+		position: absolute;
+		top: calc(50% + 11em);
+		right: calc(50% - 10em);
+		animation-delay: 0.5s;
+		box-shadow: 0 0 0.5em 0.3em #d0f138;
+	}
 }
-.contact {
-	position: absolute;
-	top: 65%;
-	left: 30%;
-}
-.skills {
-	position: absolute;
-	top: 65%;
-	right: 30%;
-}
-.projects {
-	position: absolute;
-	top: 50%;
-	right: 10%;
+
+@media screen and (max-width: 700px) {
+	.about {
+		position: absolute;
+		top: calc(50% + 8em);
+		left: calc(50% - 10em);
+		animation-delay: 1s;
+		box-shadow: 0 0 0.5em 0.3em #9ff1eb;
+	}
+	.contact {
+		position: absolute;
+		top: calc(50% + 13em);
+		left: calc(50% - 8em);
+		animation-delay: 2s;
+		box-shadow: 0 0 0.5em 0.3em #fa65cd;
+	}
+	.skills {
+		position: absolute;
+		top: calc(50% + 8em);
+		right: calc(50% - 10em);
+		animation-delay: 1.5s;
+		box-shadow: 0 0 0.5em 0.3em #f1b84e;
+	}
+	.projects {
+		position: absolute;
+		top: calc(50% + 13em);
+		right: calc(50% - 8em);
+		animation-delay: 0.5s;
+		box-shadow: 0 0 0.5em 0.3em #d0f138;
+	}
 }

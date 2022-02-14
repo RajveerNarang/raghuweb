@@ -9,10 +9,10 @@ function Home() {
 		<div className={home.back_ground} >
 			<Stars limit='275' />
 			<div className={home.intro_box}>
-				<div className={home.info_name}>Hi,I'm Raghunandan</div>
+				<div className={home.info_name}>GREETINGS EVERYONE</div>
 				<div className={home.info_content}>
-					I'm a Full Stack Developer, who have a great interest in frontend than backend developement.<br />
-					You will know more about me by clicking different sections in navbar.
+					<p>I'm Raghunandan, a Full Stack Developer, who have a great interest in frontend than backend developement.</p>
+					<p>I love to showcase the results rather then errors.</p>
 				</div>
 			</div>
 			<div className={home.nav_block_container}>
