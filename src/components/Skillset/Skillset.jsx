@@ -1,9 +1,15 @@
-import React from 'react'
+
+import BarChart from './BarChart'
+
+import skill from './skill.module.css'
+import Stars from '../Home/Stars'
 
 function Skillset() {
+
 	return (
-		<div>
-			Skillset
+		<div className={skill.skill_background}>
+			<Stars limit='100' />
+			<BarChart />
 		</div>
 	)
 }
