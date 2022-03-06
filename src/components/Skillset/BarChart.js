@@ -9,15 +9,35 @@ function BarChart() {
 	ChartJS.register(...registerables);
 
 	const barData = {
-		labels: ['HTML', 'CSS', 'JavaScript', 'Java', 'React', 'Node.js', 'Python'],
+		labels: [
+			'HTML', 
+			'CSS', 
+			'JavaScript', 
+			'React', 
+			'Node.js', 
+			'Python', 
+			'Java'
+		],
 		datasets: [{
 			label: 'Skill level',
-			data: [90, 85, 70, 55, 80, 70, 40],
+			data: [
+				90, 
+				85, 
+				70, 
+				85, 
+				65,
+				45,
+				70
+			],
 			barPercentage: 0.5,
 			backgroundColor: [
-				'#9acd32',
-				'#df0ef1',
-				'#f1b40e'
+				'#cdaf00',
+				'#45ff77',
+				'#00ff55',
+				'#ff7700',
+				'#aaff33',
+				'#b0f853',
+				'#9372cd'
 			]
 		}]
 	}
@@ -26,11 +46,11 @@ function BarChart() {
 		<div className={skill.graph_size}>
 			<Bar
 				data={barData}
-				width={100}
-				height={150}
+				width={10}
+				height={20}
 				options={{
 					scales: {
-						y: {
+						yAxes: {
 							beginAtZero: true,
 							min: 0,
 							max: 100

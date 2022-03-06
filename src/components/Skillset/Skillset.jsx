@@ -1,15 +1,21 @@
-
 import BarChart from './BarChart'
+import PieChart from './PieChart'
 
 import skill from './skill.module.css'
-import Stars from '../Home/Stars'
 
 function Skillset() {
 
 	return (
 		<div className={skill.skill_background}>
-			<Stars limit='100' />
-			<BarChart />
+			<div className={skill.laptop_screen}>
+				<BarChart />
+				<PieChart/>
+				<div className={skill.description}>
+					Level of skills I gained in these languages.
+				</div>
+			</div>
+			<div className={skill.mobile_screen}>
+				Skill level is not available for mobile screen.</div>
 		</div>
 	)
 }
