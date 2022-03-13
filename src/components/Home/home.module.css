@@ -7,6 +7,10 @@
 	top: 2em;
 }
 
+.mobile_screen {
+	display: none;
+}
+
 .intro_box {
 	position: absolute;
 	top: 25%;
@@ -21,7 +25,7 @@
 	color: #f0ddc1;
 
 	z-index: 10;
-	animation: slide 2.5s ease-in;
+	animation: slide 1s ease-in-out;
 }
 
 @keyframes slide {
@@ -168,5 +172,19 @@
 		right: calc(50% - 8em);
 		animation-delay: 0.5s;
 		box-shadow: 0 0 0.5em 0.3em #d0f138;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.mobile_screen {
+		display: flex;
+		color: #f0ddc1;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		font-size: 3rem;
+	}
+	.laptop_screen {
+		display: none;
 	}
 }

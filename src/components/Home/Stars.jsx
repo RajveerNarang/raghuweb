@@ -20,13 +20,25 @@ function Stars({limit}) {
 			stars.map((star, index) => {
 				if (index % 3 === 0) {
 					ctx.fillStyle = '#ffffff'
-					ctx.beginPath()
-					ctx.arc(star.posX, star.posY, star.radius * Math.sin(frameCount*0.05)**2, 0, 2 * Math.PI)
+					ctx.beginPath();
+					ctx.arc(
+						star.posX, 
+						star.posY, 
+						star.radius * Math.sin(frameCount*0.05)**2, 
+						0, 
+						2 * Math.PI
+					)
 					ctx.fill()
 				} else {
 					ctx.fillStyle = '#ffffff'
-					ctx.beginPath()
-					ctx.arc(star.posX, star.posY, star.radius * Math.sin(frameCount*0.03)**2, 0, 2 * Math.PI)
+					ctx.beginPath();
+					ctx.arc(
+						star.posX, 
+						star.posY, 
+						star.radius * Math.sin(frameCount*0.03)**2, 
+						0, 
+						2 * Math.PI
+					)
 					ctx.fill()
 				}
 				return 'Success'
@@ -40,8 +52,8 @@ function Stars({limit}) {
 			stars = []
 			for (let i = 0; i < limit; i++) {
 				const margins = {
-					posX: Math.random() * window.innerWidth,
-					posY: Math.random() * window.innerHeight,
+					posX: (Math.random() * window.innerWidth),
+					posY: (Math.random() * window.innerHeight),
 					radius: Math.floor(Math.random() * (3 - 1) + 1)
 				}
 				stars.push(margins)

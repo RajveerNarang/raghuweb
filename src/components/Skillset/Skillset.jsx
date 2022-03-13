@@ -15,7 +15,8 @@ function Skillset() {
 				</div>
 			</div>
 			<div className={skill.mobile_screen}>
-				Skill level is not available for mobile screen.</div>
+				Skill level is not available for mobile screen.
+			</div>
 		</div>
 	)
 }
