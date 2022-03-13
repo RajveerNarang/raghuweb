@@ -1,6 +1,6 @@
 import React from 'react'
 import {SiGmail, SiWhatsapp, SiDiscord} from 'react-icons/si'
-import {FaLinkedin, FaInstagram, FaGithub} from 'react-icons/fa'
+import {FaLinkedin, FaInstagram} from 'react-icons/fa'
 
 import contact from './contact.module.css'
 

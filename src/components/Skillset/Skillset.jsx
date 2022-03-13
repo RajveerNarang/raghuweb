@@ -9,7 +9,7 @@ function Skillset() {
 		<div className={skill.skill_background}>
 			<div className={skill.laptop_screen}>
 				<BarChart />
-				<PieChart/>
+				<PieChart />
 				<div className={skill.description}>
 					Level of skills I gained in these languages.
 				</div>
