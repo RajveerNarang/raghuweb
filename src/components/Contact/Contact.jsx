@@ -7,8 +7,15 @@ import contact from './contact.module.css'
 function Contact() {
 	return (
 		<div className={contact.contact_background}>
+			
 			<div className={contact.icon_container}>
-				<a href="mailto:raghunandansharma615@gmail.com">
+				<div className={contact.text}>
+					You can contact me through these medium.
+				</div>
+				<a 
+					href="mailto:raghunandansharma615@gmail.com" 
+					rel="noreferrer"
+				>
 					<div className={contact.gmail}>
 						<SiGmail className={contact.gmailIcon} />
 						raghunandansharma615@gmail.com
@@ -18,7 +25,11 @@ function Contact() {
 					<SiWhatsapp className={contact.whatsappIcon} />
 					+91 9814101383
 				</div>
-				<a target='_blank' href='https://www.linkedin.com/in/raghunandan-sharma/'>		
+				<a 
+					target='_blank' 
+					href='https://www.linkedin.com/in/raghunandan-sharma/' 
+					rel="noreferrer"
+				>		
 					<div className={contact.linkedIn}>
 						<FaLinkedin className={contact.linkedInIcon} />
 						raghunandan sharma
@@ -28,7 +39,11 @@ function Contact() {
 					<SiDiscord className={contact.discordIcon} />
 					Senshi Ryo#6474
 				</div>
-				<a href="https://www.instagram.com/rick_lykos/" target="_blank">
+				<a 
+					href="https://www.instagram.com/rick_lykos/" 
+					target="_blank"
+					rel="noreferrer"
+				>
 					<div className={contact.instagram}>
 						<FaInstagram className={contact.instagramIcon} />
 						rick_lykos

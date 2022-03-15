@@ -11,6 +11,12 @@
 	align-items: center;
 }
 
+.text {
+	color: #ff5a00;
+	font-size: 3rem;
+	font-family: monospace;
+}
+
 .mobile_screen {
 	display: none;
 }
@@ -30,11 +36,12 @@
 .discord {
 	position: relative;
 	width: 40rem;
-	height: 2.5rem;
-	color: #ddeeb3;
+	height: 3rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: transparent;
+	border-radius: 1rem;
 }
 
 a {
@@ -43,7 +50,8 @@ a {
 }
 
 .gmail {
-	background-color: #ff0034;
+	border: 0.2rem solid #ff3300;
+	color: #ff3300;
 }
 .gmailIcon {
 	position: absolute;
@@ -54,7 +62,8 @@ a {
 }
 
 .whatsapp {
-	background-color: #0fe460;
+	border: 0.2rem solid #0fe460;
+	color: #0fe460;
 }
 .whatsappIcon {
 	position: absolute;
@@ -65,7 +74,8 @@ a {
 }
 
 .linkedIn {
-	background-color: #0080ff;
+	border: 0.2rem solid #0080ff;
+	color: #0080ff;
 }
 .linkedInIcon {
 	position: absolute;
@@ -76,7 +86,8 @@ a {
 }
 
 .instagram {
-	background-color: #ff0055;
+	border: 0.2rem solid #ff0055;
+	color: #ff0055;
 }
 .instagramIcon {
 	position: absolute;
@@ -87,7 +98,8 @@ a {
 }
 
 .discord {
-	background-color: #7040ff;
+	border: 0.2rem solid #7040ff;
+	color: #7040ff;
 }
 .discordIcon {
 	position: absolute;
@@ -107,10 +119,25 @@ a {
 		width: 20rem;
 		height: 4rem;
 		font-size: 1.2rem;
-		color: #d4eeb3;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.gmail {
+		color: #f30;
+	}
+	.whatsapp {
+		color: #0fe460;
+	}
+	.linkedIn {
+		color: #0080ff;
+	}
+	.instagram {
+		color: #f05;
+	}
+	.discord {
+		color: #7040ff;
 	}
 }
 
