@@ -1,8 +1,10 @@
 import React from 'react'
 
+import about from './about.module.css'
+
 function About() {
 	return (
-		<div>
+		<div className={about.background}>
 			About
 		</div>
 	)

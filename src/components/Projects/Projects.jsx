@@ -1,8 +1,10 @@
 import React from 'react'
 
+import projects from './projects.module.css'
+
 function Projects() {
 	return (
-		<div>
+		<div className={projects.background}>
 			Projects
 		</div>
 	)

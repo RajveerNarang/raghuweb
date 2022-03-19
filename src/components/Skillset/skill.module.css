@@ -1,6 +1,6 @@
 .skill_background {
 	position: fixed;
-	background-color: #000000;
+	background-color: transparent;
 	width: 100vw;
 	height: 100vh;
 }
@@ -15,7 +15,7 @@
 .pie_size {
 	position: absolute;
 	color: #f5def3;
-	background-color: #000000;
+	background-color: transparent;
 	right: 1em;
 	height: calc(50vh - 3rem);
 	width: 50vw;
@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 400px) {
 	.mobile_screen {
-		background-color: #000000;
+		background-color: transparent;
 		display: flex;
 		color: #f5def3;
 		align-items: center;

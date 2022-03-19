@@ -6,7 +6,7 @@ function Stars({limit}) {
 
 	useEffect(() => {
 		const canvas = starRef.current;
-		canvas.style.position = 'absolute';
+		canvas.style.position = 'fixed';
 		const ctx = canvas.getContext('2d');
 		
 		canvas.width = window.innerWidth
@@ -52,8 +52,8 @@ function Stars({limit}) {
 			stars = []
 			for (let i = 0; i < limit; i++) {
 				const margins = {
-					posX: (Math.random() * window.innerWidth),
-					posY: (Math.random() * window.innerHeight),
+					posX: (Math.random() * canvas.width),
+					posY: (Math.random() * canvas.height),
 					radius: Math.floor(Math.random() * (3 - 1) + 1)
 				}
 				stars.push(margins)

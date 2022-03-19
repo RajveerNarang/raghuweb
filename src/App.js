@@ -1,24 +1,14 @@
-import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import {BrowserRouter as Router } from 'react-router-dom'
 
 import Navigation from './components/Navbar/Navigation'
-import Home from './components/Home/Home'
-import About from './components/About/About'
-import Contact from './components/Contact/Contact'
-import Skillset from './components/Skillset/Skillset'
-import Projects from './components/Projects/Projects'
+import MainComponent from './components/Main/MainComponent'
 
 function App() {
 	return (
 		<div>
 			<Router>
 				<Navigation />
-				<Routes>
-					<Route index path='/' element={<Home />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/contact' element={<Contact />} />
-					<Route path='/skills' element={<Skillset />} />
-					<Route path='/projects' element={<Projects />} />
-				</Routes>
+				<MainComponent />	
 			</Router>
 		</div>
 	);
