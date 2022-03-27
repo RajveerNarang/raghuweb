@@ -5,7 +5,7 @@
 	background-color: #e57810;
 	font-size: 1.3em;
 
-	position: relative;
+	position: fixed;
 	z-index: 5;
 	width: 100vw;
 }

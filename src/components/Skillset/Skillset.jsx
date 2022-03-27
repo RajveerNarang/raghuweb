@@ -11,7 +11,7 @@ function Skillset() {
 				<BarChart />
 				<PieChart />
 				<div className={skill.description}>
-					Level of skills I gained in these languages.
+					Level of skills I gained in these.
 				</div>
 			</div>
 			<div className={skill.mobile_screen}>

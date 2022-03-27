@@ -6,14 +6,19 @@ import Stars from './Stars'
 
 function Home() {
 	return (
-		<div className={home.back_ground} >
+		<div className={home.background} >
 			<div className={home.laptop_screen}>
 				<Stars limit='275' />
 				<div className={home.intro_box}>
 					<div className={home.info_name}>GREETINGS EVERYONE</div>
 					<div className={home.info_content}>
-						<p>I'm Raghunandan, a Full Stack Developer, who have a great interest in frontend than backend developement.</p>
-						<p>I love to showcase the results rather then errors.</p>
+						<p>I'm Raghunandan, creator of this website.</p>
+						<p>Reason for creating this website is to learn and implement</p>
+						<span>— Css animation</span>
+						<span>— Canvas</span>
+						<p>To get to know more about different animation tools like</p>
+						<span>— Chart.js</span>
+						<span>— AOS</span>
 					</div>
 				</div>
 				<div className={home.nav_block_container}>
