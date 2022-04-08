@@ -1,5 +1,5 @@
-import BarChart from './BarChart'
-import PieChart from './PieChart'
+import BarChart from "./BarChart";
+import PieChart from './PieChart';
 
 import skill from './skill.module.css'
 

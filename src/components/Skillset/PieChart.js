@@ -7,7 +7,7 @@ import skill from './skill.module.css'
 function PieChart() {
 	ChartJS.register(...registerables);
 	
-	const barData = {
+	const pieData = {
 		labels: ['Bootstrap', 'JQuery', 'Tailwind-css', 'Github', 'SASS', 'Drupal'],
 		datasets: [{
 			label: 'Skill level',
@@ -27,7 +27,7 @@ function PieChart() {
 	return (
 		<div className={skill.pie_size}>
 			<Pie
-				data={barData}
+				data={pieData}
 				width={10}
 				height={20}
 				options={{

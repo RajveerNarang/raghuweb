@@ -9,9 +9,7 @@ function Education() {
 				className={about.education}
 				data-aos='fade-right'
 			>
-				<p 
-				// style={{textAlign: "center"}}
-				>
+				<p>
 					Will be graduating from
 				</p>
 				<span>Chitkara University</span>

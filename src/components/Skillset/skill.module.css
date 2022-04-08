@@ -24,30 +24,17 @@
 
 .description {
 	position: absolute;
-	bottom: 13em;
-	right: 7em;
+	bottom: 8em;
+	right: 5em;
 	color: #f5def3;
+	font-size: 1.5rem;
 }
 
 .mobile_screen {
 	display: none;
 }
 
-@media screen and (max-width: 400px) {
-	.mobile_screen {
-		background-color: transparent;
-		display: flex;
-		color: #f5def3;
-		align-items: center;
-		justify-content: center;
-		font-size: 2rem;
-		height: 100vh;
-	}
-	.laptop_screen {
-		display: none;
-	}
-}
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
 	.skill_background {
 		position: absolute;
 	}
@@ -65,5 +52,20 @@
 		left: 1em;
 		font-size: 1.5rem;
 		width: 50vw;
+	}
+} */
+
+@media screen and (max-width: 900px) {
+	.mobile_screen {
+		background-color: transparent;
+		display: flex;
+		color: #f5def3;
+		align-items: center;
+		justify-content: center;
+		font-size: 2rem;
+		height: 100vh;
+	}
+	.laptop_screen {
+		display: none;
 	}
 }

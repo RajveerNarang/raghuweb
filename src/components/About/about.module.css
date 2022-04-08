@@ -37,6 +37,7 @@
 }
 .color3 {
 	color: #a4e707;
+	width: 35vw;
 }
 .color4 {
 	color: #f55c2d;
@@ -111,6 +112,20 @@
 	max-width: 30vw;
 	min-width: 25vw;
 }
+.certify_body {
+	width: 100vw;
+    height: 90vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+}
+.flex_container {
+	width: 100vw;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
 
 .pair p {
 	color: gold;
@@ -147,11 +162,20 @@
 	.education,
 	.list,
 	.certified,
-	.resume {
+	.resume,
+	.certify_body {
 		min-width: 90vw;
 		font-size: 2rem;
 	}
 	.certified span {
 		font-size: 1.5rem;
+	}
+
+	.flex_container {
+		width: 100vw;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: flex-start;
+		flex-direction: column-reverse;
 	}
 }
