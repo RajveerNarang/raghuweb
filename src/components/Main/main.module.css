@@ -1,11 +1,25 @@
 .component_container {
 	position: relative;
-	top: 2rem;
+	top: 3rem;
 	width: 100vw;
-	height: calc(100vh - 2rem);
+	height: calc(100vh - 3rem);
 	background-color: #121212;
 
 	display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+	.component_container {
+		position: relative;
+		top: 2rem;
+		width: 100vw;
+		height: calc(100vh - 2rem);
+		background-color: #121212;
+	
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
 }
