@@ -3,6 +3,9 @@
 	top: 2rem;
 	width: 100vw;
 	height: calc(100vh - 2rem);
-	/* height: min-content; */
 	background-color: #121212;
+
+	display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
