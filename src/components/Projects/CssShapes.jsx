@@ -23,7 +23,7 @@ function CssShapes() {
 						</a>
 					</div>
 					<div className={projects.text}>
-						Just to practice more of css and it's animation, I created some of drawing of animals at basic level.
+						Just to practice more of css and it's animation, I created some of drawing of animals using border at basic level.
 					</div>
 				</div>
 			</div>
