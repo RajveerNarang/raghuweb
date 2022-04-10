@@ -29,7 +29,7 @@ function Home() {
 				</div>
 			</div>
 			<div className={home.mobile_screen}>
-				Website is not available for this width.
+				Website is not available for mobile screen.
 			</div>
 		</div>
 	)

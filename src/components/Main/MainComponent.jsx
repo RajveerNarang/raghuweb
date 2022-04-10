@@ -8,6 +8,7 @@ import About from '../About/About'
 import Contact from '../Contact/Contact'
 import Skillset from '../Skillset/Skillset'
 import Projects from '../Projects/Projects'
+import ContainerComponent from '../Designs/Container/ContainerComponent'
 
 function MainComponent() {
   return (
@@ -18,6 +19,7 @@ function MainComponent() {
 			<Route path='/contact' element={<Contact />} />
 			<Route path='/skills' element={<Skillset />} />
 			<Route path='/projects' element={<Projects />} />
+			<Route path='/designs' element={<ContainerComponent />} />
 		</Routes>
 	</div>
   )

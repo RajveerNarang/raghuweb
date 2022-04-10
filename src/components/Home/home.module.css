@@ -34,11 +34,13 @@
 		background-color: transparent;
 		box-shadow: none;
 		border: none;
+		opacity: 0;
 	}
 	100% {
 		top: 25%;
 		background-color: #121212;
 		box-shadow: 0 0 1em 0.5em #0bf775;
+		opacity: 1;
 	}
 }
 
@@ -150,7 +152,7 @@
 	}
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
 	.intro_box {
 		width: calc(100vw - 5rem);
 		font-size: 1.5em;
@@ -183,9 +185,9 @@
 		animation-delay: 0.5s;
 		box-shadow: 0 0 0.5em 0.3em #d0f138;
 	}
-}
+} */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	.mobile_screen {
 		display: flex;
 		color: #f0ddc1;

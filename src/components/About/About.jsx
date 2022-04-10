@@ -22,12 +22,17 @@ function About() {
 	
 	return (
 		<div className={about.background}>
-			<Intro />
-			<Education />
-			<Hobbies />
-			<Certification />
-			<Resume />
-			<EmptyDiv />
+			<div className={about.laptop_screen}>
+				<Intro />
+				<Education />
+				<Hobbies />
+				<Certification />
+				<Resume />
+				<EmptyDiv />
+			</div>
+			<div className={about.mobile_screen}>
+				Website is not available for mobile version.
+			</div>
 		</div>
 	)
 }

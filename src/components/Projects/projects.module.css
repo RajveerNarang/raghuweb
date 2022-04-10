@@ -1,4 +1,14 @@
 .background {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #121212;
+	
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.laptop_screen {
 	position: absolute;
 	background-color: transparent;
 	padding: 1rem;
@@ -11,8 +21,7 @@
 
 .block {
 	position: relative;
-	left: auto;
-	right: auto;
+	margin: 1rem 0;
 	
 	width: 90vw;
 	border: 1px solid #ed75c5;
@@ -22,7 +31,10 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	
+	transform: rotateX(-90deg);
 }
+
 .img_container {
 	position: inherit;
 	width: 20rem;
@@ -36,6 +48,20 @@
 	height: 10rem;
 	display: block;
 	object-fit: cover;
+}
+.custom_img_container {
+	position: inherit;
+	width: 20rem;
+	border-bottom-left-radius: 1rem;
+	border-top-left-radius: 1rem;
+}
+.custom_img_container img {
+	border-bottom-left-radius: 1rem;
+	border-top-left-radius: 1rem;
+	width: 100%;
+	height: 10rem;
+	display: block;
+	object-fit: contain;
 }
 
 .content {
@@ -53,4 +79,42 @@
 }
 .content .text {
 	color: #c2feba;
+}
+
+.mobile_screen {
+	display: none;
+}
+@media screen and (max-width: 800px) {
+	.laptop_screen {
+		display: none;
+	}
+	.mobile_screen {
+		display: block;
+		color: wheat;
+		font-size: 3rem;
+	}
+}
+
+.block {
+	animation: flip 2s forwards;
+	transform-origin: top;
+}
+
+.block:nth-child(2) {
+	animation: flip 2s calc(1s * 1) forwards;
+	transform-origin: top;
+}
+
+.block:nth-child(3) {
+	animation: flip 2s calc(1s * 2) forwards;
+	transform-origin: top;
+}
+
+@keyframes flip {
+	from {
+		transform: rotateX(-90deg);
+	}
+	to {
+		transform: rotateX(0deg);
+	}
 }
