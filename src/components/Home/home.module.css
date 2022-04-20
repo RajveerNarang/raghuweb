@@ -7,9 +7,6 @@
 	/* top: 2em; */
 }
 
-.mobile_screen {
-	display: none;
-}
 
 .intro_box {
 	position: absolute;
@@ -152,21 +149,21 @@
 	}
 }
 
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
 	.intro_box {
 		width: calc(100vw - 5rem);
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 	.about {
 		position: absolute;
 		top: calc(50% + 10em);
-		left: calc(50% - 10em);
+		left: calc(50% - 5em);
 		animation-delay: 1s;
 		box-shadow: 0 0 0.5em 0.3em #9ff1eb;
 	}
 	.contact {
 		position: absolute;
-		top: calc(50% + 18em);
+		top: calc(50% + 15em);
 		left: calc(50% - 8em);
 		animation-delay: 2s;
 		box-shadow: 0 0 0.5em 0.3em #fa65cd;
@@ -174,29 +171,15 @@
 	.skills {
 		position: absolute;
 		top: calc(50% + 10em);
-		right: calc(50% - 10em);
+		right: calc(50% - 5em);
 		animation-delay: 1.5s;
 		box-shadow: 0 0 0.5em 0.3em #f1b84e;
 	}
 	.projects {
 		position: absolute;
-		top: calc(50% + 18em);
+		top: calc(50% + 15em);
 		right: calc(50% - 8em);
 		animation-delay: 0.5s;
 		box-shadow: 0 0 0.5em 0.3em #d0f138;
-	}
-} */
-
-@media screen and (max-width: 900px) {
-	.mobile_screen {
-		display: flex;
-		color: #f0ddc1;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		font-size: 3rem;
-	}
-	.laptop_screen {
-		display: none;
 	}
 }

@@ -19,9 +19,6 @@ function Projects() {
 					<CssDesigns />
 				</div>
 			</div>
-			<div className={projects.mobile_screen}>
-				Website is not available for mobile version.
-			</div>
 		</div>
 	)
 }

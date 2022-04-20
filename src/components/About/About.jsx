@@ -9,7 +9,6 @@ import Education from './Education';
 import Hobbies from './Hobbies';
 import Resume from './Resume';
 import Certification from './Certification';
-import EmptyDiv from './EmptyDiv';
 
 function About() {
 
@@ -28,10 +27,6 @@ function About() {
 				<Hobbies />
 				<Certification />
 				<Resume />
-				<EmptyDiv />
-			</div>
-			<div className={about.mobile_screen}>
-				Website is not available for mobile version.
 			</div>
 		</div>
 	)

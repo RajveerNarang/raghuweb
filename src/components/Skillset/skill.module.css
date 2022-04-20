@@ -34,28 +34,34 @@
 	display: none;
 }
 
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
 	.skill_background {
 		position: absolute;
+		display: flex;
+		flex-direction: column-reverse;
+		
+		width: 90vw;
+		height: 75vh;
 	}
 	.graph_size {
 		width: 100vw;
 		height: 60vh;
 		bottom: 0;
 	}
-	.pie_size {
+	.doughnut_size {
 		right: 1rem;
 		height: 40vh;
 	}
 	.description {
 		top: 5em;
 		left: 1em;
-		font-size: 1.5rem;
-		width: 50vw;
+		font-size: 1.3rem;
+		width: 100vw;
+		height: 3rem;
 	}
-} */
+}
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
 	.mobile_screen {
 		background-color: transparent;
 		display: flex;
@@ -68,4 +74,4 @@
 	.laptop_screen {
 		display: none;
 	}
-}
+} */

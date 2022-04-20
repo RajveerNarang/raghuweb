@@ -38,8 +38,6 @@
 .img_container {
 	position: inherit;
 	width: 20rem;
-	border-bottom-left-radius: 1rem;
-	border-top-left-radius: 1rem;
 }
 .img_container img {
 	border-bottom-left-radius: 1rem;
@@ -52,8 +50,6 @@
 .custom_img_container {
 	position: inherit;
 	width: 20rem;
-	border-bottom-left-radius: 1rem;
-	border-top-left-radius: 1rem;
 }
 .custom_img_container img {
 	border-bottom-left-radius: 1rem;
@@ -81,17 +77,20 @@
 	color: #c2feba;
 }
 
-.mobile_screen {
-	display: none;
-}
 @media screen and (max-width: 800px) {
-	.laptop_screen {
-		display: none;
+	.block {
+		display: flex;
+		flex-direction: column;
 	}
-	.mobile_screen {
+	
+	.img_container img {
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 1rem;
+		border-top-left-radius: 1rem;
+		width: 100%;
+		height: 10rem;
 		display: block;
-		color: wheat;
-		font-size: 3rem;
+		object-fit: cover;
 	}
 }
 

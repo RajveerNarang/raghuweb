@@ -18,10 +18,6 @@
 	text-align: center;
 }
 
-.mobile_screen {
-	display: none;
-}
-
 .icon_container {
 	height: 70vh;
 	display: flex;
@@ -143,11 +139,29 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-	.mobile_screen {
-		display: block;
+	.gmail,
+	.whatsapp,
+	.linkedIn,
+	.instagram,
+	.discord {
+		position: relative;
+		width: 20rem;
+		height: 4rem;
+		font-size: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		word-break: break-all;
+		padding: 0 1rem;
 	}
-
-	.icon_container {
-		display: none;
+	.text {
+		font-size: 1.2rem;
+		width: 15rem;
+	}
+	.background {
+		/* position: absolute;
+		display: flex; */
+		justify-content: flex-start;
+		/* align-items: center; */
 	}
 }

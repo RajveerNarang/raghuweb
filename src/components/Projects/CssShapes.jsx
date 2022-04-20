@@ -14,14 +14,12 @@ function CssShapes() {
 				/>
 			</div>
 			<div className={projects.content}>
-				<div className={projects.link}>
-					<a
-						href='https://github.com/Raghunandan1451/CSS_ART' 
-						target='_blank'
-						rel='noreferrer' >
-						CSS Draw
-					</a>
-				</div>
+				<a
+					href='https://github.com/Raghunandan1451/CSS_ART' 
+					target='_blank'
+					rel='noreferrer' >
+					CSS Draw
+				</a>
 				<div className={projects.text}>
 					Just to practice more of css and it's animation, I created some of drawing of animals using border at basic level.
 				</div>

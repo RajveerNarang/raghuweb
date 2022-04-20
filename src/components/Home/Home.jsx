@@ -28,9 +28,6 @@ function Home() {
 					<Link to='/projects' className={`${home.nav_block} ${home.projects}`}>Projects</Link>
 				</div>
 			</div>
-			<div className={home.mobile_screen}>
-				Website is not available for mobile screen.
-			</div>
 		</div>
 	)
 }

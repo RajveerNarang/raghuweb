@@ -47,11 +47,11 @@ function Navigation() {
 						<SvgBurger />
 					</div>
 					<div className={toggle ? navbar.nav_link_toggle_none : navbar.nav_link_toggle_flex}>
-						<Link className={navbar.nav__link} to='/'>Home</Link>
-						<Link className={navbar.nav__link} to='/about'>About</Link>
-						<Link className={navbar.nav__link} to='/contact'>Contact</Link>
-						<Link className={navbar.nav__link} to='/skills'>Skills</Link>
-						<Link className={navbar.nav__link} to='/projects'>Projects</Link>
+						<Link className={navbar.nav__link} to='/' onClick={handleToggle}>Home</Link>
+						<Link className={navbar.nav__link} to='/about' onClick={handleToggle}>About</Link>
+						<Link className={navbar.nav__link} to='/contact' onClick={handleToggle}>Contact</Link>
+						<Link className={navbar.nav__link} to='/skills' onClick={handleToggle}>Skills</Link>
+						<Link className={navbar.nav__link} to='/projects' onClick={handleToggle}>Projects</Link>
 					</div>
 				</div>
 			</Fragment> }

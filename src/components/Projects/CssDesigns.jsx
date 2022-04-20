@@ -15,9 +15,7 @@ function CssDesigns() {
 				/>
 			</div>
 			<div className={projects.content}>
-				<div className={projects.link}>
-					<Link to='/designs'>CSS Design</Link>
-				</div>
+				<Link to='/designs'>CSS Design</Link>
 				<div className={projects.text}>
 					In it every new designs and which are not available in above link will be here and will have update whenever I get free time. You can check designs by clicking the title above.
 				</div>

@@ -140,11 +140,8 @@
 	color: transparent;
 }
 
-.mobile_screen {
-	display: none;
-}
 
-/* @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 	.background {
 		top: -1rem;
 	}
@@ -160,7 +157,6 @@
 	}
 
 	.body,
-	.title,
 	.intro,
 	.education,
 	.list,
@@ -168,10 +164,15 @@
 	.resume,
 	.certify_body {
 		min-width: 90vw;
-		font-size: 2rem;
+		font-size: 1rem;
+		padding: 0.8rem;
+	}
+	.title {
+		min-width: 90vw;
+		font-size: 1rem;
 	}
 	.certified span {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 
 	.flex_container {
@@ -180,14 +181,6 @@
 		justify-content: space-evenly;
 		align-items: flex-start;
 		flex-direction: column-reverse;
-	}
-} */
-@media screen and (max-width: 800px) {
-	.laptop_screen {
-		display: none;
-	}
-	.mobile_screen {
-		display: block;
 	}
 }
 
