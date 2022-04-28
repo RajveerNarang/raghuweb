@@ -17,7 +17,7 @@ function Resume() {
 				data-aos='zoom-in-up'
 			>
 				<Link 
-					to='/Files/Raghunandan Sharma.pdf'
+					to='/Files/raghunandan_sharma.pdf'
 					className={about.color4} 
 					target='_blank' 
 					download

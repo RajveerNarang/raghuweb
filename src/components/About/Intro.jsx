@@ -15,7 +15,7 @@ function Intro() {
 				className={about.intro}
 				data-aos='fade-down'
 			>
-				I'm Raghunandan, a Full Stack Developer, who have a great interest in frontend than backend developement.
+				I'm Raghunandan, a Full Stack Developer, who is more interested in Frontend rather than Backend developement.
 			</div>
 		</div>
 	</div>
