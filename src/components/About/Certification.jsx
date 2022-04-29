@@ -43,7 +43,8 @@ function Certification() {
 					<div className={about.pair}>
 						<p>Novate 2019</p>
 						<span>
-							Event held in our university. It was my first experience working as a team, and we presented Biometric Electing Voting machine (BEVM) in this event.
+							Event held in our University.
+							It was my first experience working with a team. We got the opportunity to represent our project Biometric Electing Voting machine (BEVM) in this event.
 						</span>
 					</div>
 				</div>
