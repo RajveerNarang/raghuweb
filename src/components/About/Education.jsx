@@ -10,7 +10,7 @@ function Education() {
 				data-aos='fade-right'
 			>
 				<p>
-					Will be graduating from
+					Graduated from
 				</p>
 				<span>Chitkara University</span>
 				<span>Year: 2018 - 2022</span>

@@ -67,7 +67,7 @@
 	border-radius: 1rem;
 	color: #10f585;
 	padding: 1.5rem;
-	max-width: 30vw;
+	min-width: 30vw;
 }
 
 .list {
@@ -110,6 +110,7 @@
 	padding: 1.5rem;
 	max-width: 30vw;
 	min-width: 25vw;
+	min-height: 30vh;
 }
 .certify_body {
 	width: 100vw;
