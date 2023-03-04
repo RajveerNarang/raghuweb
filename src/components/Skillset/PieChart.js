@@ -11,7 +11,7 @@ function PieChart() {
 		labels: ['Bootstrap', 'JQuery', 'Tailwind-css', 'Github', 'SASS', 'Drupal'],
 		datasets: [{
 			label: 'Skill level',
-			data: [40, 45, 10, 45, 5, 15],
+			data: [20, 15, 10, 15, 25, 15],
 			barPercentage: 0.5,
 			backgroundColor: [
 				'#ff2500',
