@@ -13,10 +13,10 @@ function Home() {
 					<div className={home.info_name}>GREETINGS EVERYONE</div>
 					<div className={home.info_content}>
 						<p>I'm Raghunandan, creator of this website.</p>
-						<p>Reason for creating this website is to learn and implement</p>
+						<p>Main reason for creating this website is to learn and implement</p>
 						<span>— Css animation</span>
 						<span>— Canvas</span>
-						<p>To get to know more about different animation tools like</p>
+						<p>And to get to know a liitle about different animation tools like</p>
 						<span>— Chart.js</span>
 						<span>— AOS</span>
 					</div>
