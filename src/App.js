@@ -1,16 +1,16 @@
-import {BrowserRouter as Router } from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Navigation from './components/Navbar/Navigation'
-import MainComponent from './components/Main/MainComponent'
+import V1Container from './components/V1Container';
+import Elements from './mfaComponents/Basics/Elements';
 
 function App() {
 	return (
-		<div>
-			<Router>
-				<Navigation />
-				<MainComponent />	
-			</Router>
-		</div>
+		<Router>
+			<Routes>
+				<Route path='/v1/*' element={<V1Container />} />
+				<Route path='/' element={<Elements />} />
+			</Routes>	
+		</Router>
 	);
 }
 

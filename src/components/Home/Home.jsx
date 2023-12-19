@@ -22,10 +22,10 @@ function Home() {
 					</div>
 				</div>
 				<div className={home.nav_block_container}>
-					<Link to='/about' className={`${home.nav_block} ${home.about}`}>About</Link>
-					<Link to='/contact' className={`${home.nav_block} ${home.contact}`}>Contact</Link>
-					<Link to='/skills' className={`${home.nav_block} ${home.skills}`}>Skills</Link>
-					<Link to='/projects' className={`${home.nav_block} ${home.projects}`}>Projects</Link>
+					<Link to='/v1/about' className={`${home.nav_block} ${home.about}`}>About</Link>
+					<Link to='/v1/contact' className={`${home.nav_block} ${home.contact}`}>Contact</Link>
+					<Link to='/v1/skills' className={`${home.nav_block} ${home.skills}`}>Skills</Link>
+					<Link to='/v1/projects' className={`${home.nav_block} ${home.projects}`}>Projects</Link>
 				</div>
 			</div>
 		</div>
