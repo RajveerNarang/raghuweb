@@ -1,10 +1,43 @@
 import React from 'react'
-import style from './button.module.scss'
+import styles from './button.module.scss'
+import classNames from 'classnames';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
+import { useMediaQuery } from 'react-responsive'
 
-export default function Button({name, shape}) {
+const Button = ({name, iconClass, onClick}) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 }); // Adjust the breakpoint as needed
+  
+  const buttonClass = classNames(
+    styles.btn,
+    {
+      [styles.btn__mobile]: isMobile,
+      [styles.btn__desktop]: !isMobile,
+    }
+  );
   return (
-	<button 
-    className={`${shape === 'circle'} ? ${style.btn} ${style.btn_default} : `}
-    >{name}</button>
+    <button className={buttonClass} onClick={onClick}>
+      {isMobile ? (
+        <>
+          {iconClass && <FontAwesomeIcon icon={iconClass} className={styles.icon} />}
+        </>
+      ) : (
+        <>
+          {iconClass && <FontAwesomeIcon icon={iconClass} className={styles.icon} />}
+          {name && <span className={styles.text}>{name}</span>}
+        </>
+      )}
+    </button>
   )
 }
+
+Button.propTypes = {
+  iconClass: PropTypes.object.isRequired,
+  onClick: PropTypes.oneOfType([
+    PropTypes.func,    // Function
+    PropTypes.string,  // String (URL)
+  ]),
+  name: PropTypes.string.isRequired,
+};
+
+export default Button

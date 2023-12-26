@@ -1,0 +1,45 @@
+
+// Colors
+$primary-color: #ff4c00; // Orange as the dominant color
+$secondary-color: #2ecc71; // Complementary color
+$accent-color: #34495e; // Neutral color
+$background-color: #ecf0f1;
+$text-color: #34495e;
+
+// Colors for Dark Theme
+$dark-primary: #ff4c00; // Orange as the dominant color
+$dark-secondary: #2ecc71; // Complementary color
+$dark-accent: #34495e; // Neutral color
+$dark-background: #2c3e50;
+$dark-text: #ecf0f1;
+
+
+// Responsive Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Font Sizes in rem
+$base-font-size: 16px;
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-xxl: 2rem; // 32px
+
+// Spacing in rem
+$spacing-unit: 1rem;
+$spacing-half: 0.5rem;
+$spacing-double: 2rem;
+
+// Z-Index
+$z-index-modal: 1000;
+$z-index-overlay: 900;
+$z-index-default: 1;
+
+// Shadows
+$box-shadow-default: 0 0 0.2rem #0000001a;
+
+// Border Radius
+$border-radius: 0.25rem;

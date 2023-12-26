@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import V1Container from './components/V1Container';
 import Elements from './mfaComponents/Basics/Elements';
 
-function App() {
+const App = () => {
 	return (
 		<Router>
 			<Routes>
