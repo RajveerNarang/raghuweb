@@ -14,12 +14,16 @@
 	outline: none;
 	padding: 0.5rem 0.5rem;
 
-	&__desktop {
-		background-color: $dark-primary;
-		color: $dark-text;
-		border-radius: 0.5rem;
+	// &__desktop {
+	// 	background-color: $dark-primary;
+	// 	color: $dark-text;
+	// 	border-radius: 0.5rem;
+	// }
+	&:hover {
+		background-color: $dark-primary-hover;
 	}
-	&__mobile {
+
+	&__responsive {
 		background-color: $dark-primary;
 		color: $dark-text;
 		border-radius: 50%;
@@ -33,22 +37,40 @@
 			height: 2rem;
 		}
 		@include media-md {
-			width: 2rem;
-			height: 2rem;
+			width: fit-content;
+			height: fit-content;
+			border-radius: 0.5rem;
 		}
+		
 	}
 	.icon {
 		font-size: 1.5rem; // Adjust the icon size
 		color: $dark-text; // Icon color
+		
+		@include media-ssm {
+			font-size: 2rem;
+		}
+
 		@include media-sm {
+			font-size: 1rem;
+		}
+
+		@include media-xxl {
 			font-size: 2rem;
 		}
 	}
 	.text {
+		@include media-ssm {
+			display: none;
+		}
 		@include media-md {
 			display: inline-block;
+			font-size: 1rem;
+			padding: 0.1rem 0.3rem 0;
+		}
+		
+		@include media-xxl {
 			font-size: 2rem;
-			padding: 0.1rem 0.5rem;
 		}
 	}
 }
