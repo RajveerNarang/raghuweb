@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styles from './input.module.scss'
+import PropTypes from 'prop-types'
 
 const Input = ({inputType, labelText, inputNameId}) => {
 	const [inputValue, setInputValue] = useState('');
@@ -41,5 +42,11 @@ const Input = ({inputType, labelText, inputNameId}) => {
 	  </div>
 	);
 }
+
+Input.propTypes = {
+	inputType: PropTypes.string.isRequired, 
+	labelText: PropTypes.string.isRequired, 
+	inputNameId: PropTypes.string.isRequired,
+  };
 
 export default Input

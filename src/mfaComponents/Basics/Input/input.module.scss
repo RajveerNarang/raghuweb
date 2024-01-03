@@ -1,13 +1,10 @@
 @import '../../../index.scss';
-/* AnimatedInput.scss */
 
 .input__container {
 	position: relative;
 	width: 100%;
-	margin: 1.2rem;
 
 	min-width: 25%;
-	// min-height: 2rem;
   
 	&.focused {
 	  label {
@@ -31,16 +28,16 @@
 	}
   
 	.input {
-	  width: 100%;
+	  width: 95%;
 	  padding: 0.3rem;
 	//   border: 1px solid $dark-text;
 	  border: {
-		width: 1px;
-		color: transparent transparent $dark-text $dark-text ;
+		width: 0 0 1px 5px;
+		color: transparent transparent $dark-primary $dark-primary ;
 		style: solid;
 	  };
 	  
-	  border-radius: 0.35rem;
+	//   border-radius: 0.35rem;
 	  font-size: 1.1rem;
 	  transition: border-color 0.3s ease;
 	  outline: none;
