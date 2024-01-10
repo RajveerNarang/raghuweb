@@ -5,6 +5,7 @@ import styles from './glass.module.scss'
 const GlassCard = ({ children, width, height }) => {
   return (
 	<section className={styles.container} style={{width, height}}>
+		{/* <span className={`${styles.box}`}></span> */}
 		{children}
 	</section>
   )

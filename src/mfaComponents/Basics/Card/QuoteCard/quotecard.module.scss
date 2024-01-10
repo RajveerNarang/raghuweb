@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	// font-style: italic;
+	font: {
+		style: italic;
+		weight: 300;
+	}
+
+	.content {
+		text-align: center;
+	}
+	
+	.authorContent {
+		margin-right: 1rem;
+		align-self: flex-end;
+	}
+}
+

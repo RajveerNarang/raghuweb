@@ -1,8 +1,7 @@
 @import '../../../index.scss';
 
-.input__container {
+.container {
 	position: relative;
-	width: 100%;
 
 	min-width: 25%;
   
@@ -28,7 +27,7 @@
 	}
   
 	.input {
-	  width: 95%;
+	  width: 100%;
 	  padding: 0.3rem;
 	//   border: 1px solid $dark-text;
 	  border: {

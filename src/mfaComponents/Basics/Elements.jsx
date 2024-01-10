@@ -4,8 +4,23 @@ import styles from './element.module.scss'
 import { faGear, faHome, faPlus } from '@fortawesome/free-solid-svg-icons'
 import Input from './Input/Input'
 import GlassCard from './GlassBox/GlassCard'
+import QuoteCardList from './Card/QuoteCard/QuoteCardList'
 
 const Elements = () => {
+
+	// const extraStyle = {
+	// 	width: '50%',
+	// };
+	const quotesData = [
+		{
+			quote: "The only limit to our realization of tomorrow will be our doubts of today.",
+			author: "Franklin D. Roosevelt"
+		},
+		{
+			quote: "In three words I can sum up everything I've learned about life: it goes on.",
+			author: "Robert Frost"
+		},
+	];
   return (
 	<div className={`${styles.container}`}>
 		<div className={`${styles.flex__right}`}>
@@ -15,15 +30,14 @@ const Elements = () => {
 		</div>
 		<div className={`${styles.flex__right}`}>
 			<Input inputType={'text'} labelText={'Name'} inputNameId={'name'} />
-			<Input inputType={'email'} labelText={'Email'} inputNameId={'email'} />
+			{/* <Input inputType={'email'} labelText={'Email'} inputNameId={'email'} /> */}
 		</div>
 		<div className={`${styles.flex__right}`}>
-			<GlassCard width={'100vw'} height={'25vw'}>
-				<Input inputType={'text'} labelText={'Name'} inputNameId={'name'} />
-			</GlassCard>
+			{/* <GlassCard width={'100vw'}>
+				<Input inputType={'text'} labelText={'Name'} inputNameId={'name'} additionalStyle={extraStyle}/>
+			</GlassCard> */}
 			<GlassCard>
-				<h2>Heading 2</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aut consectetur voluptatibus saepe id exercitationem esse, modi optio quaerat dolores!</p>
+				<QuoteCardList quotesData={quotesData}/>
 			</GlassCard>
 		</div>
 	</div>
