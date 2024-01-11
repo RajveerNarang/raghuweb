@@ -13,14 +13,15 @@
 	border: none;
 	outline: none;
 	padding: 0.5rem 0.5rem;
+	transition: background-color 0.3s ease-in-out,
+				box-shadow 0.3s ease-in-out,
+				color 0.3s ease-in-out;
 
-	// &__desktop {
-	// 	background-color: $dark-primary;
-	// 	color: $dark-text;
-	// 	border-radius: 0.5rem;
-	// }
+
 	&:hover {
-		background-color: $dark-primary-hover;
+		background-color: transparent;
+		box-shadow: 0 0 1rem 0.1rem $dark-primary, inset 0 0 0 0.1rem $dark-primary-hover;
+		color: $dark-primary-hover;
 	}
 
 	&__responsive {
@@ -44,11 +45,16 @@
 		
 	}
 	.icon {
-		font-size: 1.5rem; // Adjust the icon size
-		color: $dark-text; // Icon color
+		font-size: 1rem; // Adjust the icon size
+		// color: $dark-text; // Icon color
+
+		transition: color 0s ease-in-out;
+		&:hover {
+			color: $dark-primary-hover;
+		}
 		
 		@include media-ssm {
-			font-size: 2rem;
+			font-size: 1.5rem;
 		}
 
 		@include media-sm {
