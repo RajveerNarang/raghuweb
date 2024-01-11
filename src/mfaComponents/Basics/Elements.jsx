@@ -4,7 +4,7 @@ import styles from './element.module.scss'
 import { faGear, faHome, faPlus } from '@fortawesome/free-solid-svg-icons'
 import Input from './Input/Input'
 import GlassCard from './GlassBox/GlassCard'
-import QuoteCardList from './Card/QuoteCard/QuoteCardList'
+import QuoteCard from './Card/QuoteCard/QuoteCard'
 
 const Elements = () => {
 
@@ -14,11 +14,11 @@ const Elements = () => {
 	const quotesData = [
 		{
 			quote: "The only limit to our realization of tomorrow will be our doubts of today.",
-			author: "Franklin D. Roosevelt"
+			author: "- Franklin D. Roosevelt"
 		},
 		{
 			quote: "In three words I can sum up everything I've learned about life: it goes on.",
-			author: "Robert Frost"
+			author: "- Robert Frost"
 		},
 	];
   return (
@@ -36,9 +36,12 @@ const Elements = () => {
 			{/* <GlassCard width={'100vw'}>
 				<Input inputType={'text'} labelText={'Name'} inputNameId={'name'} additionalStyle={extraStyle}/>
 			</GlassCard> */}
-			<GlassCard>
-				<QuoteCardList quotesData={quotesData}/>
+			
+		{quotesData.map((quoteData, index) => (
+			<GlassCard key={index}>
+				<QuoteCard quote={quoteData.quote} author={quoteData.author} />
 			</GlassCard>
+		))}
 		</div>
 	</div>
   )

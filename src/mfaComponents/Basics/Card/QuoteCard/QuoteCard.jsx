@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import styles from './quotecard.module.scss'
 
 const QuoteCard = ({ quote, author }) => {
-	console.log('Quote', quote, 'Author', author);
   return (
 	<div className={`${styles.container}`}>
 		<blockquote className={`${styles.content}`}>{quote}</blockquote>

@@ -7,7 +7,7 @@
   
 	&.focused {
 	  label {
-		top: -10px;
+		top: -0.9rem;
 		color: $dark-primary;
 		font-size: 0.9rem;
 		// background-color: $dark-secondary;
@@ -16,7 +16,7 @@
 
 	label {
 	  position: absolute;
-	  top: 0.3rem;
+	  top: 0;
 	  left: 0.5rem;
 	  padding: 0 0.2rem;
 	  color: $dark-text;
@@ -37,7 +37,7 @@
 	  };
 	  
 	//   border-radius: 0.35rem;
-	  font-size: 1.1rem;
+	  font-size: 0.9rem;
 	  transition: border-color 0.3s ease;
 	  outline: none;
 	  background-color: transparent;
