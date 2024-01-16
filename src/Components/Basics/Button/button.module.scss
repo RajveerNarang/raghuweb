@@ -1,4 +1,4 @@
-@import '../../../index.scss';
+@import '@src/index.scss';
 
 .btn {
 	position: relative;
@@ -54,7 +54,7 @@
 		}
 		
 		@include media-ssm {
-			font-size: 1.5rem;
+			font-size: 1.1rem;
 		}
 
 		@include media-xxl {
@@ -69,6 +69,7 @@
 			display: inline-block;
 			font-size: 1rem;
 			padding: 0.1rem 0.3rem 0;
+			text-decoration: none;
 		}
 		
 		@include media-xxl {

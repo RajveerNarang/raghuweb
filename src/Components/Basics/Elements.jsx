@@ -1,10 +1,10 @@
 import React from 'react'
-import Button from './Button/Button'
+import Button from '@components/Basics/Button/Button'
 import styles from './element.module.scss'
 import { faGear, faHome, faPlus } from '@fortawesome/free-solid-svg-icons'
-import Input from './Input/Input'
-import GlassCard from './GlassBox/GlassCard'
-import QuoteCard from './Card/QuoteCard/QuoteCard'
+import Input from '@components/Basics/Input/Input'
+import GlassCard from '@components/Basics/GlassBox/GlassCard'
+import QuoteCard from '@components/Basics/Card/QuoteCard/QuoteCard'
 
 const Elements = () => {
 

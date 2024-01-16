@@ -1,0 +1,57 @@
+@import '@src/index.scss';
+
+.load {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	// flex-flow: column nowrap;
+	justify-content: center;
+	// align-content: center;
+	align-items: center;
+	scale: 5;
+
+	.dbl_spin__1,
+	.dbl_spin__2 {
+		position: absolute;
+		box-sizing: border-box;
+		display: block;
+		margin: auto;
+		border: 3px solid transparent;
+		border-radius: 50%;
+	}
+
+	.dbl_spin__1 {
+		height: 2rem;
+		width: 2rem;
+		border-top: 0.25rem solid $dark-primary-hover;
+		border-left: 0.25rem solid $dark-primary-hover;
+		animation: dblspin 1.8s linear infinite;
+	}
+
+	.dbl_spin__2 {
+		height: 3rem;
+		width: 3rem;
+		border-bottom: 0.25rem solid $dark-primary;
+		border-left: 0.25rem solid $dark-primary;
+		animation: dblspin2 1.2s linear infinite;
+	}
+}
+
+@keyframes dblspin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-720deg);
+	}
+}
+
+@keyframes dblspin2 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

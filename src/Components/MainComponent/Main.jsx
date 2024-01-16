@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './main.module.scss'
-import Navbar from '../NavbarComponent/Navbar'
+import Navbar from '@components/NavbarComponent/Navbar'
 
 function Main() {
   return (
