@@ -1,12 +1,12 @@
 import React from 'react'
-import styles from './main.module.scss'
+// import styles from './main.module.scss'
 import Navbar from '@components/NavbarComponent/Navbar'
 
 function Main() {
   return (
-	<div className={`${styles.main}`}>
+	<>
     <Navbar />
-  </div>
+  </>
   )
 }
 

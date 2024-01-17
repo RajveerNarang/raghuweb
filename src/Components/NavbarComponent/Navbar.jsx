@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 
-import styles from './navbar.module.scss'
+import styles from '@components/NavbarComponent/navbar.module.scss'
 import { useMediaQuery } from 'react-responsive'
 // import DesktopNav from '@components/NavbarComponent/DesktopNav'
 // import MobileNav from '@components/NavbarComponent/MobileNav'

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import styles from './input.module.scss'
+import styles from '@components/Basics/Input/input.module.scss'
 import PropTypes from 'prop-types'
 
 const Input = ({inputType, labelText, inputNameId, additionalStyle}) => {

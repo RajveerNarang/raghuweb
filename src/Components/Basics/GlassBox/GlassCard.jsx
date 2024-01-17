@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './glass.module.scss'
+import styles from '@components/Basics/GlassBox/glass.module.scss'
 
 const GlassCard = ({ children, width, height }) => {
   return (

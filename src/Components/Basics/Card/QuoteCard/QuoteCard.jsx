@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './quotecard.module.scss'
+import styles from '@components/Basics/Card/QuoteCard/quotecard.module.scss'
 
 const QuoteCard = ({ quote, author }) => {
   return (

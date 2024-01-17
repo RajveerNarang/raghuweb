@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './button.module.scss'
+import styles from '@components/Basics/Button/button.module.scss'
 // import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
