@@ -1,6 +1,9 @@
 @import '@src/index.scss';
 
 .navbar {
+    position: fixed;
+    width: 100vw;
+	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -10,12 +13,71 @@
 	.left {
 		display: flex;
 		flex-grow: 1;
+		transition: transform 10s ease-in-out;
+
+		.rotate0 {
+			font-size: 1.5rem;
+			animation: revRotateToX 0.8s ease-in-out backwards;
+		}
+		.rotate45 {
+			font-size: 1.5rem;
+			animation: rotateToX 0.9s ease-in-out forwards;
+		}
 		
 	}
 	.right {
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		flex-grow: 1;
+		flex-grow: 11;
+
+		.navItem {
+			transition: transform 0.3s ease-in-out;
+
+			&Show {
+				transform: translateY(0);
+			}
+			&Hide {
+				transform: translateY(-5rem);
+			}
+		}
+
+		.navItem:nth-child(1) {
+			transition-delay: 0;
+		}
+		.navItem:nth-child(2) {
+			transition-delay: 0.1s;
+		}
+		.navItem:nth-child(3) {
+			transition-delay: 0.2s;
+		}
+		.navItem:nth-child(4) {
+			transition-delay: 0.3s;
+		}
+		.navItem:nth-child(5) {
+			transition-delay: 0.4s;
+		}
+
+		@include media-md {
+			flex-grow: 1;
+		}
+	}
+}
+
+@keyframes rotateToX {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes revRotateToX {
+	0% {
+		transform: rotate(135deg);
+	}
+	100% {
+		transform: rotate(0deg);
 	}
 }
