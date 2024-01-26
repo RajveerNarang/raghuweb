@@ -2,7 +2,7 @@ import React from 'react'
 import { Bar } from 'react-chartjs-2'
 import { Chart as ChartJS, registerables } from 'chart.js'
 
-import skill from './skill.module.css'
+import skill from '@src/v1Components/Skillset/skill.module.css'
 
 function BarChart() {
 

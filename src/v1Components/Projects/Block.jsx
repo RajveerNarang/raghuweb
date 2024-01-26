@@ -1,13 +1,13 @@
 import { Fragment } from 'react'
 
-import projects from './projects.module.css'
+import projects from '@src/v1Components/Projects/projects.module.css'
 
 function Block() {
 	return (
 		<Fragment>
 			<div className={projects.img_container}>
 				<img 
-					src={'./github.png'} 
+					src={'/github.png'} 
 					alt='Github' 
 					width='400' 
 					height='300'

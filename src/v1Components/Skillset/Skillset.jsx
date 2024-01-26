@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-import BarChart from './BarChart';
-import PieChart from './PieChart';
-import DoughnutChart from "./DoughnutChart";
+import BarChart from '@src/v1Components/Skillset/BarChart';
+import PieChart from '@src/v1Components/Skillset/PieChart';
+import DoughnutChart from "@src/v1Components/Skillset/DoughnutChart";
 
-import skill from './skill.module.css'
+import skill from '@src/v1Components/Skillset/skill.module.css'
 
 function Skillset() {
 

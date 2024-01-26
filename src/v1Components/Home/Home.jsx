@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import home from './home.module.css'
-import Stars from './Stars'
+import home from '@src/v1Components/Home/home.module.css'
+import Stars from '@src/v1Components/Home/Stars'
 
 function Home() {
 	return (

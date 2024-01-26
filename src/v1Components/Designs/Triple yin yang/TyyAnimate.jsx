@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import animate from './animate.module.css'
+import animate from '@src/v1Components/Designs/Triple yin yang/animate.module.css'
 
 function TyyAnimate() {
   return (

@@ -2,13 +2,13 @@ import {useEffect} from 'react'
 import AOS from 'aos'
 import "aos/dist/aos.css";
 
-import about from './about.module.css'
+import about from '@src/v1Components/About/about.module.css'
 
-import Intro from './Intro';
-import Education from './Education';
-import Hobbies from './Hobbies';
-import Resume from './Resume';
-import Certification from './Certification';
+import Intro from '@src/v1Components/About/Intro';
+import Education from '@src/v1Components/About/Education';
+import Hobbies from '@src/v1Components/About/Hobbies';
+import Resume from '@src/v1Components/About/Resume';
+import Certification from '@src/v1Components/About/Certification';
 
 function About() {
 

@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import './tyy.css';
+import '@src/v1Components/Designs/Triple yin yang/tyy.css';
 
 function TyyComponent() {
   return (

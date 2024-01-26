@@ -1,5 +1,5 @@
 import React from 'react'
-import about from './about.module.css'
+import about from '@src/v1Components/About/about.module.css'
 
 function Certification() {
   return (

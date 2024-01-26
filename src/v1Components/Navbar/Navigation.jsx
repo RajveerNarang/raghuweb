@@ -1,8 +1,8 @@
 import React, {Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import navbar from './navbar.module.css'
-import SvgBurger from './SvgBurger'
+import navbar from '@src/v1Components/Navbar/navbar.module.css'
+import SvgBurger from '@src/v1Components/Navbar/SvgBurger'
 
 function Navigation() {
 

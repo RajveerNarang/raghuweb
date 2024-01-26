@@ -1,7 +1,8 @@
 import React, { Suspense, lazy } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 import styles from '@components/NavbarComponent/navbar.module.scss'
-import { useMediaQuery } from 'react-responsive'
+import Loader from '@components/Basics/Loader/Loader'
 // import DesktopNav from '@components/NavbarComponent/DesktopNav'
 // import MobileNav from '@components/NavbarComponent/MobileNav'
 
@@ -15,10 +16,10 @@ const Navbar = () => {
   return (
 	<nav className={`${styles.navbar}`}>
 		{isDesktop ? 
-			<Suspense>
+			<Suspense fallback={<Loader />}>
 				<DesktopNav />
 			</Suspense> 
-			: <Suspense>
+			: <Suspense fallback={<Loader />}>
 				<MobileNav />
 			</Suspense> 
 		}

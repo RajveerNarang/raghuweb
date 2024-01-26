@@ -1,8 +1,8 @@
 import React from 'react'
-import TyyAnimate from '../Triple yin yang/TyyAnimate';
-import TyyComponent from '../Triple yin yang/TyyComponent';
+import TyyAnimate from '@src/v1Components/Designs/Triple yin yang/TyyAnimate';
+import TyyComponent from '@src/v1Components/Designs/Triple yin yang/TyyComponent';
 
-import container from './container.module.css'
+import container from '@src/v1Components/Designs/Container/container.module.css'
 
 function ContainerComponent() {
 	return (

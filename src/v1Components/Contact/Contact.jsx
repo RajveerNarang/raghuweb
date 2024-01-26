@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import {SiGmail, SiWhatsapp, SiDiscord} from 'react-icons/si'
 import {FaLinkedin, FaInstagram} from 'react-icons/fa'
 
-import contact from './contact.module.css'
+import contact from '@src/v1Components/Contact/contact.module.css'
 
 function Contact() {
 	const [widthDimension, setWidthDimension] = useState(null)

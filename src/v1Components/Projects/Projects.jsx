@@ -1,9 +1,9 @@
 import React from 'react'
-import Block from './Block'
-import CssDesigns from './CssDesigns'
-import CssShapes from './CssShapes'
+import Block from '@src/v1Components/Projects/Block'
+import CssDesigns from '@src/v1Components/Projects/CssDesigns'
+import CssShapes from '@src/v1Components/Projects/CssShapes'
 
-import projects from './projects.module.css'
+import projects from '@src/v1Components/Projects/projects.module.css'
 
 function Projects() {
 	return (
