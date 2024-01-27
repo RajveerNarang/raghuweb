@@ -15,7 +15,7 @@ const DesktopNav = () => {
 				<Button 
 					name={'Home'} 
 					iconClass={faHome}
-					addClass={`${isActive(location, '/') ? styles.active: null }`}
+					addClass={`${isActive(location, '/') ? styles.active: '' }`}
 				/>
 			</Link>
 		</div>
@@ -24,28 +24,28 @@ const DesktopNav = () => {
 				<Button 
 					name={'About'} 
 					iconClass={faUser}
-					addClass={`${isActive(location, '/about') ? styles.active: null }`}
+					addClass={`${isActive(location, '/about') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/contact`}>
 				<Button 
 					name={'Contact'} 
 					iconClass={faAddressCard}
-					addClass={`${isActive(location, '/contact') ? styles.active: null }`}
+					addClass={`${isActive(location, '/contact') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/skills`}>
 				<Button 
 					name={'Skills'} 
 					iconClass={faGears}
-					addClass={`${isActive(location, '/skills') ? styles.active: null }`}
+					addClass={`${isActive(location, '/skills') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/projects`}>
 				<Button 
 					name={'Projects'} 
 					iconClass={faCode}
-					addClass={`${isActive(location, '/projects') ? styles.active: null }`}
+					addClass={`${isActive(location, '/projects') ? styles.active: '' }`}
 				/>
 			</Link>
 		</div>

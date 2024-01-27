@@ -31,7 +31,7 @@ const MobileNav = () => {
 					<Button 
 						name={'Home'} 
 						iconClass={faHome} 
-						addClass={`${isActive(location, '/') ? styles.active: null }`} 
+						addClass={`${isActive(location, '/') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -40,7 +40,7 @@ const MobileNav = () => {
 					<Button 
 						name={'About'} 
 						iconClass={faUser} 
-						addClass={`${isActive(location, '/about') ? styles.active: null }`} 
+						addClass={`${isActive(location, '/about') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -49,7 +49,7 @@ const MobileNav = () => {
 					<Button 
 						name={'Contact'} 
 						iconClass={faAddressCard} 
-						addClass={`${isActive(location, '/contact') ? styles.active: null }`} 
+						addClass={`${isActive(location, '/contact') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -58,7 +58,7 @@ const MobileNav = () => {
 					<Button 
 						name={'Skills'} 
 						iconClass={faGears} 
-						addClass={`${isActive(location, '/skills') ? styles.active: null }`} 
+						addClass={`${isActive(location, '/skills') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -67,7 +67,7 @@ const MobileNav = () => {
 					<Button 
 						name={'Projects'} 
 						iconClass={faCode} 
-						addClass={`${isActive(location, '/projects') ? styles.active: null }`} 
+						addClass={`${isActive(location, '/projects') ? styles.active: '' }`} 
 					/>
 			</Link>
 		</div>

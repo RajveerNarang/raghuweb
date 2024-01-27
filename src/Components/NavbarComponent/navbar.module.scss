@@ -2,7 +2,15 @@
 
 .navbar {
     position: fixed;
+	top: 0;
+	z-index: 999;
     width: 100vw;
+	
+	@include media-md {
+		height: 12vh;
+	}
+	
+	background-color: $dark-secondary;
 	
 	display: flex;
 	justify-content: space-between;
@@ -17,7 +25,7 @@
 
 		.rotate0 {
 			font-size: 1.5rem;
-			animation: revRotateToX 0.8s ease-in-out backwards;
+			animation: revRotateToX 0.8s ease-in-out forwards;
 		}
 		.rotate45 {
 			font-size: 1.5rem;

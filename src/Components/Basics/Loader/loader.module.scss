@@ -5,9 +5,7 @@
 	height: 100vh;
 	width: 100vw;
 	display: flex;
-	// flex-flow: column nowrap;
 	justify-content: center;
-	// align-content: center;
 	align-items: center;
 	scale: 5;
 
@@ -24,17 +22,17 @@
 	.dbl_spin__1 {
 		height: 2rem;
 		width: 2rem;
-		border-top: 0.25rem solid $dark-primary-hover;
-		border-left: 0.25rem solid $dark-primary-hover;
-		animation: dblspin 1.8s linear infinite;
+		border-top: 0.15rem solid $dark-primary-hover;
+		border-left: 0.15rem solid $dark-primary-hover;
+		animation: dblspin 2s linear infinite;
 	}
 
 	.dbl_spin__2 {
 		height: 3rem;
 		width: 3rem;
-		border-bottom: 0.25rem solid $dark-primary;
-		border-left: 0.25rem solid $dark-primary;
-		animation: dblspin2 1.2s linear infinite;
+		border-bottom: 0.2rem solid $dark-primary;
+		border-left: 0.2rem solid $dark-primary;
+		animation: dblspin2 1.5s linear infinite;
 	}
 }
 
