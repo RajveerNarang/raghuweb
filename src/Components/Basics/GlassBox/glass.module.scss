@@ -3,7 +3,7 @@
 .container {
 	position: relative;
 	background-color: $dark-glasseffect;
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(0.1rem);
 	margin: 0.5rem;
 
 	color: $dark-text;
@@ -11,5 +11,6 @@
 	border-radius: 1rem;
 	padding: 1rem;
 
-	min-width: 25dvw;
+	min-width: 25vw;
+	z-index: 99;
 }

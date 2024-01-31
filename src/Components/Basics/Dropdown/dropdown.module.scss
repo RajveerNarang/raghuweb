@@ -1,0 +1,21 @@
+@import '@src/index.scss';
+
+
+.dropdownContainer {
+	background-color: red;
+}
+.dropdownBtn {
+	background-color: transparent;
+	color: $dark-text;
+	
+	border-radius: 0.5rem;
+	box-shadow: 0px 0px 2rem $dark-accent, inset 0 0 0 0.1rem $dark-primary;
+}
+
+.dropdownContent {
+	background-color: $dark-primary;
+	color: $dark-text;
+	
+	border-radius: 0.5rem;
+	box-shadow: 0px 0px 2rem $dark-accent, inset 0 0 0 0.1rem $dark-primary;
+}

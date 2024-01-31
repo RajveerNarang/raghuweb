@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 import home from '@src/v1Components/Home/home.module.css'
-import Stars from '@src/v1Components/Home/Stars'
+import Stars from '@components/Basics/Canvas/Stars'
 
 function Home() {
 	return (

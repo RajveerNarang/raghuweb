@@ -49,9 +49,9 @@
 		// color: $dark-text; // Icon color
 
 		transition: color 0s ease-in-out;
-		&:hover {
-			color: $dark-primary-hover;
-		}
+		// &:hover {
+		// 	color: $dark-primary-hover;
+		// }
 		
 		@include media-ssm {
 			font-size: 1.1rem;
