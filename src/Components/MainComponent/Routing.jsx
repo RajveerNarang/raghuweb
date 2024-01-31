@@ -8,9 +8,9 @@ const Contact = lazy(() => import('@components/ContactComponent/Contact'))
 const Skills = lazy(() => import('@components/SkillsComponent/Skills'))
 const Projects = lazy(() => import('@components/ProjectsComponent/Projects'))
 
-const Routing = ({ addStyle }) => {
+const Routing = ({ addClass }) => {
   return (
-	<div style={{...addStyle}}>
+	<div className={addClass}>
 		<Routes>
 			<Route path='' 
 				element={

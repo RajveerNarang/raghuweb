@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-// import styles from './main.module.scss'
+import styles from '@components/MainComponent/main.module.scss'
 
 const Navbar = lazy(() => import('@components/NavbarComponent/Navbar'))
 const Routing = lazy(() => import('@components/MainComponent/Routing'))
@@ -8,10 +8,10 @@ const Routing = lazy(() => import('@components/MainComponent/Routing'))
 function Main() {
 
   return (
-	<>
+	<main className={styles.container}>
     <Navbar />
-    <Routing addStyle={{paddingTop: '12vh'}} />
-  </>
+    <Routing addClass={styles.router} />
+  </main>
   )
 }
 
