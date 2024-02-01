@@ -2,20 +2,36 @@
 
 
 .dropdownContainer {
-	background-color: red;
+	// background-color: red;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 .dropdownBtn {
 	background-color: transparent;
 	color: $dark-text;
+	width: 100%;
+	text-align: center;
 	
 	border-radius: 0.5rem;
-	box-shadow: 0px 0px 2rem $dark-accent, inset 0 0 0 0.1rem $dark-primary;
+	box-shadow: 0 0 2rem $dark-accent, inset 0 0 0 0.1rem $dark-primary;
+	padding: 0.5rem 1rem;
 }
 
 .dropdownContent {
+	position: relative;
+	display: none;
 	background-color: $dark-primary;
 	color: $dark-text;
 	
-	border-radius: 0.5rem;
-	box-shadow: 0px 0px 2rem $dark-accent, inset 0 0 0 0.1rem $dark-primary;
+	border-radius: 0 0 0.5rem 0.5rem;
+	box-shadow: 0 0.2rem 2rem $dark-accent, inset 0 0 0 0.1rem $dark-primary;
+	width: 98%;
+	padding: 1rem;
+}
+
+.active {
+	display: block;
 }

@@ -9,7 +9,6 @@ const About = () => {
   return (
 	<div className={`${styles.container}`}>
     <Dropdown data={aboutData.titles} />
-    {/* <Dropdown title='About2' /> */}
   </div>
   )
 }
