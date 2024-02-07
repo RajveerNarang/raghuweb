@@ -1,0 +1,56 @@
+// Navbar
+@keyframes rotateToX {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes revRotateToX {
+	0% {
+		transform: rotate(135deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+// Home
+@keyframes bounce {
+	0% {
+		transform: translateY(-15rem);
+	}
+	20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-2rem);
+	}
+	70% {
+		transform: translateY(-1rem);
+	}
+	90% {
+		transform: translateY(-0.5rem);
+	}
+}
+
+// Loader
+@keyframes dblSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-720deg);
+	}
+}
+
+@keyframes dblSpin2 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

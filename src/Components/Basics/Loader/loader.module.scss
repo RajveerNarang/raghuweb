@@ -27,7 +27,7 @@
 		width: 2rem;
 		border-top: 0.15rem solid $dark-primary-hover;
 		border-left: 0.15rem solid $dark-primary-hover;
-		animation: dblspin 2s linear infinite;
+		animation: dblSpin 2s linear infinite;
 	}
 
 	.dbl_spin__2 {
@@ -35,25 +35,8 @@
 		width: 3rem;
 		border-bottom: 0.2rem solid $dark-primary;
 		border-left: 0.2rem solid $dark-primary;
-		animation: dblspin2 1.5s linear infinite;
+		animation: dblSpin2 1.5s linear infinite;
 	}
 }
 
-@keyframes dblspin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-720deg);
-	}
-}
-
-@keyframes dblspin2 {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
 

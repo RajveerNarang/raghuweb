@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Dropdown from '@components/Basics/Dropdown/Dropdown'
 import styles from '@components/AboutComponent/about.module.scss'
@@ -6,10 +6,22 @@ import styles from '@components/AboutComponent/about.module.scss'
 import aboutData from '@json/about.json'
 
 const About = () => {
+	const [openIndex, setOpenIndex] = useState(null)
+  
+	const toggleDropdown = (index) => {
+	  setOpenIndex(openIndex === index ? null : index)
+	}
   return (
-	<div className={`${styles.container}`}>
-    <Dropdown data={aboutData.titles} />
-  </div>
+    <div className={`${styles.container}`}>
+      {aboutData ? aboutData.titles.map((titles, index) => (
+        <Dropdown 
+          key={index} 
+          title={titles.title} 
+          content={titles.content}
+          isOpen={openIndex === index} 
+          toggleDropdown={() => toggleDropdown(index)} />
+      )) : null}
+    </div>
   )
 }
 

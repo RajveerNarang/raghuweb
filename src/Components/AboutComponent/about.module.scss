@@ -1,8 +1,14 @@
-.container {
-	display: grid;
-	grid-template-columns: 50%;
+@import '@src/index.scss';
 
+.container {
 	position: relative;
 	top: 10rem;
-	left: 1rem;
+
+	display: grid;
+	grid-template-columns: 100%;
+
+	@include media-md {
+		grid-template-columns: 50% 50%;
+	}
+
 }
