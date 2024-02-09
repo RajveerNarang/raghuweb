@@ -17,7 +17,7 @@ const About = () => {
         <Dropdown 
           key={index} 
           title={titles.title} 
-          content={titles.content}
+          data={titles.data}
           isOpen={openIndex === index} 
           toggleDropdown={() => toggleDropdown(index)} />
       )) : null}

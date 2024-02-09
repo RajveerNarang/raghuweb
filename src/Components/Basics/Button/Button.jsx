@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 // import { useMediaQuery } from 'react-responsive'
 
-const Button = ({name, iconClass, onClick, addClass}) => {
+const Button = (props) => {
   
+  const {name, iconClass, onClick, addClass} = props
+
   return (
-    <button className={`${styles.btn} ${styles.btn__responsive} ${addClass}`} onClick={onClick}>
-      {iconClass && <FontAwesomeIcon icon={iconClass} className={`${styles.icon}`} />}
-      {name && <span className={`${styles.text}`}>{name}</span>}
+    <button className={`${styles.btn} ${styles.btn__responsive} ${addClass}`} onClick={onClick} >
+      {iconClass ? <FontAwesomeIcon icon={iconClass} className={`${styles.icon}`} /> : null}
+      {name ? <span className={`${styles.text}`}>{name}</span> : null}
     </button>
   )
 }
@@ -28,5 +30,6 @@ Button.propTypes = {
     PropTypes.array
   ]),
 };
+
 
 export default Button

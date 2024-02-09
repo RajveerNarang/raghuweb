@@ -28,8 +28,9 @@
 	}
 
 	.dropdownContent {
-		position: absolute;
-		top: 2.3rem;
+		position: relative;
+		// top: 2.3rem;
+		width: 98%;
 
 		color: $dark-text;
 		background-color: $dark-secondary;
@@ -40,26 +41,30 @@
 					-0.1rem 0 0.5rem $dark-accent, 
 					0.1rem 0 0.5rem $dark-accent, 
 					inset 0 0 0 0.1rem $dark-primary;
-		width: 48%;
+		
 		padding: 1rem;
 		z-index: 70;
 	}
 }
 
 .slideDownAnimation {
-	animation: SlideDown 0.3s ease-in-out forwards;
+	animation: SlideDown 0.5s ease-in-out forwards;
+	pointer-events: auto;
 }
 .slideUpAnimation {
 	animation: SlideUp 0.3s ease-in-out forwards;
+	pointer-events: none;
 }
 
 @keyframes SlideDown {
 	0% {
 		opacity: 0;
-		transform: translateY(-1rem);
+		height: 0;
+		transform: translateY(-0.1rem);
 	}
 	100% {
 		opacity: 1;
+		height: fit-content;
 		transform: translateY(0);
 	}
 }
@@ -67,10 +72,12 @@
 @keyframes SlideUp {
 	0% {
 		opacity: 1;
+		height: fit-content;
 		transform: translateY(0);
 	}
 	100% {
 		opacity: 0;
-		transform: translateY(-1rem);
+		height: 0;
+		transform: translateY(-0.1rem);
 	}
 }

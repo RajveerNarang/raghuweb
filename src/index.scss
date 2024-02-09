@@ -16,16 +16,6 @@ body {
 	height: 100%;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
 		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
@@ -39,4 +29,19 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+ul, ol {
+	list-style-type: none;
 }

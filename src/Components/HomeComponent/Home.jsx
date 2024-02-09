@@ -4,7 +4,8 @@ import styles from '@components/HomeComponent/home.module.scss'
 import GlassCard from '@components/Basics/GlassBox/GlassCard'
 import Header from '@components/Basics/Variables/Header'
 import Paragraph from '@components/Basics/Variables/Paragraph'
-import List from '@components/Basics/Variables/List'
+import OrderedList from '@components/Basics/Variables/OrderedList'
+import UnorderedList from '@components/Basics/Variables/UnorderedList'
 import Stars from '@components/Basics/Canvas/Stars'
 
 import homeData from '@json/home.json'
@@ -17,8 +18,8 @@ const Home = () => {
       <Header text={homeData.header} level={1} />
       <Paragraph content={homeData.content} />
       <div className={styles.list_group}>
-        <List lists={homeData.lists} type={'u'} additionalClass={`${styles.list_item} ${styles.list_style_none}`}/>
-        <List lists={homeData.lists} type={'o'} additionalClass={styles.list_item}/>
+        <OrderedList lists={homeData.lists} additionalClass={`${styles.list_item}`}/>
+        <UnorderedList lists={homeData.lists} additionalClass={styles.list_item}/>
       </div>
       <Paragraph content={homeData.content} />
     </GlassCard>

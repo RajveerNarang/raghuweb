@@ -2,19 +2,36 @@
 	"titles": [
 		{
 			"title": "Resume",
-			"content": "Lorem ipsum dolor sit, amet consectetur adipisicing elite. Recusandae dolores, quidem animi saepe nihil nobis aliquid fuga, atque aut blanditiis accusamus consequatur maiores dolorem modi labore, expedita velit. Nesciunt, accusantium. Quisquam ad, cupiditate exercitationem magnam laboriosam esse, dicta adipisci sint recusandae aliquam dolore quia consectetur in quasi ullam sequi voluptatem suscipit tempora vel dignissimos harum. Debitis, illo amet. Omnis, officiis. Repellendus placeat tenetur, distinctio voluptatem quis asperiores excepturi"
+			"data": {
+				"name": "Download",
+				"path": "/public/Files/Raghunandan_Sharma_Resume.pdf"
+			}
 		},
 		{
 			"title": "Qualification",
-			"content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni?"
+			"data": {
+				"content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni?"
+			}
 		},
 		{
 			"title": "Interests",
-			"content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni?"
+			"data": {
+				"lists": [
+					{ "text": "List 1" },
+					{ "text": "List 2" },
+					{ "text": "List 3" }
+				]
+			}
 		},
 		{
 			"title": "Certifications",
-			"content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni?"
+			"data": {
+				"lists": [
+					{ "text": "List 1" },
+					{ "text": "List 2" },
+					{ "text": "List 3" }
+				]
+			}
 		}
 	]
 }
