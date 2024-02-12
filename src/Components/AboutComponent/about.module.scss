@@ -9,8 +9,9 @@
 
 	@include media-md {
 		grid-template-columns: repeat(2, 1fr);
-		column-gap: 0.5rem;
-		row-gap: 0.5rem;
+		grid-template-rows: 0fr;
+		transition: grid-template-rows 0.5s ease-in-out;
+		gap: 1.5rem;
 	}
 
 }

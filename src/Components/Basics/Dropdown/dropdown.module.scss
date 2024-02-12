@@ -2,13 +2,12 @@
 
 
 .container {
-	// background-color: red;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
 
-	margin: 0.2rem 0.7rem;
+	// margin: 0.2rem 0.7rem;
 	
 	.dropdownBtn {
 		background-color: transparent;
@@ -24,7 +23,7 @@
 					-0.3rem 0 0.5rem $dark-accent, 
 					inset 0 0 0 0.1rem $dark-primary;
 		padding: 0.5rem 1rem;
-		z-index: 69;
+		z-index: 70;
 	}
 
 	.dropdownContent {
@@ -43,41 +42,21 @@
 					inset 0 0 0 0.1rem $dark-primary;
 		
 		padding: 1rem;
-		z-index: 70;
+		z-index: 69;
+		opacity: 1;
+		
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease-out;
 	}
 }
 
 .slideDownAnimation {
-	animation: SlideDown 0.5s ease-in-out forwards;
+	animation: SlideDown 1.5s ease-in-out forwards;
 	pointer-events: auto;
+	
 }
 .slideUpAnimation {
-	animation: SlideUp 0.3s ease-in-out forwards;
+	animation: SlideUp 1.5s ease-in-out forwards;
 	pointer-events: none;
-}
-
-@keyframes SlideDown {
-	0% {
-		opacity: 0;
-		height: 0;
-		transform: translateY(-0.1rem);
-	}
-	100% {
-		opacity: 1;
-		height: fit-content;
-		transform: translateY(0);
-	}
-}
-
-@keyframes SlideUp {
-	0% {
-		opacity: 1;
-		height: fit-content;
-		transform: translateY(0);
-	}
-	100% {
-		opacity: 0;
-		height: 0;
-		transform: translateY(-0.1rem);
-	}
 }
