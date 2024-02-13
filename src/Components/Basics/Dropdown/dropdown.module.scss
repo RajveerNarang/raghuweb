@@ -6,8 +6,7 @@
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-
-	// margin: 0.2rem 0.7rem;
+	margin: 0.5rem 1.5rem;
 	
 	.dropdownBtn {
 		background-color: transparent;
@@ -28,7 +27,6 @@
 
 	.dropdownContent {
 		position: relative;
-		// top: 2.3rem;
 		width: 98%;
 
 		color: $dark-text;
@@ -49,12 +47,15 @@
 		overflow: hidden;
 		transition: max-height 0.5s ease-out;
 	}
+
+	.marginTop_1 {
+		margin-top: 1rem;
+	}
 }
 
 .slideDownAnimation {
 	animation: SlideDown 1.5s ease-in-out forwards;
 	pointer-events: auto;
-	
 }
 .slideUpAnimation {
 	animation: SlideUp 1.5s ease-in-out forwards;

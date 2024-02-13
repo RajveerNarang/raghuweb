@@ -8,10 +8,8 @@
 	grid-template-columns: 1fr;
 
 	@include media-md {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 0fr;
-		transition: grid-template-rows 0.5s ease-in-out;
-		gap: 1.5rem;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5rem;
 	}
 
 }
