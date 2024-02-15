@@ -1,9 +1,11 @@
+@import '@src/index.scss';
+
 .container {
 	display: flex;
 	flex-direction: column;
 
-	width: 100vw;
-	height: 100vh;
+	width: $width-vw-100;
+	height: $height-vh-100;
 }
 .router {
 	flex-grow: 1;

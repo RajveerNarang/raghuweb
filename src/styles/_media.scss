@@ -1,52 +1,42 @@
-// _media-queries.scss
-
-$breakpoint-ssm: 300px;
-$breakpoint-sm: 576px;
-$breakpoint-md: 767px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-$breakpoint-xxl: 1440px;
-$breakpoint-xxxl: 1920px;
-
 // Define reusable media queries
 @mixin media-ssm {
-  @media (min-width: $breakpoint-ssm) {
+  @media screen and (width > $breakpoint-ssm) {
     @content;
   }
 }
 
 @mixin media-sm {
-  @media (min-width: $breakpoint-sm) {
+  @media screen and (width > $breakpoint-sm) {
     @content;
   }
 }
 
 @mixin media-md {
-  @media (min-width: $breakpoint-md) {
+  @media screen and (width > $breakpoint-md) {
     @content;
   }
 }
 
 @mixin media-lg {
-  @media (min-width: $breakpoint-lg) {
+  @media screen and (width > $breakpoint-lg) {
     @content;
   }
 }
 
 @mixin media-xl {
-  @media (min-width: $breakpoint-xl) {
+  @media screen and (width > $breakpoint-xl) {
     @content;
   }
 }
 
 @mixin media-xxl {
-  @media (min-width: $breakpoint-xxl) {
+  @media screen and (width > $breakpoint-xxl) {
     @content;
   }
 }
 
 @mixin media-xxxl {
-  @media (min-width: $breakpoint-xxxl) {
+  @media screen and (width > $breakpoint-xxxl) {
     @content;
   }
 }

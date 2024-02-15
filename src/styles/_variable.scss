@@ -9,12 +9,14 @@ $dark-text: #ecf0f1;
 $dark-primary-hover: #ff7c00;
 $placeholder: #888888;
 
-
-// Responsive Breakpoints
+// Breakpoints
+$breakpoint-ssm: 300px;
 $breakpoint-sm: 576px;
-$breakpoint-md: 768px;
+$breakpoint-md: 767px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+$breakpoint-xxl: 1440px;
+$breakpoint-xxxl: 1920px;
 
 // Font Sizes in rem
 $base-font-size: 16px;
@@ -24,18 +26,13 @@ $font-size-lg: 1.25rem; // 20px
 $font-size-xl: 1.5rem; // 24px
 $font-size-xxl: 2rem; // 32px
 
-// Spacing in rem
-$spacing-unit: 1rem;
-$spacing-half: 0.5rem;
-$spacing-double: 2rem;
-
-// Z-Index
-$z-index-modal: 1000;
-$z-index-overlay: 900;
-$z-index-default: 1;
-
-// Shadows
-$box-shadow-default: 0 0 0.2rem #0000001a;
-
 // Border Radius
 $border-radius: 0.25rem;
+
+// vw width and height
+$width-vw-100: 100vw;
+$height-vh-100: 100vh;
+$width-vw-50: calc($width-vw-100 / 2);
+$height-vh-50: calc($height-vh-100 / 2);
+$width-vw-25: calc($width-vw-100 / 4);
+$height-vh-25: calc($height-vh-100 / 4);
