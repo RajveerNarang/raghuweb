@@ -2,10 +2,9 @@
 
 .load {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	// height: 100vh;
-	// width: 100vw;
+	top: $perc-50;
+	left: $perc-50;
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,7 +18,7 @@
 		display: block;
 		margin: auto;
 		border: 3px solid transparent;
-		border-radius: 50%;
+		border-radius: $perc-50;
 	}
 
 	.dbl_spin__1 {

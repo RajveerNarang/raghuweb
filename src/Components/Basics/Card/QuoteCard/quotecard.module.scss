@@ -3,7 +3,7 @@
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
-	// font-style: italic;
+	
 	font: {
 		style: italic;
 		weight: 300;
@@ -14,7 +14,7 @@
 	}
 	
 	.authorContent {
-		margin-right: 1rem;
+		margin-right: $spacing;
 		align-self: flex-end;
 	}
 }

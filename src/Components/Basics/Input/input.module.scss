@@ -3,7 +3,7 @@
 .container {
 	position: relative;
 
-	min-width: 25%;
+	min-width: $perc-25;
   
 	&.focused {
 	  label {
@@ -17,27 +17,26 @@
 	label {
 	  position: absolute;
 	  top: 0;
-	  left: 0.5rem;
+	  left: $spacing-half;
 	  padding: 0 0.2rem;
 	  color: $dark-text;
-	  font-size: 1rem;
+	  font-size: $size;
 	  pointer-events: none;
 	  transition: all 0.3s ease;
 	  z-index: 2;
 	}
   
 	.input {
-	  width: 100%;
+	  width: $perc-100;
 	  padding: 0.3rem;
-	//   border: 1px solid $dark-text;
+	  
 	  border: {
 		width: 0 0 1px 5px;
 		color: transparent transparent $dark-primary $dark-primary ;
 		style: solid;
 	  };
 	  
-	//   border-radius: 0.35rem;
-	  font-size: 0.9rem;
+	  font-size: $size;
 	  transition: border-color 0.3s ease;
 	  outline: none;
 	  background-color: transparent;

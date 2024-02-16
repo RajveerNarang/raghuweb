@@ -10,7 +10,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	padding: 1rem;
+	padding: $spacing;
 
 	.left {
 		display: flex;
@@ -18,11 +18,11 @@
 		transition: transform 10s ease-in-out;
 
 		.rotate0 {
-			font-size: 1.5rem;
+			font-size: $size-half;
 			animation: revRotateToX 0.8s ease-in-out forwards;
 		}
 		.rotate45 {
-			font-size: 1.5rem;
+			font-size: $size-half;
 			animation: rotateToX 0.9s ease-in-out forwards;
 		}
 		
@@ -70,7 +70,8 @@
 		background-color: $dark-text;
 
 		&:hover {
-			box-shadow: 0 0 1rem 0.1rem $dark-accent, inset 0 0 0 0.1rem $dark-accent;
+			box-shadow: 0 0 1rem 0.1rem $dark-accent, 
+						inset 0 0 0 0.1rem $dark-accent;
 		    color: $dark-accent;
 		}
 	}

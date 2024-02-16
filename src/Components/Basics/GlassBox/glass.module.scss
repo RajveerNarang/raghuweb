@@ -4,13 +4,13 @@
 	position: relative;
 	background-color: $dark-glasseffect;
 	backdrop-filter: blur(0.1rem);
-	margin: 0.5rem;
+	margin: $spacing-half;
 
 	color: $dark-text;
 	box-shadow: inset 0 0 1rem 0.2rem $dark-accent;
-	border-radius: 1rem;
-	padding: 1rem;
+	border-radius: $size;
+	padding: $spacing;
 
-	min-width: 25vw;
+	min-width: $width-vw-25;
 	z-index: 99;
 }

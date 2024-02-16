@@ -6,7 +6,7 @@
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-	margin: 0.5rem 1.5rem;
+	margin: $spacing-half $spacing-one-half;
 	
 	.dropdownBtn {
 		background-color: transparent;
@@ -15,49 +15,49 @@
 		text-align: center;
 		cursor: pointer;
 		
-		border-radius: 0.5rem;
+		border-radius: $size-half;
 		box-shadow: 0 -0.3rem 0.5rem $dark-accent,
 					0.3rem 0 0.5rem $dark-accent,
 					0 0.3rem 0.5rem $dark-accent,
 					-0.3rem 0 0.5rem $dark-accent, 
 					inset 0 0 0 0.1rem $dark-primary;
-		padding: 0.5rem 1rem;
+		padding: $spacing-half $spacing;
 		z-index: 70;
 	}
 
 	.dropdownContent {
 		position: relative;
-		width: 98%;
+		width: calc($perc-100 - $spacing);
 
 		color: $dark-text;
 		background-color: $dark-secondary;
 		
-		border-radius: 0 0 0.5rem 0.5rem;
+		border-radius: 0 0 $size $size;
 		box-shadow: 0 -0.1rem 0.5rem $dark-primary,
 					0 0.3rem 0.5rem $dark-accent, 
 					-0.1rem 0 0.5rem $dark-accent, 
 					0.1rem 0 0.5rem $dark-accent, 
 					inset 0 0 0 0.1rem $dark-primary;
 		
-		padding: 1rem;
+		padding: $spacing;
 		z-index: 69;
 		opacity: 1;
 		
 		max-height: 0;
-		overflow: hidden;
+		overflow: hidden scroll;
 		transition: max-height 0.5s ease-out;
 	}
 
 	.marginTopAnim {
-		margin-top: 1rem;
+		margin-top: $size;
 	}
 }
 
 .slideDownAnimation {
-	animation: SlideDown 1.5s ease-in-out forwards;
+	animation: slideDown 1.5s ease-in-out forwards;
 	pointer-events: auto;
 }
 .slideUpAnimation {
-	animation: SlideUp 1.5s ease-in-out forwards;
+	animation: slideUp 1.5s ease-in-out forwards;
 	pointer-events: none;
 }

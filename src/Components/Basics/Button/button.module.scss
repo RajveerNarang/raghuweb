@@ -7,12 +7,12 @@
 	align-items: center;
 	justify-content: center;
 
-	min-width: 2rem;
-	min-height: 2rem;
+	min-width: $size-double;
+	min-height: $size-double;
 	cursor: pointer;
 	border: none;
 	outline: none;
-	padding: 0.5rem 0.5rem;
+	padding: $spacing-half ;
 	transition: background-color 0.3s ease-in-out,
 				box-shadow 0.3s ease-in-out,
 				color 0.3s ease-in-out;
@@ -27,38 +27,34 @@
 	&__responsive {
 		background-color: $dark-primary;
 		color: $dark-text;
-		border-radius: 50%;
+		border-radius: $perc-50;
 		
 		@include media-ssm {
-			width: 3rem;
-			height: 3rem;
+			width: calc($size * 3);
+			height: calc($size * 3);
 		}
 		@include media-sm {
-			width: 2.5rem;
-			height: 2.5rem;
+			width: calc($size * 2.5);
+			height: calc($size * 2.5);
 		}
 		@include media-md {
 			width: fit-content;
 			height: fit-content;
-			border-radius: 0.5rem;
+			border-radius: $size-half;
 		}
 		
 	}
 	.icon {
-		font-size: 1rem; // Adjust the icon size
-		// color: $dark-text; // Icon color
+		font-size: $size-one-half;
 
-		transition: color 0s ease-in-out;
-		// &:hover {
-		// 	color: $dark-primary-hover;
-		// }
+		transition: color ease-in-out;
 		
-		@include media-ssm {
-			font-size: 1.1rem;
+		@include media-sm {
+			font-size: $size;
 		}
 
 		@include media-xxl {
-			font-size: 2rem;
+			font-size: $size-double;
 		}
 	}
 	.text {
@@ -67,13 +63,13 @@
 		}
 		@include media-md {
 			display: inline-block;
-			font-size: 1rem;
+			font-size: $size;
 			padding: 0.1rem 0.3rem 0;
 			text-decoration: none;
 		}
 		
 		@include media-xxl {
-			font-size: 2rem;
+			font-size: $size-double
 		}
 	}
 }

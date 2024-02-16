@@ -2,14 +2,25 @@
 
 .container {
 	position: relative;
-	top: 10rem;
+	top: calc($spacing * 8);
 
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+	gap: $spacing-half;
 
 	@include media-md {
-		grid-template-columns: 1fr 1fr;
-		gap: 0.5rem;
+		top: calc($spacing * 10);
 	}
-
 }
+
+::-webkit-scrollbar {
+	// width: calc($size-half / 2);
+	display: none;
+}
+// ::-webkit-scrollbar-track {
+// 	margin-block: $spacing;
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background: $dark-primary;
+// 	border-radius: $size;
+// }

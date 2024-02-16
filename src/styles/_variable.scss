@@ -19,20 +19,28 @@ $breakpoint-xxl: 1440px;
 $breakpoint-xxxl: 1920px;
 
 // Font Sizes in rem
-$base-font-size: 16px;
-$font-size-sm: 0.875rem; // 14px
-$font-size-md: 1rem; // 16px
-$font-size-lg: 1.25rem; // 20px
-$font-size-xl: 1.5rem; // 24px
-$font-size-xxl: 2rem; // 32px
+$size: 1rem;
+$size-half: calc($size / 2);
+$size-quarter: calc($size / 4);
+$size-one-half: calc($size * 1.5);
+$size-double: calc($size * 2);
 
-// Border Radius
-$border-radius: 0.25rem;
+// Margin and Padding in rem
+$spacing: 1rem;
+$spacing-half: calc($spacing / 2);
+$spacing-quarter: calc($spacing / 4);
+$spacing-one-half: calc($spacing * 1.5);
+$spacing-double: calc($spacing * 2);
 
-// vw width and height
+
+// width and height
 $width-vw-100: 100vw;
 $height-vh-100: 100vh;
 $width-vw-50: calc($width-vw-100 / 2);
 $height-vh-50: calc($height-vh-100 / 2);
 $width-vw-25: calc($width-vw-100 / 4);
 $height-vh-25: calc($height-vh-100 / 4);
+
+$perc-100: 100%;
+$perc-50: calc($perc-100 / 2);
+$perc-25: calc($perc-100 / 4);
