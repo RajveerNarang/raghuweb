@@ -13,39 +13,44 @@ const DesktopNav = () => {
 		<div className={`${styles.left}`}> 
 			<Link to={`/`}>
 				<Button 
+					id={'home'}
 					name={'Home'} 
 					iconClass={faHome}
-					addClass={`${isActive(location, '/') ? styles.active: '' }`}
+					additionalClass={`${isActive(location, '/') ? styles.active: '' }`}
 				/>
 			</Link>
 		</div>
 		<div className={`${styles.right}`}>
 			<Link to={`/about`}>
 				<Button 
+					id={'about'}
 					name={'About'} 
 					iconClass={faUser}
-					addClass={`${isActive(location, '/about') ? styles.active: '' }`}
+					additionalClass={`${isActive(location, '/about') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/contact`}>
 				<Button 
+					id={'contact'}
 					name={'Contact'} 
 					iconClass={faAddressCard}
-					addClass={`${isActive(location, '/contact') ? styles.active: '' }`}
+					additionalClass={`${isActive(location, '/contact') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/skills`}>
 				<Button 
+					id={'skills'}
 					name={'Skills'} 
 					iconClass={faGears}
-					addClass={`${isActive(location, '/skills') ? styles.active: '' }`}
+					additionalClass={`${isActive(location, '/skills') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/projects`}>
 				<Button 
+					id={'projects'}
 					name={'Projects'} 
 					iconClass={faCode}
-					addClass={`${isActive(location, '/projects') ? styles.active: '' }`}
+					additionalClass={`${isActive(location, '/projects') ? styles.active: '' }`}
 				/>
 			</Link>
 		</div>

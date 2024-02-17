@@ -7,28 +7,34 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   
-  const {name, iconClass, onClick, addClass} = props
+  const {name, id, iconClass, onClick, additionalClass, attr, isRect} = props
 
   return (
-    <button className={`${styles.btn} ${styles.btn__responsive} ${addClass}`} onClick={onClick} >
+    <button id={id} className={`${styles.btn} ${isRect ? styles.btn__rect : styles.btn__responsive } ${additionalClass}`} onClick={onClick} {...attr || null}>
       {iconClass ? <FontAwesomeIcon icon={iconClass} className={`${styles.icon}`} /> : null}
-      {name ? <span className={`${styles.text}`}>{name}</span> : null}
+      {name ? <span className={`${styles.text} ${isRect ? styles.textShow : ''}`}>{name}</span> : null}
     </button>
   )
 }
 
+Button.defaultProps = {
+  isRect: false
+}
+
 Button.propTypes = {
-  iconClass: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
+  iconClass: PropTypes.object,
   onClick: PropTypes.oneOfType([
     PropTypes.func,    // Function
     PropTypes.string,  // String (URL)
   ]),
   name: PropTypes.string.isRequired,
-  addClass: PropTypes.oneOfType([
+  additionalClass: PropTypes.oneOfType([
     PropTypes.string, 
     PropTypes.object,
     PropTypes.array
   ]),
+  isRect: PropTypes.bool
 };
 
 

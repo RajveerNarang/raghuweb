@@ -44,6 +44,12 @@
 		}
 		
 	}
+
+	&__rect {
+		border-radius: $size;
+		width: 100vw;
+		height: fit-content;
+	}
 	.icon {
 		font-size: $size-one-half;
 
@@ -53,8 +59,8 @@
 			font-size: $size;
 		}
 
-		@include media-xxl {
-			font-size: $size-double;
+		@include media-md {
+			font-size: $size;
 		}
 	}
 	.text {
@@ -67,9 +73,9 @@
 			padding: 0.1rem 0.3rem 0;
 			text-decoration: none;
 		}
-		
-		@include media-xxl {
-			font-size: $size-double
-		}
+	}
+
+	.textShow {
+		display: block;
 	}
 }

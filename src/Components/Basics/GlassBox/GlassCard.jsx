@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '@components/Basics/GlassBox/glass.module.scss'
 
-const GlassCard = ({ children, additionalClass }) => {
+const GlassCard = (props) => {
+	const { id, children, additionalClass } = props;
   return (
-	<section className={`${styles.container} ${additionalClass}`}>
+	<section id={id} className={`${styles.container} ${additionalClass}`}>
 		{children}
 	</section>
   )
 }
 
 GlassCard.propTypes = {
+  id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 

@@ -25,9 +25,9 @@ const Elements = () => {
   return (
 	<div className={`${styles.container}`}>
 		<div className={`${styles.flex__right}`}>
-			<Button iconClass={faPlus} name={'plus'} onClick={console.log('Plus')} />
-			<Button iconClass={faHome} name={'Home'} onClick={console.log('Home')} />
-			<Button iconClass={faGear} name={'Gear'} onClick={console.log('Gear')} />
+			<Button iconClass={faPlus} id={'plus'} name={'plus'} onClick={console.log('Plus')} />
+			<Button iconClass={faHome} id={'home'} name={'Home'} onClick={console.log('Home')} />
+			<Button iconClass={faGear} id={'gear'} name={'Gear'} onClick={console.log('Gear')} />
 		</div>
 		<div className={`${styles.flex__right}`}>
 			<Input inputType={'text'} labelText={'Name'} inputNameId={'name'} />
@@ -39,7 +39,7 @@ const Elements = () => {
 			</GlassCard> */}
 			
 		{quotesData.map((quoteData, index) => (
-			<GlassCard key={index}>
+			<GlassCard key={index} id={index}>
 				<QuoteCard quote={quoteData.quote} author={quoteData.author} />
 			</GlassCard>
 		))}

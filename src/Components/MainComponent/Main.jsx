@@ -10,7 +10,7 @@ function Main() {
   return (
 	<main className={styles.container}>
     <Navbar />
-    <Routing addClass={styles.router} />
+    <Routing additionalClass={styles.router} />
   </main>
   )
 }
