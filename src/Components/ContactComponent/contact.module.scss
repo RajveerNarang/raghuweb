@@ -1,0 +1,35 @@
+@import '@src/index.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: $width-vw-100;
+	height: $height-vh-100;
+
+	&_child {
+		width: $perc-100;
+
+		@include media-md {
+			width: $width-vw-50;
+			padding: $spacing $spacing-double;	
+		}
+	}
+
+	.items {
+		padding: $spacing-half $spacing;
+		border: 1px solid red;
+		// width: $perc-50;
+		margin: $spacing-half;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.group {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

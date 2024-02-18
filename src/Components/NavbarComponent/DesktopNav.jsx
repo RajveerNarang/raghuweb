@@ -15,7 +15,7 @@ const DesktopNav = () => {
 				<Button 
 					id={'home'}
 					name={'Home'} 
-					iconClass={faHome}
+					iconName={faHome}
 					additionalClass={`${isActive(location, '/') ? styles.active: '' }`}
 				/>
 			</Link>
@@ -25,7 +25,7 @@ const DesktopNav = () => {
 				<Button 
 					id={'about'}
 					name={'About'} 
-					iconClass={faUser}
+					iconName={faUser}
 					additionalClass={`${isActive(location, '/about') ? styles.active: '' }`}
 				/>
 			</Link>
@@ -33,7 +33,7 @@ const DesktopNav = () => {
 				<Button 
 					id={'contact'}
 					name={'Contact'} 
-					iconClass={faAddressCard}
+					iconName={faAddressCard}
 					additionalClass={`${isActive(location, '/contact') ? styles.active: '' }`}
 				/>
 			</Link>
@@ -41,7 +41,7 @@ const DesktopNav = () => {
 				<Button 
 					id={'skills'}
 					name={'Skills'} 
-					iconClass={faGears}
+					iconName={faGears}
 					additionalClass={`${isActive(location, '/skills') ? styles.active: '' }`}
 				/>
 			</Link>
@@ -49,7 +49,7 @@ const DesktopNav = () => {
 				<Button 
 					id={'projects'}
 					name={'Projects'} 
-					iconClass={faCode}
+					iconName={faCode}
 					additionalClass={`${isActive(location, '/projects') ? styles.active: '' }`}
 				/>
 			</Link>
