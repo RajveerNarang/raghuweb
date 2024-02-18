@@ -10,15 +10,11 @@ const Button = (props) => {
   const {name, id, iconClass, onClick, additionalClass, attr, isRect} = props
 
   return (
-    <button id={id} className={`${styles.btn} ${isRect ? styles.btn__rect : styles.btn__responsive } ${additionalClass}`} onClick={onClick} {...attr || null}>
+    <button id={id} className={`${styles.btn} ${styles.btn__responsive } ${additionalClass}`} onClick={onClick} {...attr || null}>
       {iconClass ? <FontAwesomeIcon icon={iconClass} className={`${styles.icon}`} /> : null}
-      {name ? <span className={`${styles.text} ${isRect ? styles.textShow : ''}`}>{name}</span> : null}
+      {name ? <span className={`${styles.text}`}>{name}</span> : null}
     </button>
   )
-}
-
-Button.defaultProps = {
-  isRect: false
 }
 
 Button.propTypes = {
@@ -33,8 +29,7 @@ Button.propTypes = {
     PropTypes.string, 
     PropTypes.object,
     PropTypes.array
-  ]),
-  isRect: PropTypes.bool
+  ])
 };
 
 
