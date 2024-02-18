@@ -25,9 +25,9 @@ const Elements = () => {
   return (
 	<div className={`${styles.container}`}>
 		<div className={`${styles.flex__right}`}>
-			<Button iconClass={faPlus} id={'plus'} name={'plus'} onClick={console.log('Plus')} />
-			<Button iconClass={faHome} id={'home'} name={'Home'} onClick={console.log('Home')} />
-			<Button iconClass={faGear} id={'gear'} name={'Gear'} onClick={console.log('Gear')} />
+			<Button iconName={faPlus} id={'plus'} name={'plus'} onClick={console.log('Plus')} />
+			<Button iconName={faHome} id={'home'} name={'Home'} onClick={console.log('Home')} />
+			<Button iconName={faGear} id={'gear'} name={'Gear'} onClick={console.log('Gear')} />
 		</div>
 		<div className={`${styles.flex__right}`}>
 			<Input inputType={'text'} labelText={'Name'} inputNameId={'name'} />
