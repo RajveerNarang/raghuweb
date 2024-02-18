@@ -1,33 +1,36 @@
 import React from 'react'
 
-import Container from '@components/ContactComponent/Container'
-import GlassCard from '@components/Basics/GlassBox/GlassCard'
-import styles from '@components/ContactComponent/contact.module.scss'
 import { faDiscord, faInstagram, faLinkedin, faWhatsapp, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+import Container from '@components/ContactComponent/Container'
+import GlassCard from '@components/Basics/GlassBox/GlassCard'
+import styles from '@components/ContactComponent/contact.module.scss'
+import contactData from '@json/contact.json'
+
 const Contact = () => {
+
+  const getIcon = (iconName) => {
+    switch (iconName) {
+      case 'faEnvelope': return faEnvelope;
+      case 'faDiscord': return faDiscord;
+      case 'faInstagram': return faInstagram;
+      case 'faLinkedin': return faLinkedin;
+      case 'faWhatsapp': return faWhatsapp;
+      case 'faXTwitter': return faXTwitter;
+      default: return null;
+    }
+  }
+
   return (
 	<div className={`${styles.container}`}>
     <GlassCard id={'contactGlassCard'} additionalClass={`${styles.container_child}`}>
-      <div className={`${styles.items}`}>
-        <Container id={'gmail'} name={'Gmail'} iconName={faEnvelope} />
-      </div>
-      <div className={`${styles.items}`}>
-        <Container id={'whatsapp'} name={'Whatsapp'} iconName={faWhatsapp} />
-      </div>
-      <div className={`${styles.items}`}>
-        <Container id={'linkedin'} name={'LinkedIn'} iconName={faLinkedin} />
-      </div>
-      <div className={`${styles.items}`}>
-        <Container id={'instagram'} name={'Instagram'} iconName={faInstagram} />
-      </div>
-      <div className={`${styles.items}`}>
-        <Container id={'discord'} name={'Discord'} iconName={faDiscord} />
-      </div>
-      <div className={`${styles.items}`}>
-        <Container id={'twitter'} name={'Twitter/X'} iconName={faXTwitter} />
-      </div>
+      {contactData ? contactData.map((item, index) => (
+        <div key={index} className={`${styles.items}`}>
+          <Container id={item.id} name={item.name} iconName={getIcon(item.iconName)} />
+        </div>
+      )): null}
+      
     </GlassCard>
   </div>
   )

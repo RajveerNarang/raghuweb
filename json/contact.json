@@ -1,0 +1,32 @@
+[
+	{
+		"id": "gmail",
+		"name": "Gmail",
+		"iconName": "faEnvelope"
+	},
+	{
+		"id": "whatsapp",
+		"name": "Whatsapp",
+		"iconName": "faWhatsapp"
+	},
+	{
+		"id": "linkedin",
+		"name": "Linkedin",
+		"iconName": "faLinkedin"
+	},
+	{
+		"id": "instagram",
+		"name": "Instagram",
+		"iconName": "faInstagram"
+	},
+	{
+		"id": "discord",
+		"name": "Discord",
+		"iconName": "faDiscord"
+	},
+	{
+		"id": "xtwitter",
+		"name": "X/Twitter",
+		"iconName": "faXTwitter"
+	}
+]

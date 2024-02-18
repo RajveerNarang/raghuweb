@@ -8,7 +8,7 @@ const Container = (props) => {
 	const {name, iconName, id} = props
   return (
 	<div id={id} className={styles.group}>
-		{iconName ? <FontAwesomeIcon icon={iconName} /> : null}
+		{iconName ? <FontAwesomeIcon icon={iconName} className={`${styles.icon}`} /> : null}
 		<span>{name}</span>
 	</div>
   )
