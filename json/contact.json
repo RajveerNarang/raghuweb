@@ -1,32 +1,44 @@
 [
 	{
 		"id": "gmail",
-		"name": "Gmail",
-		"iconName": "faEnvelope"
+		"iconName": "faEnvelope",
+		"data": {
+			"content": "raghunandansharma615@gmail.com"
+		}
 	},
 	{
 		"id": "whatsapp",
-		"name": "Whatsapp",
-		"iconName": "faWhatsapp"
+		"iconName": "faWhatsapp",
+		"data": {
+			"content": "+91 9814101383"
+		}
 	},
 	{
 		"id": "linkedin",
-		"name": "Linkedin",
-		"iconName": "faLinkedin"
+		"iconName": "faLinkedin",
+		"data": {
+			"content": "raghunandan sharma"
+		}
 	},
 	{
 		"id": "instagram",
-		"name": "Instagram",
-		"iconName": "faInstagram"
+		"iconName": "faInstagram",
+		"data": {
+			"content": "rick_lykos"
+		}
 	},
 	{
 		"id": "discord",
-		"name": "Discord",
-		"iconName": "faDiscord"
+		"iconName": "faDiscord",
+		"data": {
+			"content": "Senshi Ryo#6474"
+		}
 	},
 	{
 		"id": "xtwitter",
-		"name": "X/Twitter",
-		"iconName": "faXTwitter"
+		"iconName": "faXTwitter",
+		"data": {
+			"content": "Raghunandan Sharma"
+		}
 	}
 ]

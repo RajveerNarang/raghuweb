@@ -27,7 +27,7 @@ const Contact = () => {
     <GlassCard id={'contactGlassCard'} additionalClass={`${styles.container_child}`}>
       {contactData ? contactData.map((item, index) => (
         <div key={index} className={`${styles.items}`}>
-          <Container id={item.id} name={item.name} iconName={getIcon(item.iconName)} />
+          <Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
         </div>
       )): null}
       

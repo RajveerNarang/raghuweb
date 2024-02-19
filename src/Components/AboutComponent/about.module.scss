@@ -2,7 +2,7 @@
 
 .container {
 	position: relative;
-	top: calc($spacing * 8);
+	top: calc($spacing-double * 2.5);
 
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
