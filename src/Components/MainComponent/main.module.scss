@@ -9,4 +9,5 @@
 }
 .router {
 	flex-grow: 1;
+	height: calc($height-vh-100 - ($spacing-double * 6));
 }

@@ -6,7 +6,6 @@ import Header from '@components/Basics/Variables/Header'
 import Paragraph from '@components/Basics/Variables/Paragraph'
 import OrderedList from '@components/Basics/Variables/OrderedList'
 import UnorderedList from '@components/Basics/Variables/UnorderedList'
-import Stars from '@components/Basics/Canvas/Stars'
 
 import homeData from '@json/home.json'
 import { Link } from 'react-router-dom'
@@ -16,7 +15,6 @@ const Home = () => {
 
   return (
 	<div className={`${styles.container}`}>
-    <Stars limit='275' />
     <GlassCard id={'homeGlassCard'} additionalClass={`${styles.box}`}>
       <Header text={homeData.header} level={1} />
       <Paragraph content={homeData.content} />

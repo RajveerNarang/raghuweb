@@ -10,7 +10,7 @@ $xl-rep: 6;
 	align-items: center;
 
 	width: $width-vw-100;
-	height: $height-vh-100;
+	height: $perc-100;
 
 	.box {
 		width: $width-vw-100;
@@ -48,7 +48,6 @@ $xl-rep: 6;
 
 	.animate {
 		position: absolute;
-		cursor: quote($string: "?");
 
 		&_1 {
 			top: calc($height-vh-50 + ($spacing-double * 4));

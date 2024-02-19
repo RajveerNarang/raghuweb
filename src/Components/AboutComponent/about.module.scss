@@ -9,18 +9,10 @@
 	gap: $spacing-half;
 
 	@include media-md {
-		top: calc($spacing * 10);
+		top: calc($spacing-double * 3);
 	}
 }
 
 ::-webkit-scrollbar {
-	// width: calc($size-half / 2);
 	display: none;
 }
-// ::-webkit-scrollbar-track {
-// 	margin-block: $spacing;
-// }
-// ::-webkit-scrollbar-thumb {
-// 	background: $dark-primary;
-// 	border-radius: $size;
-// }
