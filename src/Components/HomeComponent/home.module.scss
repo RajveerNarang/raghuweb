@@ -51,11 +51,11 @@ $xl-rep: 6;
 		cursor: quote($string: "?");
 
 		&_1 {
-			top: calc($height-vh-50 + ($spacing-double * 3));
+			top: calc($height-vh-50 + ($spacing-double * 4));
 			animation: slideRight 1.5s linear;
 		}
 		&_2 {
-			bottom: calc($height-vh-50 - ($spacing-double * 6));
+			bottom: calc($height-vh-50 - ($spacing-double * 6.5));
 			animation: slideLeft 1.5s linear;
 		}
 		&_3 {
@@ -63,7 +63,7 @@ $xl-rep: 6;
 			animation: slideRight 1.5s linear;
 		}
 		&_4 {
-			bottom: calc($height-vh-50 - ($spacing-double * 10));
+			bottom: calc($height-vh-50 - ($spacing-double * 9.5));
 			animation: slideLeft 1.5s linear;
 		}
 		
