@@ -22,6 +22,7 @@ $xl-rep: 6;
 		@include media-md {
 			width: $width-vw-50;
 			padding: $spacing $spacing-double;	
+			top: calc($spacing-double * -1);
 		}
 	}
 

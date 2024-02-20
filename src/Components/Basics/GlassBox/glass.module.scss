@@ -18,5 +18,6 @@
 
 	@include media-md {
 		top: 0;
+		padding: $spacing $spacing-double;
 	}
 }

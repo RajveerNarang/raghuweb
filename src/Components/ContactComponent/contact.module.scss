@@ -1,6 +1,7 @@
 @import '@src/index.scss';
 
 $rep-md: 1.2;
+$tt-rep: 5;
 
 .container {
 	display: flex;
@@ -9,7 +10,7 @@ $rep-md: 1.2;
 	width: $width-vw-100;
 	height: $perc-100;
 
-	&_child {
+	.box {
 		width: $perc-100;
 		display: flex;
 		align-items: center;
@@ -21,7 +22,7 @@ $rep-md: 1.2;
 
 		@include media-md {
 			width: calc($width-vw-25 * $rep-md);
-			height: calc($height-vh-50 * $rep-md);
+			height: fit-content;
 			padding: $spacing $spacing-double;
 		}
 
@@ -39,7 +40,26 @@ $rep-md: 1.2;
 		border-radius: $size-half;
 		width: calc($perc-100 * (3/4));
 		font-size: $size;
+		position: relative;
+		overflow: hidden;
 		// cursor: pointer;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: calc($size-double * -3);
+			top: 0;
+			width: calc($size-double * $tt-rep);
+			height: 0;
+
+			border-left: $size-double solid transparent;
+			border-right: $size-double solid transparent;
+		
+			border-bottom: $size-half solid $dark-glasseffect;
+			transform: rotateZ(-45deg);
+			
+			box-shadow: 0 $spacing $dark-glasseffect, 0 $spacing-double $dark-glasseffect-inset;
+		}
 
 		@include media-md {
 			width: $perc-100;

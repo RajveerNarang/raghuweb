@@ -3,42 +3,63 @@
 		"id": "gmail",
 		"iconName": "faEnvelope",
 		"data": {
-			"content": "raghunandansharma615@gmail.com"
-		}
-	},
-	{
-		"id": "whatsapp",
-		"iconName": "faWhatsapp",
-		"data": {
-			"content": "+91 9814101383"
+			"content": "raghunandansharma615@gmail.com",
+			"tooltipData": "This is the data",
+			"link": "mailto:raghunandansharma615@gmail.com"
 		}
 	},
 	{
 		"id": "linkedin",
 		"iconName": "faLinkedin",
 		"data": {
-			"content": "raghunandan sharma"
+			"content": "raghunandan sharma",
+			"tooltipData": "This is the data",
+			"link": "https://www.linkedin.com/in/raghunandan-sharma/"
+		}
+	},
+	{
+		"id": "github",
+		"iconName": "faGithub",
+		"data": {
+			"content": "Raghunandan Sharma",
+			"tooltipData": "This is the data",
+			"link": "https://github.com/Raghunandan1451"
+		}
+	},
+	{
+		"id": "whatsapp",
+		"iconName": "faWhatsapp",
+		"data": {
+			"content": "+91 9814101383",
+			"tooltipData": "This is the data",
+			"link": "https://wa.me/9814101383"
 		}
 	},
 	{
 		"id": "instagram",
 		"iconName": "faInstagram",
 		"data": {
-			"content": "rick_lykos"
+			"content": "rick_lykos",
+			"tooltipData": "This is the data",
+			"link": "https://www.instagram.com/rick_lykos/"
 		}
 	},
 	{
 		"id": "discord",
 		"iconName": "faDiscord",
 		"data": {
-			"content": "Senshi Ryo#6474"
+			"content": "Senshi Ryo#6474",
+			"tooltipData": "This is the data",
+			"link": "https://discord.com/users/li3kos"
 		}
 	},
 	{
 		"id": "xtwitter",
 		"iconName": "faXTwitter",
 		"data": {
-			"content": "Raghunandan Sharma"
+			"content": "Raghunandan Sharma",
+			"tooltipData": "This is the data",
+			"link": "https://twitter.com/Rick_lykos"
 		}
 	}
 ]
