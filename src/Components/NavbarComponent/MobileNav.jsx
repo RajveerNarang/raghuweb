@@ -4,7 +4,7 @@ import { faAddressCard, faCode, faGears, faHome, faPlus, faUser } from '@fortawe
 
 import styles from '@components/NavbarComponent/navbar.module.scss'
 import Button from '@components/Basics/Button/Button'
-import { isActive } from '@components/NavbarComponent/utils'
+import { isActive } from '@utils/navbar'
 
 const MobileNav = () => {
 	const [isOpen, setIsOpen] = useState(false)

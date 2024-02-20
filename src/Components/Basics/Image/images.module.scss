@@ -1,0 +1,14 @@
+@import '@src/index.scss';
+
+.image {
+	position: absolute;
+	top: calc($spacing-double * -2);
+
+	border-radius: $perc-50;
+
+	width: calc($size-double * 2.5);
+	height: calc($size-double * 2.5);
+
+	object-fit: cover;
+	box-shadow: 0 0.3rem 1rem 0.1rem $dark-primary;
+}

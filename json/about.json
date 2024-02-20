@@ -1,37 +1,35 @@
-{
-	"titles": [
-		{
-			"title": "Resume",
-			"data": {
-				"name": "Download",
-				"path": "/public/Files/Raghunandan_Sharma_Resume.pdf"
-			}
-		},
-		{
-			"title": "Qualification",
-			"data": {
-				"content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni?"
-			}
-		},
-		{
-			"title": "Interests",
-			"data": {
-				"lists": [
-					{ "text": "List 1" },
-					{ "text": "List 2" },
-					{ "text": "List 3" }
-				]
-			}
-		},
-		{
-			"title": "Certifications",
-			"data": {
-				"lists": [
-					{ "text": "List 1" },
-					{ "text": "List 2" },
-					{ "text": "List 3" }
-				]
-			}
+[
+	{
+		"title": "Resume",
+		"data": {
+			"name": "Download",
+			"path": "/public/Files/Raghunandan_Sharma_Resume.pdf"
 		}
-	]
-}
+	},
+	{
+		"title": "Qualification",
+		"data": {
+			"content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis totam sint excepturi eum voluptatem quas placeat iure debitis alias enim, rem tenetur laudantium a. Ipsa, non aliquid. Cupiditate, accusamus magni?"
+		}
+	},
+	{
+		"title": "Interests",
+		"data": {
+			"lists": [
+				{ "text": "List 1" },
+				{ "text": "List 2" },
+				{ "text": "List 3" }
+			]
+		}
+	},
+	{
+		"title": "Certifications",
+		"data": {
+			"lists": [
+				{ "text": "List 1" },
+				{ "text": "List 2" },
+				{ "text": "List 3" }
+			]
+		}
+	}
+]

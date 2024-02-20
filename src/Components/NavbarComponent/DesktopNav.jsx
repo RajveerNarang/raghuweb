@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { faAddressCard, faCode, faGears, faHome, faPlus, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faAddressCard, faCode, faGears, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '@components/NavbarComponent/navbar.module.scss'
 import Button from '@components/Basics/Button/Button'
-import { isActive } from '@components/NavbarComponent/utils'
+import { isActive } from '@utils/navbar'
 
 const DesktopNav = () => {
 	const location = useLocation()

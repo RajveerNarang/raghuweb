@@ -1,0 +1,102 @@
+[
+	{
+		"name": "HTML",
+		"category": "Frontend"
+	},
+	{
+		"name": "CSS",
+		"category": "Frontend"
+	},
+	{
+		"name": "Sass/Scss",
+		"category": "Frontend"
+	},
+	{
+		"name": "Tailwind CSS",
+		"category": "Frontend"
+	},
+	{
+		"name": "Bootstrap",
+		"category": "Frontend"
+	},
+	{
+		"name": "Javascript",
+		"category": "Frontend"
+	},
+	{
+		"name": "React",
+		"category": "Frontend"
+	},
+	{
+		"name": "NodeJs",
+		"category": "Backend"
+	},
+	{
+		"name": "Java",
+		"category": "Backend"
+	},
+	{
+		"name": "Python",
+		"category": "Backend"
+	},
+	{
+		"name": "ExpressJS",
+		"category": "Backend"
+	},
+	{
+		"name": "MongoDB",
+		"category": "Other"
+	},
+	{
+		"name": "Git",
+		"category": "Other"
+	},
+	{
+		"name": "Figma",
+		"category": "Other"
+	},
+	{
+		"name": "SketchBook",
+		"category": "Other"
+	},
+	{
+		"name": "jQuery",
+		"category": "Other"
+	},
+	{
+		"name": "Postman",
+		"category": "Other"
+	},
+	{
+		"name": "Blender",
+		"category": "Other"
+	},
+	{
+		"name": "Drupal",
+		"category": "Journey"
+	},
+	{
+		"name": "Docker",
+		"category": "Journey"
+	},
+	{
+		"name": "Azure",
+		"category": "Journey"
+	},
+	{
+		"name": "JIRA",
+		"category": "Journey"
+	},
+	{
+		"name": "StoryBook",
+		"category": "Journey"
+	},
+	{
+		"name": "Dimensions",
+		"category": "Journey"
+	},
+	{
+		"name": "Decipher",
+		"category": "Journey"
+	}
+]

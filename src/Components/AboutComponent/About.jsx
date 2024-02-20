@@ -13,7 +13,7 @@ const About = () => {
 	}
   return (
     <div className={`${styles.container}`}>
-      {aboutData ? aboutData.titles.map((titles, index) => (
+      {aboutData ? aboutData.map((titles, index) => (
         <Dropdown 
           key={index} 
           title={titles.title} 
