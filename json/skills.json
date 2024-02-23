@@ -1,102 +1,152 @@
 [
 	{
 		"name": "HTML",
-		"category": "Frontend"
+		"category": "Frontend",
+		"level": 90,
+		"bgColor": "#cdaf00"
 	},
 	{
 		"name": "CSS",
-		"category": "Frontend"
+		"category": "Frontend",
+		"level": 90,
+		"bgColor": "#45ff77"
 	},
 	{
 		"name": "Sass/Scss",
-		"category": "Frontend"
+		"category": "Frontend",
+		"level": 80,
+		"bgColor": "#00ff55"
 	},
 	{
 		"name": "Tailwind CSS",
-		"category": "Frontend"
+		"category": "Frontend",
+		"level": 50,
+		"bgColor": "#ff7700"
 	},
 	{
 		"name": "Bootstrap",
-		"category": "Frontend"
+		"category": "Frontend",
+		"level": 40,
+		"bgColor": "#aaff33"
 	},
 	{
 		"name": "Javascript",
-		"category": "Frontend"
+		"category": "Frontend",
+		"level": 70,
+		"bgColor": "#b0f853"
 	},
 	{
 		"name": "React",
-		"category": "Frontend"
+		"category": "Frontend",
+		"level": 75,
+		"bgColor": "#9372cd"
 	},
 	{
 		"name": "NodeJs",
-		"category": "Backend"
+		"category": "Backend",
+		"level": 85,
+		"bgColor": "#cdaf00"
 	},
 	{
 		"name": "Java",
-		"category": "Backend"
+		"category": "Backend",
+		"level": 65,
+		"bgColor": "#45ff77"
 	},
 	{
 		"name": "Python",
-		"category": "Backend"
+		"category": "Backend",
+		"level": 65,
+		"bgColor": "#00ff55"
 	},
 	{
 		"name": "ExpressJS",
-		"category": "Backend"
+		"category": "Backend",
+		"level": 70,
+		"bgColor": "#ff7700"
 	},
 	{
 		"name": "MongoDB",
-		"category": "Other"
+		"category": "Other",
+		"level": 70,
+		"bgColor": "#cdaf00"
 	},
 	{
 		"name": "Git",
-		"category": "Other"
+		"category": "Other",
+		"level": 90,
+		"bgColor": "#45ff77"
 	},
 	{
 		"name": "Figma",
-		"category": "Other"
+		"category": "Other",
+		"level": 40,
+		"bgColor": "#00ff55"
 	},
 	{
 		"name": "SketchBook",
-		"category": "Other"
+		"category": "Other",
+		"level": 30,
+		"bgColor": "#ff7700"
 	},
 	{
 		"name": "jQuery",
-		"category": "Other"
+		"category": "Other",
+		"level": 70,
+		"bgColor": "#aaff33"
 	},
 	{
 		"name": "Postman",
-		"category": "Other"
+		"category": "Other",
+		"level": 75,
+		"bgColor": "#b0f853"
 	},
 	{
 		"name": "Blender",
-		"category": "Other"
+		"category": "Other",
+		"level": 40,
+		"bgColor": "#9372cd"
 	},
 	{
 		"name": "Drupal",
-		"category": "Journey"
+		"category": "Journey",
+		"level": 50,
+		"bgColor": "#cdaf00"
 	},
 	{
 		"name": "Docker",
-		"category": "Journey"
+		"category": "Journey",
+		"level": 50,
+		"bgColor": "#45ff77"
 	},
 	{
 		"name": "Azure",
-		"category": "Journey"
+		"category": "Journey",
+		"level": 80,
+		"bgColor": "#00ff55"
 	},
 	{
 		"name": "JIRA",
-		"category": "Journey"
+		"category": "Journey",
+		"level": 85,
+		"bgColor": "#ff7700"
 	},
 	{
 		"name": "StoryBook",
-		"category": "Journey"
+		"category": "Journey",
+		"level": 50,
+		"bgColor": "#aaff33"
 	},
 	{
 		"name": "Dimensions",
-		"category": "Journey"
+		"category": "Journey",
+		"level": 85,
+		"bgColor": "#b0f853"
 	},
 	{
 		"name": "Decipher",
-		"category": "Journey"
+		"category": "Journey",
+		"level": 75,
+		"bgColor": "#9372cd"
 	}
 ]
