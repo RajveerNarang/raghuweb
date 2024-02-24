@@ -1,0 +1,32 @@
+@import '@src/index.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: $spacing;
+	height: $perc-100;
+
+	@include media-md {
+		flex-direction: row;
+		gap: $spacing;
+	}
+
+
+	.btnFlex {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing;
+
+		&__item {
+			border-radius: $size-half;
+
+			@include media-md {
+				width: calc($size-double * 8);
+			}
+		}
+	}
+
+	.chartEx {
+		flex-grow: 1;
+	}
+}

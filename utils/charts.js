@@ -12,8 +12,9 @@ export const dataFilter = (data, filterTo) => {
 	const datasets = [{
 	  label: filterTo,
 	  data: dataValues,
-	  backgroundColor: bgColors,
-	  barPercentage: 0.5
+	  backgroundColor: generateRainbowColors(bgColors.length),
+	  barPercentage: 0.5,
+	  borderColor: generateRainbowColors(bgColors.length)
 	}];
   
 	return { labels, datasets };
@@ -22,26 +23,45 @@ export const dataFilter = (data, filterTo) => {
 export const optionRender = (filteredData) => {
 
 	const option = {
-		indexAxis: filteredData.datasets.label === 'Backend' ? 'y': 'x',
-		responsive: true,
+		indexAxis: filteredData.datasets[0].label === 'Backend' ? 'y': 'x',
 		plugins: {
 			tooltip: {
 				enabled: true,
 			}
 		},
+		maintainAspectRatio: false,
 		scales: {
 			y: {
 				beginAtZero: true,
 				min: 0,
-				max: 100
+				max: 100,
+				ticks: {
+					color: 'white',
+				},
 			},
 			x: {
 				beginAtZero: true,
 				min: 0,
-				max: 100
+				max: 100,
+				ticks: {
+					color: 'white',
+				},
 			}
 		}
 	}
 
 	return option
+}
+
+const generateRainbowColors = (numColors) => {
+	const colors = [];
+	const increment = 360 / numColors;
+  
+	for (let i = 0; i < numColors; i++) {
+	  const hue = i * increment;
+	  const color = `hsl(${hue}, 75%, 60%)`; // Using HSL color model
+	  colors.push(color);
+	}
+  
+	return colors;
 }
