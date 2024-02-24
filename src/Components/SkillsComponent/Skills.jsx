@@ -11,7 +11,7 @@ const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState("Frontend")
 
   const filterData = dataFilter(skillData, selectedCategory);
-
+  // TODO: Special filterData and renderOption for Journey
   return (
 	<div className={`${styles.container}`}>
     <div className={`${styles.btnFlex}`}>
