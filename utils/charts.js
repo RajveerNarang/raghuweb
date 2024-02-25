@@ -29,6 +29,7 @@ export const optionRender = (filteredData) => {
 				enabled: true,
 			}
 		},
+		responsive: true,
 		maintainAspectRatio: false,
 		scales: {
 			y: {
@@ -48,6 +49,70 @@ export const optionRender = (filteredData) => {
 				},
 			}
 		}
+	}
+
+	return option
+}
+
+export const lineDataFilter = (data) => {
+	// Filter data based on the specified category
+	const filteredData = data.filter((item) => {
+		return item.category === 'Journey'
+	});
+  
+	// Prepare chart data structure
+	const labels = filteredData.map(item => item.year);
+	const dataValues = filteredData.map(item => ({x: item.year, y: item.month}));
+  
+	const datasets = [{
+	  label: 'Journey',
+	  data: dataValues,
+	  borderColor: 'orange',
+	}];
+  
+	return { labels, datasets };
+};
+
+export const lineOptionRender = () => {
+
+	const option = {
+		scales: {
+			x: {
+			  type: 'time',
+			  time: {
+				unit: 'year',
+				displayFormats: {
+				  month: 'YYYY'
+				}
+			  },
+			  title: {
+				display: true,
+				text: 'Years'
+			  }
+			},
+			y: {
+			  type: 'category',
+			  title: {
+				display: true,
+				text: 'Months'
+			  }
+			}
+		  },
+		  plugins: {
+			legend: {
+			  display: false
+			},
+			tooltip: {
+			  callbacks: {
+				label: function(context) {
+				  const label = context.dataset.label || '';
+				  const value = context.formattedValue;
+				  return `${label}: ${value}`;
+				}
+			  }
+			}
+		},
+		tension: 0.4
 	}
 
 	return option

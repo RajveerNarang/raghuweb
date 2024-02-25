@@ -5,7 +5,7 @@ import styles from '@components/Basics/GlassBox/glass.module.scss'
 const GlassCard = (props) => {
 	const { id, children, additionalClass } = props;
   return (
-	<section id={id} className={`${styles.container} ${additionalClass}`}>
+	<section id={id} className={`${styles.container} ${additionalClass || ''}`}>
 		{children}
 	</section>
   )

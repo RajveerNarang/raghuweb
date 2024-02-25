@@ -6,7 +6,7 @@ import styles from '@components/Basics/Charts/chart.module.scss'
 const PieChart2 = (props) => {
 	const {data, options, additionalClass} = props
   return (
-	<div className={`${styles.container} ${additionalClass}`} >
+	<div className={`${styles.container} ${additionalClass || ''}`} >
 		<Pie 
 			data={data}
 			options={options} 

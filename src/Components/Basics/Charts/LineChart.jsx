@@ -6,7 +6,7 @@ import styles from '@components/Basics/Charts/chart.module.scss'
 const LineChart = (props) => {
 	const {data, options, additionalClass} = props
   return (
-	<div className={`${styles.container} ${additionalClass}`}>
+	<div className={`${styles.container} ${additionalClass || ''}`}>
 		<Line 
 			data={data} 
 			options={options}/>

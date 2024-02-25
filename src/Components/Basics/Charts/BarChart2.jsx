@@ -7,7 +7,7 @@ const BarChart2 = (props) => {
 
 	const {data, options, additionalClass} = props
   return (
-	<div className={`${styles.container} ${additionalClass}`}>
+	<div className={`${styles.container} ${additionalClass || ''}`}>
 		<Bar 
 			data={data} 
 			options={options}

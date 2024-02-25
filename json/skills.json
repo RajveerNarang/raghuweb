@@ -92,36 +92,50 @@
 	{
 		"name": "Drupal",
 		"category": "Journey",
-		"level": 50
+		"level": 50,
+		"month": "Feb",
+		"year": "2022"
 	},
 	{
 		"name": "Docker",
 		"category": "Journey",
-		"level": 50
+		"level": 50,
+		"month": "Feb",
+		"year": "2022"
 	},
 	{
 		"name": "Azure",
 		"category": "Journey",
-		"level": 80
+		"level": 80,
+		"month": "Aug",
+		"year": "2022"
 	},
 	{
 		"name": "JIRA",
 		"category": "Journey",
-		"level": 85
+		"level": 85,
+		"month": "Aug",
+		"year": "2022"
 	},
 	{
 		"name": "StoryBook",
 		"category": "Journey",
-		"level": 50
+		"level": 50,
+		"month": "Dec",
+		"year": "2022"
 	},
 	{
 		"name": "Dimensions",
 		"category": "Journey",
-		"level": 85
+		"level": 85,
+		"month": "Feb",
+		"year": "2023"
 	},
 	{
 		"name": "Decipher",
 		"category": "Journey",
-		"level": 75
+		"level": 75,
+		"month": "Feb",
+		"year": "2024"
 	}
 ]

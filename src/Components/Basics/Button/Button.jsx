@@ -10,7 +10,7 @@ const Button = (props) => {
   const {name, id, iconName, onClick, additionalClass, attr, isRect} = props
 
   return (
-    <button id={id} className={`${styles.btn} ${styles.btn__responsive } ${additionalClass}`} onClick={onClick} {...attr || null}>
+    <button id={id} className={`${styles.btn} ${styles.btn__responsive } ${additionalClass || ''}`} onClick={onClick} {...attr || null}>
       {iconName ? <FontAwesomeIcon icon={iconName} className={`${styles.icon}`} /> : null}
       {name ? <span className={`${styles.text}`}>{name}</span> : null}
     </button>

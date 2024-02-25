@@ -49,6 +49,11 @@ $xl-rep: 6;
 
 	.animate {
 		position: absolute;
+		width: $perc-100;
+
+		@include media-md {
+			width: fit-content;
+		}
 
 		&_1 {
 			top: calc($height-vh-50 + ($spacing-double * 4));

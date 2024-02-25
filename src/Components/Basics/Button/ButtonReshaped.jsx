@@ -8,7 +8,7 @@ const ButtonReshaped = (props) => {
 	const {name, id, iconName, onClick, additionalClass, attr} = props
 
 	return (
-	  <button id={id} className={`${styles.btn} ${styles.btn__rect} ${additionalClass}`} onClick={onClick} {...attr || null}>
+	  <button id={id} className={`${styles.btn} ${styles.btn__rect} ${additionalClass || ''}`} onClick={onClick} {...attr || null}>
 		{iconName ? <FontAwesomeIcon icon={iconName} className={`${styles.icon}`} /> : null}
 		{name ? <span className={`${styles.textShow}`}>{name}</span> : null}
 	  </button>
