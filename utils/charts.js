@@ -29,8 +29,6 @@ export const optionRender = (filteredData) => {
 				enabled: true,
 			}
 		},
-		responsive: true,
-		maintainAspectRatio: false,
 		scales: {
 			y: {
 				beginAtZero: true,
@@ -48,7 +46,9 @@ export const optionRender = (filteredData) => {
 					color: 'white',
 				},
 			}
-		}
+		},
+		responsive: true,
+		maintainAspectRatio: false,
 	}
 
 	return option
@@ -112,7 +112,9 @@ export const lineOptionRender = () => {
 			  }
 			}
 		},
-		tension: 0.4
+		tension: 0.4,
+		responsive: true,
+		maintainAspectRatio: false,
 	}
 
 	return option

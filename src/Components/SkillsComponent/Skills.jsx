@@ -12,6 +12,7 @@ import {
 	Tooltip
 } from "chart.js";
 
+import 'chartjs-adapter-date-fns';
 
 import { dataFilter, optionRender, lineOptionRender, lineDataFilter } from '@utils/charts';
 import skillData from '@json/skills.json';
