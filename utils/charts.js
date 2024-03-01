@@ -61,55 +61,70 @@ export const lineDataFilter = (data) => {
 	});
   
 	// Prepare chart data structure
-	const labels = filteredData.map(item => item.year);
-	const dataValues = filteredData.map(item => ({x: item.year, y: item.month}));
+	const labels = filteredData.map(item => `${item.year}-${item.month.split(':')[0]}-01`);
+	const dataValues = filteredData.map(item => (item.month.split(':')[0]));
   
 	const datasets = [{
 	  label: 'Journey',
 	  data: dataValues,
 	  borderColor: 'orange',
 	}];
-  
+
+	// console.log(labels, dataValues);
+
 	return { labels, datasets };
 };
 
 export const lineOptionRender = () => {
 
+	const currentYear = new Date().getFullYear();
+
 	const option = {
 		scales: {
 			x: {
-			  type: 'time',
-			  time: {
-				unit: 'year',
-				displayFormats: {
-				  month: 'YYYY'
+				type: 'time',
+				time: {
+					unit: 'year',
+					min: new Date('2021-01-01'),
+					max: new Date(`${currentYear + 1}-01-31`),
+					displayFormats: {
+						month: 'YYYY'
+					}
+				},
+				title: {
+					display: true,
+					text: 'Years',
+					color: 'white'
+				},
+				ticks: {
+					color: 'white',
+				},
+				grid: {
+					display: true,
+					color: '#8888885a'
 				}
-			  },
-			  title: {
-				display: true,
-				text: 'Years'
-			  }
 			},
 			y: {
-			  type: 'category',
-			  title: {
-				display: true,
-				text: 'Months'
-			  }
-			}
-		  },
-		  plugins: {
-			legend: {
-			  display: false
-			},
-			tooltip: {
-			  callbacks: {
-				label: function(context) {
-				  const label = context.dataset.label || '';
-				  const value = context.formattedValue;
-				  return `${label}: ${value}`;
+				beginAtZero: true,
+				type: 'time',
+				time: {
+					unit: 'month',
+					displayFormats: {
+						month: 'MMM'
+					},
+				},
+				ticks: {
+					color: 'white'
+				},
+				title: {
+					display: true,
+					text: 'Months',
+					color: 'white'
+				},
+				grid: {
+					display: true,
+					color: '#8888885a'
 				}
-			  }
 			}
 		},
 		tension: 0.4,
