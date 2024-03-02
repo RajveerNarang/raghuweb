@@ -4,6 +4,8 @@ export const dataFilter = (data, filterTo) => {
 		return item.category === filterTo
 	});
   
+	filteredData.sort((a, b) => a.year - b.year);
+	
 	// Prepare chart data structure
 	const labels = filteredData.map(item => item.name);
 	const dataValues = filteredData.map(item => item.level);
@@ -59,18 +61,26 @@ export const lineDataFilter = (data) => {
 	const filteredData = data.filter((item) => {
 		return item.category === 'Journey'
 	});
+	
+	filteredData.sort((a, b) => a.year - b.year);
   
 	// Prepare chart data structure
-	const labels = filteredData.map(item => `${item.year}-${item.month.split(':')[0]}-01`);
-	const dataValues = filteredData.map(item => (item.month.split(':')[0]));
+	const labels = filteredData.map(item => (
+		`${item.year}-${item.month.split(':')[0]}-01`
+	));
+	const dataValues = filteredData.map(item => (
+		{
+			x: `${item.year}-${item.month.split(':')[0]}-01`,
+			y: item.level - 1,
+		}
+	));
   
 	const datasets = [{
 	  label: 'Journey',
 	  data: dataValues,
-	  borderColor: 'orange',
+	  borderColor: '#ff6c00',
+	  backgroundColor: '#ff8c00'
 	}];
-
-	// console.log(labels, dataValues);
 
 	return { labels, datasets };
 };
@@ -78,15 +88,20 @@ export const lineDataFilter = (data) => {
 export const lineOptionRender = () => {
 
 	const currentYear = new Date().getFullYear();
-
+	
+	const monthNames = [
+		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+	  ];
 	const option = {
 		scales: {
 			x: {
+				beginAtZero: true,
 				type: 'time',
 				time: {
 					unit: 'year',
-					min: new Date('2021-01-01'),
-					max: new Date(`${currentYear + 1}-01-31`),
+					min: new Date('2021-01-01T00:00:00.000'),
+					max: new Date(`${currentYear + 1}-01-31T00:00:00.000`),
 					displayFormats: {
 						month: 'YYYY'
 					}
@@ -106,15 +121,11 @@ export const lineOptionRender = () => {
 			},
 			y: {
 				beginAtZero: true,
-				type: 'time',
-				time: {
-					unit: 'month',
-					displayFormats: {
-						month: 'MMM'
-					},
-				},
+				type: 'linear',
 				ticks: {
-					color: 'white'
+					color: 'white',
+					callback: (val) => monthNames[val],
+					maxTicksLimit: 13
 				},
 				title: {
 					display: true,
@@ -125,6 +136,11 @@ export const lineOptionRender = () => {
 					display: true,
 					color: '#8888885a'
 				}
+			}
+		},
+		plugins: {
+			tooltip: {
+				enabled: true,
 			}
 		},
 		tension: 0.4,

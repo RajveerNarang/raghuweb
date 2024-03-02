@@ -8,8 +8,8 @@ import {
 	CategoryScale,
   TimeScale,
 	LinearScale,
-	Legend,
-	Tooltip
+	Tooltip,
+	Legend
 } from "chart.js";
 
 import 'chartjs-adapter-date-fns';
@@ -31,8 +31,8 @@ const Skills = () => {
 		CategoryScale,
     TimeScale,
 		LinearScale,
-		Legend,
-		Tooltip
+		Tooltip,
+		Legend
 	);
 
   const [selectedCategory, setSelectedCategory] = useState("Frontend")
