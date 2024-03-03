@@ -24,16 +24,9 @@ export const dataFilter = (data, filterTo) => {
 	return { labels, datasets };
 };
 
-export const optionRender = (filteredData) => {
+export const optionRender = () => {
 
-	const option = {
-		indexAxis: filteredData.datasets[0].label === 'Backend' ? 'y': 'x',
-		plugins: {
-			tooltip: {
-				enabled: true,
-				backgroundColor: '#fff4',
-			}
-		},
+	const options = {
 		scales: {
 			y: {
 				beginAtZero: true,
@@ -49,11 +42,24 @@ export const optionRender = (filteredData) => {
 				},
 			}
 		},
+		plugins: {
+			tooltip: {
+				enabled: true,
+				position: 'top',
+				display: true,
+				opacity: 1,
+				// callbacks: {
+				// 	label: function(context) {
+				// 		console.log(context);
+				// 	}
+				// }
+			}
+		},
 		responsive: true,
 		maintainAspectRatio: false,
 	}
 
-	return option
+	return options
 }
 
 export const lineDataFilter = (data) => {
@@ -100,7 +106,7 @@ export const lineOptionRender = () => {
 		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
 		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 	  ];
-	const option = {
+	const options = {
 		scales: {
 			x: {
 				beginAtZero: true,
@@ -145,17 +151,12 @@ export const lineOptionRender = () => {
 				}
 			}
 		},
-		plugins: {
-			tooltip: {
-				enabled: true,
-			}
-		},
 		tension: 0.4,
 		responsive: true,
 		maintainAspectRatio: false,
 	}
 
-	return option
+	return options
 }
 
 const generateRainbowColors = (numColors) => {

@@ -8,8 +8,7 @@ import {
 	CategoryScale,
   TimeScale,
 	LinearScale,
-	Tooltip,
-	Legend
+	Tooltip
 } from "chart.js";
 
 import 'chartjs-adapter-date-fns';
@@ -31,16 +30,18 @@ const Skills = () => {
 		CategoryScale,
     TimeScale,
 		LinearScale,
-		Tooltip,
-		Legend
+		Tooltip
 	);
 
   const [selectedCategory, setSelectedCategory] = useState("Frontend")
 
   const filterData = dataFilter(skillData, selectedCategory);
+	const options = optionRender()
+
   const lineFilterData = lineDataFilter(skillData);
+	const lineOptions = lineOptionRender()
   
-  // TODO: Special filterData and renderOption for Journey
+  // TODO: Display Tooltip, default behavior not working
 
   return (
 	<div className={`${styles.container}`}>
@@ -71,9 +72,9 @@ const Skills = () => {
       />
     </div>
     {selectedCategory !== 'Journey' ? 
-      <RenderedChart categoryGrp={selectedCategory} data={filterData} options={optionRender(filterData)} additionalClass={styles.chartEx} /> 
+      <RenderedChart categoryGrp={selectedCategory} data={filterData} options={options} additionalClass={styles.chartEx} /> 
       : 
-      <LineChart data={lineFilterData} options={lineOptionRender()} />
+      <LineChart data={lineFilterData} options={lineOptions} />
     }
   </div>
   )

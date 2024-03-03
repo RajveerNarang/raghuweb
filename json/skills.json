@@ -7,7 +7,7 @@
 	{
 		"name": "CSS",
 		"category": "Frontend",
-		"level": 90
+		"level": 88
 	},
 	{
 		"name": "Sass/Scss",
@@ -137,5 +137,15 @@
 		"level": 2,
 		"month": "02:Feb",
 		"year": "2024"
+	},
+	{
+		"name": "Hibernate",
+		"category": "Backend",
+		"level": 25
+	},
+	{
+		"name": "Spring Boots",
+		"category": "Backend",
+		"level": 25
 	}
 ]
