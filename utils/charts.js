@@ -8,7 +8,9 @@ export const dataFilter = (data, filterTo) => {
 	
 	// Prepare chart data structure
 	const labels = filteredData.map(item => item.name);
-	const dataValues = filteredData.map(item => item.level);
+	const dataValues = filteredData.map(item => ({
+		x: item.name, y: item.level
+	}));
 	const bgColors = filteredData.map(item => item.bgColor);
   
 	const datasets = [{
@@ -29,6 +31,7 @@ export const optionRender = (filteredData) => {
 		plugins: {
 			tooltip: {
 				enabled: true,
+				backgroundColor: '#fff4',
 			}
 		},
 		scales: {
@@ -37,15 +40,12 @@ export const optionRender = (filteredData) => {
 				min: 0,
 				max: 100,
 				ticks: {
-					color: 'white',
+					color: '#fff8',
 				},
 			},
 			x: {
-				beginAtZero: true,
-				min: 0,
-				max: 100,
 				ticks: {
-					color: 'white',
+					color: '#fff8',
 				},
 			}
 		},
@@ -74,6 +74,13 @@ export const lineDataFilter = (data) => {
 			y: item.level - 1,
 		}
 	));
+
+	if (!dataValues.some(d => d.year === '2021-01')) {
+		dataValues.push({
+		  x: '2021-10-01',
+		  y: null,
+		});
+	  }
   
 	const datasets = [{
 	  label: 'Journey',
@@ -87,7 +94,7 @@ export const lineDataFilter = (data) => {
 
 export const lineOptionRender = () => {
 
-	const currentYear = new Date().getFullYear();
+	// const currentYear = new Date().getFullYear();
 	
 	const monthNames = [
 		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -100,19 +107,19 @@ export const lineOptionRender = () => {
 				type: 'time',
 				time: {
 					unit: 'year',
-					min: new Date('2021-01-01T00:00:00.000'),
-					max: new Date(`${currentYear + 1}-01-31T00:00:00.000`),
+					// min: new Date('2021-01-01T00:00:00.000'),
+					// max: new Date(`${currentYear + 1}-01-01T00:00:00.000`),
 					displayFormats: {
 						month: 'YYYY'
 					}
 				},
+				ticks: {
+					color: '#fff8',
+				},
 				title: {
 					display: true,
 					text: 'Years',
-					color: 'white'
-				},
-				ticks: {
-					color: 'white',
+					color: '#fff8'
 				},
 				grid: {
 					display: true,
@@ -123,14 +130,14 @@ export const lineOptionRender = () => {
 				beginAtZero: true,
 				type: 'linear',
 				ticks: {
-					color: 'white',
+					color: '#fff8',
 					callback: (val) => monthNames[val],
 					maxTicksLimit: 13
 				},
 				title: {
 					display: true,
 					text: 'Months',
-					color: 'white'
+					color: '#fff8'
 				},
 				grid: {
 					display: true,
