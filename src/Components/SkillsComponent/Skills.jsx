@@ -1,42 +1,28 @@
 import React, { useState } from 'react'
-import { 
-	Chart as ChartJS,
-	BarElement,
-	ArcElement,
-  LineElement,
-  PointElement,
-	CategoryScale,
-  TimeScale,
-	LinearScale,
-	Tooltip
-} from "chart.js";
 
 import 'chartjs-adapter-date-fns';
 
-import { dataFilter, optionRender, lineOptionRender, lineDataFilter } from '@utils/charts';
+import { 
+  barDataFilter, barOptionRender, 
+  pieDataFilter, pieOptionRender, 
+  lineOptionRender, lineDataFilter 
+} from '@utils/charts';
 import skillData from '@json/skills.json';
 import styles from "@components/SkillsComponent/skill.module.scss";
 import ButtonReshaped from '@components/Basics/Button/ButtonReshaped';
-import RenderedChart from '@components/SkillsComponent/RenderedChart';
 import LineChart from '@components/Basics/Charts/LineChart'
+import PieBarChart from '@components/Basics/Charts/PieBarChart';
 
 
 const Skills = () => {
-  ChartJS.register(
-		BarElement,
-		ArcElement,
-    LineElement,
-    PointElement,
-		CategoryScale,
-    TimeScale,
-		LinearScale,
-		Tooltip
-	);
 
   const [selectedCategory, setSelectedCategory] = useState("Frontend")
 
-  const filterData = dataFilter(skillData, selectedCategory);
-	const options = optionRender()
+  const barFilterData = barDataFilter(skillData, selectedCategory);
+	const barOptions = barOptionRender()
+
+  const pieFilterData = pieDataFilter(skillData, selectedCategory);
+  const pieOptions = pieOptionRender()
 
   const lineFilterData = lineDataFilter(skillData);
 	const lineOptions = lineOptionRender()
@@ -72,9 +58,19 @@ const Skills = () => {
       />
     </div>
     {selectedCategory !== 'Journey' ? 
-      <RenderedChart categoryGrp={selectedCategory} data={filterData} options={options} additionalClass={styles.chartEx} /> 
+      <PieBarChart 
+        barData={barFilterData} 
+        pieData = {pieFilterData}
+        barOptions={barOptions} 
+        pieOptions={pieOptions}
+        // additionalClass={styles.chartEx} 
+      /> 
       : 
-      <LineChart data={lineFilterData} options={lineOptions} />
+      <LineChart 
+        data={lineFilterData} 
+        options={lineOptions} 
+        // additionalClass={styles.chartEx} 
+      />
     }
   </div>
   )

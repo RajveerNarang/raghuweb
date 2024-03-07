@@ -1,10 +1,8 @@
-export const dataFilter = (data, filterTo) => {
+export const barDataFilter = (data, filterTo) => {
 	// Filter data based on the specified category
 	const filteredData = data.filter((item) => {
 		return item.category === filterTo
 	});
-  
-	filteredData.sort((a, b) => a.year - b.year);
 	
 	// Prepare chart data structure
 	const labels = filteredData.map(item => item.name);
@@ -24,7 +22,7 @@ export const dataFilter = (data, filterTo) => {
 	return { labels, datasets };
 };
 
-export const optionRender = () => {
+export const barOptionRender = () => {
 
 	const options = {
 		scales: {
@@ -45,18 +43,46 @@ export const optionRender = () => {
 		plugins: {
 			tooltip: {
 				enabled: true,
-				position: 'top',
-				display: true,
-				opacity: 1,
-				// callbacks: {
-				// 	label: function(context) {
-				// 		console.log(context);
-				// 	}
-				// }
 			}
 		},
 		responsive: true,
 		maintainAspectRatio: false,
+	}
+
+	return options
+}
+
+export const pieDataFilter = (data, filterTo) => {
+	// Filter data based on the specified category
+	const filteredData = data.filter((item) => {
+		return item.category === filterTo
+	});
+	
+	// Prepare chart data structure
+	const labels = filteredData.map(item => item.name);
+	const dataValues = filteredData.map(item => (item.level
+));
+	const bgColors = filteredData.map(item => item.bgColor);
+  
+	const datasets = [{
+	  label: filterTo,
+	  data: dataValues,
+	  backgroundColor: generateRainbowColors(bgColors.length),
+	  borderColor: generateRainbowColors(bgColors.length)
+	}];
+  
+	return { labels, datasets };
+};
+
+export const pieOptionRender = () => {
+	const options = {
+		responsive: true,
+		maintainAspectRatio: false,
+		plugins: {
+			tooltip: {
+				enabled: true
+			}
+		}
 	}
 
 	return options
@@ -154,6 +180,11 @@ export const lineOptionRender = () => {
 		tension: 0.4,
 		responsive: true,
 		maintainAspectRatio: false,
+		plugins: {
+			tooltip: {
+				enabled: true
+			}
+		}
 	}
 
 	return options
