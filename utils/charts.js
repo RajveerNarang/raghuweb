@@ -1,98 +1,43 @@
-export const barDataFilter = (data, filterTo) => {
+const barDataFilter = (data, filterTo) => {
 	// Filter data based on the specified category
-	const filteredData = data.filter((item) => {
-		return item.category === filterTo
-	});
+	const filteredData = data.filter((item) => ( item.category === filterTo ));
 	
 	// Prepare chart data structure
 	const labels = filteredData.map(item => item.name);
-	const dataValues = filteredData.map(item => ({
-		x: item.name, y: item.level
-	}));
-	const bgColors = filteredData.map(item => item.bgColor);
+	const dataValues = filteredData.map(({name, level}) => ({ x: name, y: level }));
   
 	const datasets = [{
 	  label: filterTo,
 	  data: dataValues,
-	  backgroundColor: generateRainbowColors(bgColors.length),
+	  backgroundColor: generateColors(8),
 	  barPercentage: 0.5,
-	  borderColor: generateRainbowColors(bgColors.length)
+	  borderColor: generateColors(8)
 	}];
   
 	return { labels, datasets };
 };
 
-export const barOptionRender = () => {
-
-	const options = {
-		scales: {
-			y: {
-				beginAtZero: true,
-				min: 0,
-				max: 100,
-				ticks: {
-					color: '#fff8',
-				},
-			},
-			x: {
-				ticks: {
-					color: '#fff8',
-				},
-			}
-		},
-		plugins: {
-			tooltip: {
-				enabled: true,
-			}
-		},
-		responsive: true,
-		maintainAspectRatio: false,
-	}
-
-	return options
-}
-
-export const pieDataFilter = (data, filterTo) => {
+const pieDataFilter = (data, filterTo) => {
 	// Filter data based on the specified category
-	const filteredData = data.filter((item) => {
-		return item.category === filterTo
-	});
+	const filteredData = data.filter((item) => ( item.category === filterTo ));
 	
 	// Prepare chart data structure
 	const labels = filteredData.map(item => item.name);
-	const dataValues = filteredData.map(item => (item.level
-));
-	const bgColors = filteredData.map(item => item.bgColor);
+	const dataValues = filteredData.map(item => (item.level));
   
 	const datasets = [{
 	  label: filterTo,
 	  data: dataValues,
-	  backgroundColor: generateRainbowColors(bgColors.length),
-	  borderColor: generateRainbowColors(bgColors.length)
+	  backgroundColor: generateColors(8),
+	  borderColor: generateColors(8)
 	}];
   
 	return { labels, datasets };
 };
 
-export const pieOptionRender = () => {
-	const options = {
-		responsive: true,
-		maintainAspectRatio: false,
-		plugins: {
-			tooltip: {
-				enabled: true
-			}
-		}
-	}
-
-	return options
-}
-
-export const lineDataFilter = (data) => {
+const lineDataFilter = (data) => {
 	// Filter data based on the specified category
-	const filteredData = data.filter((item) => {
-		return item.category === 'Journey'
-	});
+	const filteredData = data.filter((item) => (item.category === 'Journey'));
 	
 	filteredData.sort((a, b) => a.year - b.year);
   
@@ -118,16 +63,40 @@ export const lineDataFilter = (data) => {
 	  label: 'Journey',
 	  data: dataValues,
 	  borderColor: '#ff6c00',
-	  backgroundColor: '#ff8c00'
+	  backgroundColor: '#ff6c00'
 	}];
 
 	return { labels, datasets };
 };
 
-export const lineOptionRender = () => {
+const createBarChartOptions = () => ({
+	scales: {
+		y: {
+			beginAtZero: true,
+			min: 0,
+			max: 100,
+			ticks: { color: '#fff8' },
+		},
+		x: { ticks: { color: '#fff8' } }
+	},
+	plugins: {
+		tooltip: { enabled: true }
+	},
+	interaction: {
+		mode: 'index',
+	},
+	responsive: true,
+	maintainAspectRatio: false,
+})
+const createPieChartOptions = () => ({
+	responsive: true,
+	maintainAspectRatio: false,
+	plugins: {
+		tooltip: { enabled: true }
+	}
+})
+const createLineChartOptions = () => {
 
-	// const currentYear = new Date().getFullYear();
-	
 	const monthNames = [
 		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
 		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -139,20 +108,14 @@ export const lineOptionRender = () => {
 				type: 'time',
 				time: {
 					unit: 'year',
-					// min: new Date('2021-01-01T00:00:00.000'),
-					// max: new Date(`${currentYear + 1}-01-01T00:00:00.000`),
-					displayFormats: {
-						month: 'YYYY'
-					}
+					displayFormats: { month: 'YYYY' }
 				},
-				ticks: {
-					color: '#fff8',
-				},
-				title: {
-					display: true,
-					text: 'Years',
-					color: '#fff8'
-				},
+				ticks: { color: '#fff8' },
+				// title: {
+				// 	display: true,
+				// 	text: 'Years',
+				// 	color: '#fff8'
+				// },
 				grid: {
 					display: true,
 					color: '#8888885a'
@@ -166,11 +129,11 @@ export const lineOptionRender = () => {
 					callback: (val) => monthNames[val],
 					maxTicksLimit: 13
 				},
-				title: {
-					display: true,
-					text: 'Months',
-					color: '#fff8'
-				},
+				// title: {
+				// 	display: true,
+				// 	text: 'Months',
+				// 	color: '#fff8'
+				// },
 				grid: {
 					display: true,
 					color: '#8888885a'
@@ -181,16 +144,14 @@ export const lineOptionRender = () => {
 		responsive: true,
 		maintainAspectRatio: false,
 		plugins: {
-			tooltip: {
-				enabled: true
-			}
+			tooltip: { enabled: true }
 		}
 	}
 
 	return options
 }
 
-const generateRainbowColors = (numColors) => {
+const generateColors = (numColors) => {
 	const colors = [];
 	const increment = 360 / numColors;
   
@@ -202,3 +163,8 @@ const generateRainbowColors = (numColors) => {
   
 	return colors;
 }
+
+export { 
+	barDataFilter, pieDataFilter, lineDataFilter,
+	createBarChartOptions, createPieChartOptions, createLineChartOptions
+};

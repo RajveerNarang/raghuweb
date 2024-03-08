@@ -1,27 +1,9 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { 
-	Chart as ChartJS,
-	BarElement,
-	ArcElement,
-	CategoryScale,
-	LinearScale,
-	Tooltip,
-	Legend,
-} from "chart.js";
-
-import { Bar, Pie } from 'react-chartjs-2'
 
 import styles from '@components/Basics/Charts/chart.module.scss'
-
-ChartJS.register(
-	BarElement,
-	ArcElement,
-	CategoryScale,
-	LinearScale,
-	Tooltip,
-	Legend
-);
+import BarChart2 from '@components/Basics/Charts/BarChart2'
+import PieChart2 from '@components/Basics/Charts/PieChart2'
 
 const PieBarChart = (props) => {
 
@@ -32,15 +14,15 @@ const PieBarChart = (props) => {
 		pieData, pieOptions, 
 		additionalClass
 	} = props
-
+	// console.log(barData, barOptions, pieData, pieOptions);
 	return (
 		<div className={`${styles.container} ${additionalClass || ''}`}>
 			{isDesktop ? 
-				<Bar 
+				<BarChart2
 					data={barData} 
 					options={barOptions}
 				/> : 
-				<Pie 
+				<PieChart2
 					data={pieData}
 					options={pieOptions} 
 				/>
