@@ -83,7 +83,7 @@ function Stars({limit}) {
 	}, [limit]);
 	
 
-	return <canvas ref={starRef} ></canvas>;
+	return <canvas ref={starRef} style={{ zIndex: -1 }} ></canvas>;
 }
 
 export default Stars;

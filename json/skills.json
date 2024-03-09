@@ -92,15 +92,17 @@
 	{
 		"name": "Drupal",
 		"category": "Journey",
-		"level": 2,
-		"month": "02:Feb",
+		"level": 1,
+		"day": 15,
+		"month": "01:Jan",
 		"year": "2022"
 	},
 	{
 		"name": "Docker",
 		"category": "Journey",
-		"level": 2,
-		"month": "02:Feb",
+		"level": 1,
+		"day": 15,
+		"month": "01:Jan",
 		"year": "2022"
 	},
 	{

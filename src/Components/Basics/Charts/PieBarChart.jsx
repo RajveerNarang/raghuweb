@@ -9,23 +9,13 @@ const PieBarChart = (props) => {
 
 	const isDesktop = useMediaQuery({minWidth: 767})
 
-	const {
-		barData, barOptions, 
-		pieData, pieOptions, 
-		additionalClass
-	} = props
+	const { selectedCategory, additionalClass } = props
 	// console.log(barData, barOptions, pieData, pieOptions);
 	return (
 		<div className={`${styles.container} ${additionalClass || ''}`}>
 			{isDesktop ? 
-				<BarChart2
-					data={barData} 
-					options={barOptions}
-				/> : 
-				<PieChart2
-					data={pieData}
-					options={pieOptions} 
-				/>
+				<BarChart2 selectedCategory={selectedCategory} /> : 
+				<PieChart2 selectedCategory={selectedCategory} />
 			}
 		</div>
 	)

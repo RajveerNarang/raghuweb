@@ -1,4 +1,4 @@
-const barDataFilter = (data, filterTo) => {
+export const barDataFilter = (data, filterTo) => {
 	// Filter data based on the specified category
 	const filteredData = data.filter((item) => ( item.category === filterTo ));
 	
@@ -17,7 +17,7 @@ const barDataFilter = (data, filterTo) => {
 	return { labels, datasets };
 };
 
-const pieDataFilter = (data, filterTo) => {
+export const pieDataFilter = (data, filterTo) => {
 	// Filter data based on the specified category
 	const filteredData = data.filter((item) => ( item.category === filterTo ));
 	
@@ -35,7 +35,7 @@ const pieDataFilter = (data, filterTo) => {
 	return { labels, datasets };
 };
 
-const lineDataFilter = (data) => {
+export const lineDataFilter = (data) => {
 	// Filter data based on the specified category
 	const filteredData = data.filter((item) => (item.category === 'Journey'));
 	
@@ -43,7 +43,7 @@ const lineDataFilter = (data) => {
   
 	// Prepare chart data structure
 	const labels = filteredData.map(item => (
-		`${item.year}-${item.month.split(':')[0]}-01`
+		`${item.year}-${item.month.split(':')[0]}-${item.day || '01'}`
 	));
 	const dataValues = filteredData.map(item => (
 		{
@@ -52,12 +52,6 @@ const lineDataFilter = (data) => {
 		}
 	));
 
-	if (!dataValues.some(d => d.year === '2021-01')) {
-		dataValues.push({
-		  x: '2021-10-01',
-		  y: null,
-		});
-	  }
   
 	const datasets = [{
 	  label: 'Journey',
@@ -69,7 +63,7 @@ const lineDataFilter = (data) => {
 	return { labels, datasets };
 };
 
-const createBarChartOptions = () => ({
+export const createBarChartOptions = () => ({
 	scales: {
 		y: {
 			beginAtZero: true,
@@ -88,19 +82,27 @@ const createBarChartOptions = () => ({
 	responsive: true,
 	maintainAspectRatio: false,
 })
-const createPieChartOptions = () => ({
+export const createPieChartOptions = () => ({
 	responsive: true,
 	maintainAspectRatio: false,
 	plugins: {
 		tooltip: { enabled: true }
 	}
 })
-const createLineChartOptions = () => {
+export const createLineChartOptions = (data) => {
+
+	const filteredData = data.filter(
+		(item) => (item.category === 'Journey')
+	);
+	
+	filteredData.sort((a, b) => a.year - b.year);
+
+	const currentYear = new Date().getFullYear();
 
 	const monthNames = [
 		"Jan", "Feb", "Mar", "Apr", "May", "Jun",
 		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-	  ];
+	];
 	const options = {
 		scales: {
 			x: {
@@ -110,12 +112,14 @@ const createLineChartOptions = () => {
 					unit: 'year',
 					displayFormats: { month: 'YYYY' }
 				},
+				min: '2021-01-01',
+				max: `${currentYear + 1}-01-01`,
 				ticks: { color: '#fff8' },
-				// title: {
-				// 	display: true,
-				// 	text: 'Years',
-				// 	color: '#fff8'
-				// },
+				title: {
+					display: true,
+					text: 'Years',
+					color: '#fff8'
+				},
 				grid: {
 					display: true,
 					color: '#8888885a'
@@ -129,11 +133,11 @@ const createLineChartOptions = () => {
 					callback: (val) => monthNames[val],
 					maxTicksLimit: 13
 				},
-				// title: {
-				// 	display: true,
-				// 	text: 'Months',
-				// 	color: '#fff8'
-				// },
+				title: {
+					display: true,
+					text: 'Months',
+					color: '#fff8'
+				},
 				grid: {
 					display: true,
 					color: '#8888885a'
@@ -143,8 +147,38 @@ const createLineChartOptions = () => {
 		tension: 0.4,
 		responsive: true,
 		maintainAspectRatio: false,
+		interaction: {
+			intersect: false,
+			mode: 'index',
+		},
 		plugins: {
-			tooltip: { enabled: true }
+			tooltip: { 
+				enabled: true,
+				callbacks:{
+					title: (context) =>{
+						const date = new Date(context[0].parsed.x);
+						const month = date.toLocaleString('default', { month: 'long' });
+						const year = date.getFullYear();
+						return `${month} ${year}`;
+					},
+					label: (context) =>{
+						// Making individual data points with color points
+						const dataPoint = context.dataset.data[context.dataIndex];
+						const date = new Date(dataPoint.x);
+						const year = date.getFullYear();
+						const month = date.getMonth() + 1; // Note: month is 0-indexed, so add 1
+
+						const matchingDataPoint = filteredData.filter(item => {
+							const itemYear = parseInt(item.year);
+							const itemMonth = parseInt(item.month.split(':')[0]);
+
+							return itemYear === year && itemMonth === month;
+						}).map(({name}) => name); 
+						
+						return matchingDataPoint
+					},
+				}
+			}
 		}
 	}
 
@@ -163,8 +197,3 @@ const generateColors = (numColors) => {
   
 	return colors;
 }
-
-export { 
-	barDataFilter, pieDataFilter, lineDataFilter,
-	createBarChartOptions, createPieChartOptions, createLineChartOptions
-};
