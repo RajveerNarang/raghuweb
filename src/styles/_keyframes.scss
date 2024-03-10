@@ -53,9 +53,19 @@
 		transform: translateX(0);
 	}
 }
+// Projects
+@keyframes ScaleIn {
+	0% {
+		opacity: 0;
+		scale: 0;
+	}
+	100% {
+		opacity: 1;
+		scale: 1;
+	}
+}
 
-// Dropdown
-
+// About Dropdown
 @keyframes slideDown {
 	0% {
 		top: -2rem;
@@ -72,7 +82,7 @@
 		max-height: 0;
 	}
 	100% {
-		max-height: $height-vh-25;
+		max-height: calc($height-vh-25 * 1.5);
 	}
 }
 
@@ -80,7 +90,7 @@
 	0% {
 		top: 0;
 		opacity: 1;
-		max-height: $height-vh-25;
+		max-height: calc($height-vh-25 * 1.5);
 	}
 	65% {
 		max-height: 0;

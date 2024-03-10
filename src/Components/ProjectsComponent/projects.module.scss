@@ -1,18 +1,15 @@
 @import '@src/index.scss';
 
 .container {
-	position: relative;
-	top: calc($spacing-double * 2.5);
-
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax($grid-min-width, 1fr));
 	gap: $spacing-half;
 
-	@include media-md {
-		top: calc($spacing-double * 3);
+	.animate {
+		animation: ScaleIn 1s linear;
 	}
-}
 
-::-webkit-scrollbar {
-	display: none;
+	.paraSpace {
+		margin-top: $spacing;
+	}
 }

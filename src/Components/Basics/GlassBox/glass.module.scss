@@ -14,8 +14,6 @@
 	min-width: $width-vw-25;
 	z-index: 99;
 
-	top: calc($spacing-double * -3);
-
 	@include media-md {
 		top: 0;
 		padding: $spacing $spacing-double;

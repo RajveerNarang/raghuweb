@@ -21,7 +21,7 @@ $tt-rep: 5;
 		top: 0;
 
 		@include media-md {
-			width: calc($width-vw-25 * $rep-md);
+			width: $width-vw-50; // calc($width-vw-50 * $rep-md);
 			height: fit-content;
 			padding: $spacing $spacing-double;
 		}

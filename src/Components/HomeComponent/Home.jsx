@@ -6,10 +6,9 @@ import Header from '@components/Basics/Variables/Header'
 import Paragraph from '@components/Basics/Variables/Paragraph'
 import OrderedList from '@components/Basics/Variables/OrderedList'
 import UnorderedList from '@components/Basics/Variables/UnorderedList'
+import LinkGroup from '@components/HomeComponent/LinkGroup'
 
 import homeData from '@json/home.json'
-import { Link } from 'react-router-dom'
-import ButtonReshaped from '@components/Basics/Button/ButtonReshaped'
 
 const Home = () => {
 
@@ -24,19 +23,7 @@ const Home = () => {
       </div>
       <Paragraph content={homeData.content} />
     </GlassCard>
-    <Link to={'#'} className={`${styles.animate} ${styles.animate_1}`}>
-      <ButtonReshaped id={'btn1'} name={'Get Started'} />
-    </Link>
-    <Link to={'#'} className={`${styles.animate} ${styles.animate_2}`}>
-      <ButtonReshaped id={'btn2'} name={'Learn More'} />
-    </Link>
-    <Link to={'#'} className={`${styles.animate} ${styles.animate_3}`}>
-      <ButtonReshaped id={'btn3'} name={'Contact Us'} />
-    </Link>
-    <Link to={'#'} className={`${styles.animate} ${styles.animate_4}`}>
-      <ButtonReshaped id={'btn4'} name={'Download CV'} />
-    </Link>
-    
+    <LinkGroup />
   </div>
   )
 }

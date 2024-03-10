@@ -19,6 +19,8 @@ $xl-rep: 6;
 
 		animation: bounce 1.5s linear;
 		
+		top: calc($spacing-double * -3);
+		
 		@include media-md {
 			width: $width-vw-50;
 			padding: $spacing $spacing-double;	

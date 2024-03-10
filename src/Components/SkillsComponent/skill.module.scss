@@ -18,8 +18,6 @@
 		gap: $spacing;
 
 		&__item {
-			border-radius: $size-half;
-
 			@include media-md {
 				width: calc($size-double * 8);
 			}

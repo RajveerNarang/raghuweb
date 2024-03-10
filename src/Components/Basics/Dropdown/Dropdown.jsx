@@ -13,9 +13,9 @@ const Dropdown = (props) => {
 	<div className={`${styles.container} ${additionalClass || ''}`}>
 		<div className={`${styles.dropdownBtn}`} onClick={toggleDropdown}> {title} </div>
 		<div className={`${styles.dropdownContent} ${isOpen ? styles.slideDownAnimation : styles.slideUpAnimation}`}>
-			{data.content ? <Paragraph additionalClass={`${styles.marginTopAnim}`} content={data.content}/> : null}
-			{data.lists ? <UnorderedList additionalClass={`${styles.marginTopAnim}`} lists={data.lists}/> : null}
-			{data.path ? <File additionalClass={`${styles.marginTopAnim}`} path={data.path} name={data.name} /> : null}
+			{data.content ? <Paragraph additionalClass={`${styles.marginTop}`} content={data.content}/> : null}
+			{data.lists ? <UnorderedList additionalClass={`${styles.marginTop}`} lists={data.lists}/> : null}
+			{data.path ? <File additionalClass={`${styles.marginTop}`} path={data.path} name={data.name} /> : null}
 		</div>
 		
 	</div>
