@@ -82,7 +82,7 @@
 		max-height: 0;
 	}
 	100% {
-		max-height: calc($height-vh-25 * 1.5);
+		max-height: $height-vh-25;
 	}
 }
 
@@ -90,7 +90,7 @@
 	0% {
 		top: 0;
 		opacity: 1;
-		max-height: calc($height-vh-25 * 1.5);
+		max-height: $height-vh-25;
 	}
 	65% {
 		max-height: 0;

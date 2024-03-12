@@ -41,13 +41,12 @@
 		
 		padding: $spacing;
 		z-index: 69;
-		opacity: 1;
 		
 		max-height: 0;
 		overflow: hidden scroll;
 		transition: max-height 0.5s ease-out;
 	}
-
+	
 	.marginTop {
 		margin-top: $size;
 	}
@@ -60,4 +59,7 @@
 .slideUpAnimation {
 	animation: slideUp 1.5s ease-in-out forwards;
 	pointer-events: none;
+}
+.preload {
+	animation: slideUp 0s ease-in-out forwards;
 }
