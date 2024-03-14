@@ -191,7 +191,7 @@ const generateColors = (numColors) => {
   
 	for (let i = 0; i < numColors; i++) {
 	  const hue = i * increment;
-	  const color = `hsl(${hue}, 75%, 60%)`; // Using HSL color model
+	  const color = `hsla(${hue}, 75%, 60%, 0.8)`; // Using HSLA color model
 	  colors.push(color);
 	}
   
