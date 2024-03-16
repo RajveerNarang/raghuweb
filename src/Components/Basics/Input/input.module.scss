@@ -3,14 +3,13 @@
 .container {
 	position: relative;
 
-	min-width: $perc-25;
+	min-width: $perc-100;
   
 	&.focused {
 	  label {
 		top: -0.9rem;
 		color: $dark-primary;
 		font-size: 0.9rem;
-		// background-color: $dark-secondary;
 	  }
 	}
 

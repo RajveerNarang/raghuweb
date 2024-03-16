@@ -1,0 +1,23 @@
+@import '@src/index.scss';
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $perc-100;
+	height: $perc-100;
+
+	.login {
+		width: $perc-100;
+		height: $perc-50;
+		display: inherit;
+		justify-content: inherit;
+		align-items: center;
+		flex-direction: column;
+		row-gap: $spacing-double;
+
+		@include media-md {
+			width: $perc-50;
+		}
+	}
+}

@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import Loader from '@components/Basics/Loader/Loader';
+const Login = lazy(() => import('@components/LoginComponent/Login'));
 const Home = lazy(() => import('@components/HomeComponent/Home'))
 const About = lazy(() => import('@components/AboutComponent/About'))
 const Contact = lazy(() => import('@components/ContactComponent/Contact'))
@@ -44,6 +45,13 @@ const Routing = ({ additionalClass }) => {
 				element={
 				<Suspense fallback={<Loader />}>
 					<Projects />
+				</Suspense>
+				} 
+			/>
+			<Route path='login' 
+				element={
+				<Suspense fallback={<Loader />}>
+				  <Login />
 				</Suspense>
 				} 
 			/>
