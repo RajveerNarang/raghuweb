@@ -25,6 +25,19 @@ const Contact = () => {
     }
   }
 
+  const getClassName = (id) => {
+    switch (id) {
+      case 'gmail': return styles.gmail
+      case 'linkedin': return styles.linkedin
+      case 'github': return styles.github
+      case 'whatsapp': return styles.whatsapp
+      case 'instagram': return styles.instagram
+      case 'discord': return styles.discord
+      case 'xtwitter': return styles.xtwitter
+      default: return null;
+    }
+  }
+
   return (
 	<div className={`${styles.container}`}>
     <GlassCard id={'contactGlassCard'} additionalClass={`${styles.box}`}>
@@ -33,7 +46,7 @@ const Contact = () => {
         <a 
           href={item.data.link || '#'} 
           key={index} 
-          className={`${styles.items}`} 
+          className={`${styles.items} ${getClassName(item.id)}`} 
           data-tooltip={item.data.tooltipData}
           target="_blank" 
           rel="noopener noreferrer"

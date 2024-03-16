@@ -69,6 +69,28 @@ $tt-rep: 5;
 			font-size: $size-one-half;
 		}
 	}
+	.gmail {
+		background-image: linear-gradient(25deg, $gmail, transparent 50%);
+	}
+	.instagram {
+		background-image: linear-gradient(25deg, $instagram, transparent 50%);
+	}
+	.linkedin {
+		background-image: linear-gradient(25deg, $linkedIn, transparent 50%);
+	}
+	.discord {
+		background-image: linear-gradient(25deg, $discord, transparent 50%);
+	}
+	.xtwitter {
+		background-image: linear-gradient(25deg, $xTwitter, transparent 50%);
+	}
+	.github {
+		background-image: linear-gradient(25deg, $github, transparent 50%);
+	}
+	.whatsapp {
+		background-image: linear-gradient(25deg, $whatsapp, transparent 50%);
+	}
+
 	.group {
 		display: grid;
 		grid-template-columns: 1fr 6fr;
