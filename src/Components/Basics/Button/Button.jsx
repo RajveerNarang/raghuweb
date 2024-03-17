@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   
-  const {name, id, iconName, onClick, additionalClass, attr, isRect} = props
+  const {name, id, iconName, onClick, additionalClass, attr} = props
 
   return (
     <button id={id} className={`${styles.btn} ${styles.btn__responsive } ${additionalClass || ''}`} onClick={onClick} {...attr || null}>

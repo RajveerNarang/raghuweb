@@ -2,14 +2,11 @@ import React, { useState, useRef, useEffect } from 'react'
 import styles from '@components/Basics/Input/input.module.scss'
 import PropTypes from 'prop-types'
 
-const Input = ({inputType, labelText, inputNameId, additionalStyle}) => {
-	const [inputValue, setInputValue] = useState('');
+const Input = (props) => {
+	const {inputType, labelText, inputNameId, inputValue, onChangeHandler, additionalStyle} = props
+
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef(null);
-
-	const handleChange = (e) => {
-	  setInputValue(e.target.value);
-	};
 
 	const handleFocus = () => {
 		setIsFocused(true)
@@ -34,7 +31,7 @@ const Input = ({inputType, labelText, inputNameId, additionalStyle}) => {
 		  className={styles.input}
 		  ref={inputRef}
 		  value={inputValue}
-		  onChange={handleChange}
+		  onChange={onChangeHandler}
 		  onFocus={handleFocus}
 		  onBlur={handleBlur}
 		  autoComplete={inputNameId}
