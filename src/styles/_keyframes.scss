@@ -54,7 +54,7 @@
 	}
 }
 // Projects
-@keyframes ScaleIn {
+@keyframes scaleIn {
 	0% {
 		opacity: 0;
 		scale: 0;
@@ -102,6 +102,16 @@
 	100% {
 		top: -2rem;
 		opacity: 0;
+	}
+}
+
+// DropDown
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 

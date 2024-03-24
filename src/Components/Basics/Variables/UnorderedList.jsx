@@ -15,7 +15,7 @@ const UnorderedList = (props) => {
 	)))
 	
   return (
-	<ul className={additionalClass}>
+	<ul className={additionalClass || ''}>
 		{renderItems(lists)}
 	</ul>
   )

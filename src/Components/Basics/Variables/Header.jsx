@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Header = ({level, text, additionalClass}) => {
 	const Tag = `h${level}`
   return (
-	<Tag className={additionalClass}>{text}</Tag>
+	<Tag className={additionalClass || ''}>{text}</Tag>
   )
 }
 

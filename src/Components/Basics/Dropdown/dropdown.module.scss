@@ -53,13 +53,10 @@
 }
 
 .slideDownAnimation {
-	animation: slideDown 1.5s ease-in-out forwards;
+	animation: slideDown 1s ease-in-out forwards;
 	pointer-events: auto;
 }
 .slideUpAnimation {
-	animation: slideUp 1.5s ease-in-out forwards;
+	animation: slideUp 1s ease-in-out forwards;
 	pointer-events: none;
-}
-.preload {
-	animation: slideUp 0s ease-in-out forwards;
 }

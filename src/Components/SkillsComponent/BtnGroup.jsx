@@ -5,35 +5,30 @@ import styles from "@components/SkillsComponent/skill.module.scss";
 
 const BtnGroup = ({categoryAssign}) => {
 
+	const items = {
+		'frontend': 'Frontend', 
+		'backend': 'Backend',
+		'other': 'Others',
+		'journey': 'Journey'
+	}
 	const handleCategoryAssign = (name) => {
 		categoryAssign(name)
 	}
   return (
 	<div className={`${styles.btnFlex}`}>
-      <ButtonReshaped 
-        id={'frontend'} 
-        name={'Frontend'} 
-        additionalClass={styles.btnFlex__item} 
-        onClick={() => handleCategoryAssign('Frontend')} 
-      />
-      <ButtonReshaped 
-        id={'backend'} 
-        name={'Backend'} 
-        additionalClass={styles.btnFlex__item} 
-        onClick={() => handleCategoryAssign('Backend')} 
-      />
-      <ButtonReshaped 
-        id={'other'} 
-        name={'Others'} 
-        additionalClass={styles.btnFlex__item} 
-        onClick={() => handleCategoryAssign('Others')} 
-      />
-      <ButtonReshaped 
-        id={'journey'} 
-        name={'Journey'} 
-        additionalClass={styles.btnFlex__item} 
-        onClick={() => handleCategoryAssign('Journey')} 
-      />
+		{Object.entries(items).map(([key, value], index) => {
+			console.log(key, value, ((index + 1) * 0.5));
+			return (
+				<ButtonReshaped 
+					key={key}
+					id={key} 
+					name={value} 
+					additionalClass={styles.btnFlex__item} 
+					onClick={() => handleCategoryAssign(value)} 
+					attr = {{style: { animation: `slideRight ${(index + 1) * 0.5}s linear` }}}
+				/>
+			)
+		})}
     </div>
   )
 }

@@ -20,6 +20,8 @@ $tt-rep: 5;
 		padding: $spacing-double $spacing;
 		top: 0;
 
+		animation: scaleIn 1s linear;
+
 		@include media-md {
 			width: $width-vw-50; // calc($width-vw-50 * $rep-md);
 			height: fit-content;

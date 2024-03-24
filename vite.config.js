@@ -13,7 +13,8 @@ export default defineConfig({
       "@components": "/src/components",
       "@json": "/json",
       "@images": "/images",
-      "@utils": "/utils"
+      "@utils": "/utils",
+	  "@audio": "/audio"
     },
   },
 });

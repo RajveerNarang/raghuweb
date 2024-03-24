@@ -3,13 +3,22 @@ import styles from '@components/Basics/Input/input.module.scss'
 import PropTypes from 'prop-types'
 
 const Input = (props) => {
-	const {inputType, labelText, inputNameId, inputValue, onChangeHandler, additionalStyle} = props
+	const {
+		inputType, 
+		labelText, 
+		inputNameId, 
+		inputValue, 
+		onChangeHandler, 
+		// startAudioContext,
+		additionalStyle
+	} = props
 
 	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef(null);
 
 	const handleFocus = () => {
 		setIsFocused(true)
+		// startAudioContext();
 	};
 	const handleBlur = () => {
 		setIsFocused(false)
@@ -45,6 +54,7 @@ Input.propTypes = {
 	labelText: PropTypes.string.isRequired, 
 	inputNameId: PropTypes.string.isRequired,
 	additionalStyle: PropTypes.object,
+	onChangeHandler: PropTypes.func.isRequired
   };
 
 export default Input

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Paragraph = ({content, additionalClass}) => {
   return (
-	<p className={additionalClass}>{content}</p>
+	<p className={additionalClass || ''}>{content}</p>
   )
 }
 

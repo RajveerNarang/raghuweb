@@ -18,7 +18,7 @@ const List = (props) => {
 	)))
 	
   return (
-	<Tag className={additionalClass}>
+	<Tag className={additionalClass || ''}>
 		{renderItems(lists)}
 	</Tag>
   )

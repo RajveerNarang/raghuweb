@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import styles from '@components/Basics/Dropdown/dropdown.module.scss'
@@ -7,31 +7,35 @@ import File from '@components/Basics/File/File'
 import Paragraph from '@components/Basics/Variables/Paragraph'
 
 const Dropdown = (props) => {
-	const {title, data, additionalClass, isOpen, toggleDropdown} = props
 
-	const [initialRender, setInitialRender] = useState(true);
+	const [initialRender, setInitialRender] = useState(true)
+	const {
+		title, 
+		data, 
+		additionalClass, 
+		isOpen, 
+		toggleDropdown
+	} = props
 
-	const handleDropdownAnimation = () => {
-		toggleDropdown();
+	// const handleAnimation = () => {
+	// 	toggleDropdown()
 
-		const dropdownContent = document.querySelector('.' + styles.dropdownContent);
-		const isExist = dropdownContent.classList.contains(styles.slideDownAnimation)
-		// console.log(isExist, initialRender);
+	// 	const dropdownContent = document.querySelector('.' + styles.dropdownContent);
+	// 	const isExist = dropdownContent.classList.contains(styles.slideDownAnimation);
 
-		if (isExist && initialRender) {
-			dropdownContent.classList.remove(styles.preload);
-			dropdownContent.classList.add(styles.slideUpAnimation);
-			setInitialRender(false)
-		}
-	};
+	// 	if (isExist && initialRender) {
+	// 		setInitialRender(false); // Assuming this triggers the animation
+	// 	}
+	// }
 
 	return (
 		<div className={`${styles.container} ${additionalClass || ''}`}>
-			<div className={`${styles.dropdownBtn}`} onClick={handleDropdownAnimation}> {title} </div>
+			<div className={styles.dropdownBtn} onClick={toggleDropdown}> {title} </div>
 			<div 
 				className={`${styles.dropdownContent} ${isOpen ? 
 					styles.slideDownAnimation : 
-					initialRender ? styles.preload : styles.slideUpAnimation
+					// (!isOpen && initialRender) ? styles.preload : 
+					styles.slideUpAnimation
 				}`}
 			>
 				{data.content ? <Paragraph additionalClass={`${styles.marginTop}`} content={data.content}/> : null}
@@ -47,3 +51,4 @@ Dropdown.prototype = {
 }
 
 export default Dropdown
+

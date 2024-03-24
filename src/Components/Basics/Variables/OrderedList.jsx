@@ -14,7 +14,7 @@ const OrderedList = (props) => {
 	)))
 	
   return (
-	<ol className={additionalClass}>
+	<ol className={additionalClass || ''}>
 		{renderItems(lists)}
 	</ol>
   )

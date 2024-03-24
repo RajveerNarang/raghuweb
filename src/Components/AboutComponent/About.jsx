@@ -11,6 +11,7 @@ const About = () => {
 	const toggleDropdown = (index) => {
 	  setOpenIndex(openIndex === index ? null : index)
 	}
+
   return (
     <div className={`${styles.container}`}>
       {aboutData ? aboutData.map((titles, index) => (
@@ -19,10 +20,12 @@ const About = () => {
           title={titles.title} 
           data={titles.data}
           isOpen={openIndex === index} 
-          toggleDropdown={() => toggleDropdown(index)} />
+          toggleDropdown={() => toggleDropdown(index)} 
+		/>
       )) : null}
     </div>
   )
 }
 
 export default About
+
