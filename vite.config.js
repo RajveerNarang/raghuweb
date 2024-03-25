@@ -14,7 +14,8 @@ export default defineConfig({
       "@json": "/json",
       "@images": "/images",
       "@utils": "/utils",
-	  "@audio": "/audio"
+	  "@audio": "/audio",
+	  "@server": "/server"
     },
   },
 });
