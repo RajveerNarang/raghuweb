@@ -7,8 +7,7 @@
 			"@json/*": ["./json/*"],
 			"@images": ["./images/*"],
 			"@utils": ["./utils/*"],
-			"@audio": ["./audio/*"],
-			"@server": ["./server/*"]
+			"@audio": ["./audio/*"]
 		}
 	},
 	"include": ["src"]

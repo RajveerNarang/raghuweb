@@ -1,8 +1,9 @@
 import express from 'express';
-import { emailLogin } from "@server/controllers/userController.js";
+import { getEmail, postEmail } from "../controllers/userController.js";
 
 const router = express.Router();
 
-router.post('/login', emailLogin)
+router.get('/', getEmail)
+router.post('/', postEmail)
 
 export default router

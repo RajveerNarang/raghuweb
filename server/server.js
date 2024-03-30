@@ -1,16 +1,15 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import { config } from 'dotenv';
+import express, { json } from 'express';
+import userRouter from './routes/userRouter.js';
 
-import express from 'express';
-import userRouter from '@server/routes/userRouter.js';
-
-console.log(userRouter);
+config();
 
 const app = express();
+app.use(json());
+
 const port = process.env.PORT || 3000;
 
-
-app.use('/', userRouter)
+app.use('/api/login', userRouter)
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
