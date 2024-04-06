@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import styles from '@components/Basics/Input/input.module.scss'
 import PropTypes from 'prop-types'
 
@@ -6,30 +6,24 @@ const Input = (props) => {
 	const {
 		inputType, 
 		labelText, 
-		inputNameId, 
-		inputValue, 
-		onChangeHandler, 
-		// startAudioContext,
+		inputNameId,  
 		additionalStyle
 	} = props
 
 	const [isFocused, setIsFocused] = useState(false);
-	const inputRef = useRef(null);
+	const [inputValue, setInputValue] = useState('')
 
 	const handleFocus = () => {
 		setIsFocused(true)
-		// startAudioContext();
 	};
 	const handleBlur = () => {
 		setIsFocused(false)
 	};
 
-	useEffect(() => {
-		if (inputRef && (inputValue || document.activeElement === inputRef.current)) {
-			inputRef.current?.focus();
-		}
-	}, [inputValue]);
-  
+	const handleChange = (e) => {
+		setInputValue(e.target.value)
+	}
+
 	return (
 	  <div className={`${styles.container}  ${isFocused || inputValue ? `${styles.focused}`: ''}`} style={{...additionalStyle}}>
 		<label htmlFor={inputNameId} >{labelText}</label>
@@ -38,9 +32,8 @@ const Input = (props) => {
 		  id={inputNameId}
 		  name={inputNameId}
 		  className={styles.input}
-		  ref={inputRef}
 		  value={inputValue}
-		  onChange={onChangeHandler}
+		  onChange={handleChange}
 		  onFocus={handleFocus}
 		  onBlur={handleBlur}
 		  autoComplete={inputNameId}
@@ -53,8 +46,7 @@ Input.propTypes = {
 	inputType: PropTypes.string.isRequired, 
 	labelText: PropTypes.string.isRequired, 
 	inputNameId: PropTypes.string.isRequired,
-	additionalStyle: PropTypes.object,
-	onChangeHandler: PropTypes.func.isRequired
+	additionalStyle: PropTypes.object
   };
 
 export default Input

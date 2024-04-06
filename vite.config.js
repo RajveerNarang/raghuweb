@@ -19,4 +19,12 @@ export default defineConfig({
 	  '@server': '/server',
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001', // Replace with your backend URL
+        changeOrigin: true,
+      }
+    }
+  }
 });

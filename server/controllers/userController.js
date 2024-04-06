@@ -8,11 +8,11 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const jsonFilePath = path.join(__dirname, '..', '..', 'json', 'emailList.json');
+const jsonFilePath = path.join(__dirname, '../../json', 'emailList.json');
 
 export const postEmail = (req, res) => {
 	const { email } = req.body;
-	console.log(req.body)
+	// console.log(req.body)
 
 	if (!validator.isEmail(email)) {
 		return res.status(400).json({ error: 'Invalid email format' });
@@ -28,7 +28,7 @@ export const postEmail = (req, res) => {
 			jsonData.push({ email });
 			fileData = JSON.stringify(jsonData, null, 2);
 			fs.writeFileSync(jsonFilePath, fileData, 'utf8');
-			console.log(`Data has been added to file: ${jsonFilePath}`);
+			// console.log(`Data has been added to file: ${jsonFilePath}`);
 			res.status(200).json({ message: 'User registered successfully' });
 		} else {
 			res.status(200).json({ message: 'User logged in successfully' });
@@ -51,12 +51,6 @@ export const getEmail = (req, res) => {
 		return res.status(200).json(JSON.parse(data));
 	} catch (err) {
 		return res.status(500).json({ error: 'Failed to read JSON data' });
-	}
-
-	if (jsonData) {
-	  return res.status(200).json(jsonData);
-	} else {
-	  return res.status(500).json({ error: 'Failed to read JSON data' });
 	}
 };
 
