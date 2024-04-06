@@ -8,7 +8,7 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const jsonFilePath = path.join(__dirname, '../../json', 'emailList.json');
+const jsonFilePath = path.join(__dirname, '../../json/db', 'emailList.json');
 
 export const postEmail = (req, res) => {
 	const { email } = req.body;
