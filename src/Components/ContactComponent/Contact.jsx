@@ -6,7 +6,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Container from '@components/ContactComponent/Container'
 import GlassCard from '@components/Basics/GlassBox/GlassCard'
 import styles from '@components/ContactComponent/contact.module.scss'
-import contactData from '@json/contact.json'
+import contactData from '@json/frontend/contact.json'
 import Image from '@components/Basics/Image/Image'
 import dummyProfile from '@images/dummyProfile.jpg'
 

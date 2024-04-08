@@ -90,57 +90,6 @@
 		"level": 40
 	},
 	{
-		"name": "Drupal",
-		"category": "Journey",
-		"level": 1,
-		"day": 15,
-		"month": "01:Jan",
-		"year": "2022"
-	},
-	{
-		"name": "Docker",
-		"category": "Journey",
-		"level": 1,
-		"day": 15,
-		"month": "01:Jan",
-		"year": "2022"
-	},
-	{
-		"name": "Azure",
-		"category": "Journey",
-		"level": 8,
-		"month": "08:Aug",
-		"year": "2022"
-	},
-	{
-		"name": "JIRA",
-		"category": "Journey",
-		"level": 8,
-		"month": "08:Aug",
-		"year": "2022"
-	},
-	{
-		"name": "StoryBook",
-		"category": "Journey",
-		"level": 12,
-		"month": "12:Dec",
-		"year": "2022"
-	},
-	{
-		"name": "Dimensions",
-		"category": "Journey",
-		"level": 2,
-		"month": "02:Feb",
-		"year": "2023"
-	},
-	{
-		"name": "Decipher",
-		"category": "Journey",
-		"level": 2,
-		"month": "02:Feb",
-		"year": "2024"
-	},
-	{
 		"name": "Hibernate",
 		"category": "Backend",
 		"level": 25

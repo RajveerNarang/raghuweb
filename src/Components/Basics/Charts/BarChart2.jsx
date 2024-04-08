@@ -2,7 +2,7 @@ import React from 'react'
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 
-import skillData from '@json/skills.json';
+import skillData from '@json/frontend/skills.json';
 import { 
   barDataFilter, createBarChartOptions
 } from '@utils/charts';

@@ -16,9 +16,7 @@ const BtnGroup = ({categoryAssign}) => {
 	}
   return (
 	<div className={`${styles.btnFlex}`}>
-		{Object.entries(items).map(([key, value], index) => {
-			console.log(key, value, ((index + 1) * 0.5));
-			return (
+		{Object.entries(items).map(([key, value], index) => (
 				<ButtonReshaped 
 					key={key}
 					id={key} 
@@ -28,7 +26,7 @@ const BtnGroup = ({categoryAssign}) => {
 					attr = {{style: { animation: `slideRight ${(index + 1) * 0.5}s linear` }}}
 				/>
 			)
-		})}
+		)}
     </div>
   )
 }

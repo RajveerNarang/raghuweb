@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '@components/ProjectsComponent/projects.module.scss'
 
-import projectData from '@json/projects.json'
+import projectData from '@json/frontend/projects.json'
 import GlassCard from '@components/Basics/GlassBox/GlassCard'
 import Header from '@components/Basics/Variables/Header'
 import Paragraph from '@components/Basics/Variables/Paragraph'

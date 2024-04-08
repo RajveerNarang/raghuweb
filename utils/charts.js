@@ -36,16 +36,14 @@ export const pieDataFilter = (data, filterTo) => {
 };
 
 export const lineDataFilter = (data) => {
-	// Filter data based on the specified category
-	const filteredData = data.filter((item) => (item.category === 'Journey'));
 	
-	filteredData.sort((a, b) => a.year - b.year);
+	data.sort((a, b) => a.year - b.year);
   
 	// Prepare chart data structure
-	const labels = filteredData.map(item => (
+	const labels = data.map(item => (
 		`${item.year}-${item.month.split(':')[0]}-${item.day || '01'}`
 	));
-	const dataValues = filteredData.map(item => (
+	const dataValues = data.map(item => (
 		{
 			x: `${item.year}-${item.month.split(':')[0]}-01`,
 			y: item.level - 1,
@@ -90,12 +88,8 @@ export const createPieChartOptions = () => ({
 	}
 })
 export const createLineChartOptions = (data) => {
-
-	const filteredData = data.filter(
-		(item) => (item.category === 'Journey')
-	);
 	
-	filteredData.sort((a, b) => a.year - b.year);
+	data.sort((a, b) => a.year - b.year);
 
 	const currentYear = new Date().getFullYear();
 
@@ -168,7 +162,7 @@ export const createLineChartOptions = (data) => {
 						const year = date.getFullYear();
 						const month = date.getMonth() + 1; // Note: month is 0-indexed, so add 1
 
-						const matchingDataPoint = filteredData.filter(item => {
+						const matchingDataPoint = data.filter(item => {
 							const itemYear = parseInt(item.year);
 							const itemMonth = parseInt(item.month.split(':')[0]);
 

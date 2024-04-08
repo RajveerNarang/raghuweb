@@ -3,7 +3,7 @@ import React from 'react'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
 
-import skillData from '@json/skills.json';
+import skillData from '@json/frontend/skills.json';
 import { 
   pieDataFilter, createPieChartOptions
 } from '@utils/charts';

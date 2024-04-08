@@ -3,7 +3,7 @@ import { Chart as ChartJS, LineElement, PointElement, TimeScale, LinearScale, To
 import { Line } from 'react-chartjs-2'
 
 import styles from '@components/Basics/Charts/chart.module.scss'
-import skillData from '@json/skills.json';
+import journeyData from '@json/db/journey.json';
 import { 
   createLineChartOptions, lineDataFilter
 } from '@utils/charts';
@@ -12,8 +12,8 @@ ChartJS.register(LineElement, PointElement, TimeScale, LinearScale, Tooltip, Leg
 
 const LineChart = ({additionalClass}) => {
 	
-	const lineData = lineDataFilter(skillData);
-	const lineOptions = createLineChartOptions(skillData)
+	const lineData = lineDataFilter(journeyData);
+	const lineOptions = createLineChartOptions(journeyData)
 
 	// console.log(lineData.labels);
 

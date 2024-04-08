@@ -1,10 +1,11 @@
 import React, { lazy } from 'react'
+import { useMediaQuery } from 'react-responsive'
+
 import styles from '@components/MainComponent/main.module.scss'
 
-const Navbar = lazy(() => import('@components/NavbarComponent/Navbar'))
+import Navbar from '@components/NavbarComponent/Navbar'
 const Routing = lazy(() => import('@components/MainComponent/Routing'))
 import Stars from '@components/Basics/Canvas/Stars'
-import { useMediaQuery } from 'react-responsive'
 
 function Main() {
 

@@ -7,19 +7,19 @@ import Paragraph from '@components/Basics/Variables/Paragraph'
 import UnorderedList from '@components/Basics/Variables/UnorderedList'
 import LinkGroup from '@components/HomeComponent/LinkGroup'
 
-import homeData from '@json/home.json'
+import homeData from '@json/frontend/home.json'
 
 const Home = () => {
 
   return (
 	<div className={`${styles.container}`}>
-    <GlassCard id={'homeGlassCard'} additionalClass={`${styles.box}`}>
-      <Header text={homeData.header} level={1} />
-      <Paragraph content={homeData.content} />
-      <UnorderedList lists={homeData.lists} additionalClass={styles.list_group}/>
-      <Paragraph content={homeData.content} />
-    </GlassCard>
-    <LinkGroup />
+		<GlassCard id={'homeGlassCard'} additionalClass={`${styles.box}`}>
+			<Header text={homeData.header} level={1} />
+			<Paragraph content={homeData.content} />
+			<UnorderedList lists={homeData.lists} additionalClass={styles.list_group}/>
+			<Paragraph content={homeData.content} />
+		</GlassCard>
+		<LinkGroup />
   </div>
   )
 }

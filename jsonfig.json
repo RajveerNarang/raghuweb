@@ -4,7 +4,7 @@
 		"paths": {
 			"@src/*": ["./src/*"],
 			"@components/*": ["./src/components/*"],
-			"@json/*": ["./json/*"],
+			"@json/frontend/*": ["./json/*"],
 			"@images": ["./images/*"],
 			"@utils": ["./utils/*"],
 			"@audio": ["./audio/*"]

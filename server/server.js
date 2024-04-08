@@ -5,6 +5,7 @@ import userRouter from './routes/userRouter.js';
 import audioRouter from './routes/audioRouter.js';
 import quoteRouter from './routes/quoteRouter.js';
 import emailRouter from './routes/emailRouter.js';
+import journeyRouter from './routes/journeyRouter.js';
 
 config();
 
@@ -16,7 +17,8 @@ const port = process.env.PORT || 3000;
 server.use('/api/login', userRouter)
 server.use('/api/audio', audioRouter)
 server.use('/api/quote', quoteRouter)
-server.use('/api/', emailRouter)
+server.use('/api/sendEmail', emailRouter)
+server.use('/api/journey', journeyRouter)
 
 server.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
