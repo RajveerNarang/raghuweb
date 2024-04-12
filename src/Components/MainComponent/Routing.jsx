@@ -10,9 +10,9 @@ const Skills = lazy(() => import('@components/SkillsComponent/Skills'))
 const Projects = lazy(() => import('@components/ProjectsComponent/Projects'))
 
 // use framer motion hint: https://www.youtube.com/watch?v=FdrEjwymzdY&ab_channel=PedroTech
-const Routing = ({ additionalClass }) => {
+const Routing = ({ className }) => {
   return (
-	<div className={additionalClass}>
+	<div className={className}>
 		<Routes>
 			<Route path='' 
 				element={

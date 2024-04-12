@@ -15,7 +15,7 @@ function Main() {
 	<main className={styles.container}>
     <Stars limit={isDesktop ? '275' : '137'} />
     <Navbar />
-    <Routing additionalClass={styles.router} />
+    <Routing className={styles.router} />
   </main>
   )
 }

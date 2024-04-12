@@ -16,7 +16,7 @@ const DesktopNav = () => {
 					id={'home'}
 					name={'Home'} 
 					iconName={faHome}
-					additionalClass={`${isActive(location, '/') ? styles.active: '' }`}
+					className={`${isActive(location, '/') ? styles.active: '' }`}
 				/>
 			</Link>
 		</div>
@@ -26,7 +26,7 @@ const DesktopNav = () => {
 					id={'about'}
 					name={'About'} 
 					iconName={faUser}
-					additionalClass={`${isActive(location, '/about') ? styles.active: '' }`}
+					className={`${isActive(location, '/about') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/contact`}>
@@ -34,7 +34,7 @@ const DesktopNav = () => {
 					id={'contact'}
 					name={'Contact'} 
 					iconName={faAddressCard}
-					additionalClass={`${isActive(location, '/contact') ? styles.active: '' }`}
+					className={`${isActive(location, '/contact') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/skills`}>
@@ -42,7 +42,7 @@ const DesktopNav = () => {
 					id={'skills'}
 					name={'Skills'} 
 					iconName={faGears}
-					additionalClass={`${isActive(location, '/skills') ? styles.active: '' }`}
+					className={`${isActive(location, '/skills') ? styles.active: '' }`}
 				/>
 			</Link>
 			<Link to={`/projects`}>
@@ -50,7 +50,7 @@ const DesktopNav = () => {
 					id={'projects'}
 					name={'Projects'} 
 					iconName={faCode}
-					additionalClass={`${isActive(location, '/projects') ? styles.active: '' }`}
+					className={`${isActive(location, '/projects') ? styles.active: '' }`}
 				/>
 			</Link>
 		</div>

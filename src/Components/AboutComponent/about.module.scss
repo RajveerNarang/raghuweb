@@ -2,13 +2,73 @@
 
 .container {
 	position: relative;
-	top: calc($spacing-double * 2.5);
+	display: flex;
+	height: $perc-100;
 
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax($grid-min-width, 1fr));
-	gap: $spacing-half;
+	.icons {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: $spacing;
 
-	@include media-md {
-		top: calc($spacing-double * 3);
+		.resume {
+			text-align: center;
+			
+			color: $dark-primary;
+			font-size: $size-one-half; 
+			background-color: transparent;
+
+			flex: 1;
+		}
+
+		.iconGrp {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+
+			flex: 1;
+		}
+
+		.iconBtn {
+			color: $dark-text;
+			font-size: $size-one-half; 
+			background-color: transparent;
+			cursor: pointer;
+		}
+
+		.active {
+			color: $dark-primary;
+		}
+
+		span {
+			opacity: 0;
+			position: absolute;
+		}
+	}
+	.contents {
+		flex: 1;
+		overflow: hidden scroll;
+	}
+
+	.content_box {
+		position: relative;
+		left: calc($spacing-one-half * 2);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		font-size: calc($size-half * 2.5);
+
+		height: calc($perc-100 * 0.95);
+		width: calc($perc-100 * 0.9);
+		background-color: $dark-secondary;
+		
+		margin: $spacing-half;
+		color: $dark-text;
+		box-shadow: inset 0 0 1rem 0.1rem $dark-accent;
+		border-radius: $size-half;
+		padding: $spacing $spacing-double;
 	}
 }

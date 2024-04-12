@@ -21,9 +21,9 @@ const BtnGroup = ({categoryAssign}) => {
 					key={key}
 					id={key} 
 					name={value} 
-					additionalClass={styles.btnFlex__item} 
+					className={styles.btnFlex__item} 
 					onClick={() => handleCategoryAssign(value)} 
-					attr = {{style: { animation: `slideRight ${(index + 1) * 0.5}s linear` }}}
+					attr = {{style: { animation: `slideRight ${(index + 1) * 0.3}s ease-in` }}}
 				/>
 			)
 		)}

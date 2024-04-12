@@ -10,11 +10,11 @@ const Projects = () => {
   return (
 	<div className={`${styles.container}`}>
     {projectData.map((item, index) => (
-      <GlassCard key={index} id={`project${index}`} additionalClass={styles.animate}>
+      <GlassCard key={index} id={`project${index}`} className={styles.animate}>
         <a href={item.link}>
           <Header level={3} text={item.heading} />
         </a>
-        <Paragraph additionalClass={styles.paraSpace} content={item.description} />
+        <Paragraph className={styles.paraSpace} content={item.description} />
       </GlassCard>
     ))}
   </div>

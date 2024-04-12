@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
 	<div className={`${styles.container}`}>
-    <GlassCard id={'contactGlassCard'} additionalClass={`${styles.box}`}>
+    <GlassCard id={'contactGlassCard'} className={`${styles.box}`}>
       <Image path={dummyProfile} alt={'Dummy Profile'} />
       {contactData ? contactData.map((item, index) => (
         <a 

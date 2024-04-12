@@ -32,7 +32,7 @@ const LoginForm = () => {
 		<ButtonReshaped 
 			id="submit" 
 			name="Submit" 
-			additionalClass={styles.form_btn}
+			className={styles.form_btn}
 			attr={{type: "submit"}}
 		/>
 	</form>

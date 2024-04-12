@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const List = (props) => {
 
-	const {lists, type, additionalClass} = props
+	const {lists, type, className} = props
 	if (!lists || lists === undefined || type !== 'u' && type !== 'o') {
 		return null
 	}
@@ -18,7 +18,7 @@ const List = (props) => {
 	)))
 	
   return (
-	<Tag className={additionalClass || ''}>
+	<Tag className={className || ''}>
 		{renderItems(lists)}
 	</Tag>
   )

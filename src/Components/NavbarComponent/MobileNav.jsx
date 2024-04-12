@@ -22,7 +22,7 @@ const MobileNav = () => {
 				name={''} 
 				iconName={faPlus} 
 				onClick={toggleNav} 
-				additionalClass={`${isOpen ? styles.rotate45 : styles.rotate0}`}
+				className={`${isOpen ? styles.rotate45 : styles.rotate0}`}
 			/>
 		</div>
 		<div className={`${styles.right}`}>
@@ -33,7 +33,7 @@ const MobileNav = () => {
 						id={'home'}
 						name={'Home'} 
 						iconName={faHome} 
-						additionalClass={`${isActive(location, '/') ? styles.active: '' }`} 
+						className={`${isActive(location, '/') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -43,7 +43,7 @@ const MobileNav = () => {
 						id={'about'}
 						name={'About'} 
 						iconName={faUser} 
-						additionalClass={`${isActive(location, '/about') ? styles.active: '' }`} 
+						className={`${isActive(location, '/about') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -53,7 +53,7 @@ const MobileNav = () => {
 						id={'contact'}
 						name={'Contact'} 
 						iconName={faAddressCard} 
-						additionalClass={`${isActive(location, '/contact') ? styles.active: '' }`} 
+						className={`${isActive(location, '/contact') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -63,7 +63,7 @@ const MobileNav = () => {
 						id={'skills'}
 						name={'Skills'} 
 						iconName={faGears} 
-						additionalClass={`${isActive(location, '/skills') ? styles.active: '' }`} 
+						className={`${isActive(location, '/skills') ? styles.active: '' }`} 
 					/>
 			</Link>
 			<Link 
@@ -73,7 +73,7 @@ const MobileNav = () => {
 						id={'projects'}
 						name={'Projects'} 
 						iconName={faCode} 
-						additionalClass={`${isActive(location, '/projects') ? styles.active: '' }`} 
+						className={`${isActive(location, '/projects') ? styles.active: '' }`} 
 					/>
 			</Link>
 		</div>

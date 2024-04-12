@@ -10,7 +10,7 @@ import {
 
 ChartJS.register(LineElement, PointElement, TimeScale, LinearScale, Tooltip, Legend)
 
-const LineChart = ({additionalClass}) => {
+const LineChart = ({className}) => {
 	
 	const lineData = lineDataFilter(journeyData);
 	const lineOptions = createLineChartOptions(journeyData)
@@ -18,7 +18,7 @@ const LineChart = ({additionalClass}) => {
 	// console.log(lineData.labels);
 
 	return (
-		<div className={`${styles.container} ${additionalClass || ''}`}>
+		<div className={`${styles.container} ${className || ''}`}>
 			<Line 
 				data={lineData} 
 				options={lineOptions}/>

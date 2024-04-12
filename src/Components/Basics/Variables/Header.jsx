@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Header = ({level, text, additionalClass}) => {
+const Header = ({level, text, className}) => {
 	const Tag = `h${level}`
   return (
-	<Tag className={additionalClass || ''}>{text}</Tag>
+	<Tag className={className || ''}>{text}</Tag>
   )
 }
 

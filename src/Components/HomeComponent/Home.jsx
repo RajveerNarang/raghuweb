@@ -13,10 +13,10 @@ const Home = () => {
 
   return (
 	<div className={`${styles.container}`}>
-		<GlassCard id={'homeGlassCard'} additionalClass={`${styles.box}`}>
+		<GlassCard id={'homeGlassCard'} className={`${styles.box}`}>
 			<Header text={homeData.header} level={1} />
 			<Paragraph content={homeData.content} />
-			<UnorderedList lists={homeData.lists} additionalClass={styles.list_group}/>
+			<UnorderedList lists={homeData.lists} className={styles.list_group}/>
 			<Paragraph content={homeData.content} />
 		</GlassCard>
 		<LinkGroup />

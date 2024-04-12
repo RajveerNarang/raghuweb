@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const UnorderedList = (props) => {
 
-	const {lists, additionalClass} = props
+	const {lists, className} = props
 	if (!lists || lists === undefined) {
 		return null
 	}
@@ -15,7 +15,7 @@ const UnorderedList = (props) => {
 	)))
 	
   return (
-	<ul className={additionalClass || ''}>
+	<ul className={className || ''}>
 		{renderItems(lists)}
 	</ul>
   )

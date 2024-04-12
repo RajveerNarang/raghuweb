@@ -7,10 +7,10 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   
-  const {name, id, iconName, onClick, additionalClass, attr} = props
+  const {name, id, iconName, onClick, className, attr} = props
 
   return (
-    <button id={id} className={`${styles.btn} ${styles.btn__responsive } ${additionalClass || ''}`} onClick={onClick} {...attr || null}>
+    <button id={id} className={`${styles.btn} ${styles.btn__responsive } ${className || ''}`} onClick={onClick} {...attr || null}>
       {iconName ? <FontAwesomeIcon icon={iconName} className={`${styles.icon}`} /> : null}
       {name ? <span className={`${styles.text}`}>{name}</span> : null}
     </button>
@@ -25,7 +25,7 @@ Button.propTypes = {
     PropTypes.string,  // String (URL)
   ]),
   name: PropTypes.string.isRequired,
-  additionalClass: PropTypes.oneOfType([
+  className: PropTypes.oneOfType([
     PropTypes.string, 
     PropTypes.object,
     PropTypes.array

@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 
 const OrderedList = (props) => {
 
-	const {lists, additionalClass} = props
+	const {lists, className} = props
 	if (!lists || lists === undefined) {
 		return null
 	}
 	const renderItems = (lists) => (lists.map((list, index) => (
 		<li key={index}>
-			{list.text}
+			{list.text || list}
 		</li>
 	)))
 	
   return (
-	<ol className={additionalClass || ''}>
+	<ol className={className || ''}>
 		{renderItems(lists)}
 	</ol>
   )
