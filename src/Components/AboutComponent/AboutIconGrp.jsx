@@ -6,11 +6,11 @@ import styles from '@components/AboutComponent/about.module.scss'
 import PropTypes from 'prop-types';
 
 const AboutIconGrp = (props) => {
-	const {idx, icon, text, setCurentIndex, isCurrent} = props
+	const {idx, icon, text, setCurrentIndex, isCurrent} = props
   return (
 	<>
 		<motion.button
-			onClick={() => setCurentIndex(idx)}
+			onClick={() => setCurrentIndex(idx)}
 			whileHover={{ scale: 1.1 }}
 			whileTap={{ scale: 0.9 }}
 			className={`${styles.iconBtn} ${isCurrent ? `${styles.active}` : ''}`}
@@ -27,7 +27,7 @@ AboutIconGrp.propTypes = {
 	idx: PropTypes.number.isRequired,
 	icon: PropTypes.object.isRequired,
 	text: PropTypes.string.isRequired,
-	setCurentIndex: PropTypes.func.isRequired,
+	setCurrentIndex: PropTypes.func.isRequired,
 	isCurrent: PropTypes.bool.isRequired
 }
 

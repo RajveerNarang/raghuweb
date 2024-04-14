@@ -47,12 +47,16 @@
 	}
 	.contents {
 		flex: 1;
-		overflow: hidden scroll;
+		overflow-y: hidden;
 	}
 
 	.content_box {
 		position: relative;
-		left: calc($spacing-one-half * 2);
+		left: $spacing;
+		
+		@include media-md {
+			left: calc($spacing-one-half * 2);
+		}
 
 		display: flex;
 		align-items: center;
@@ -65,7 +69,7 @@
 		width: calc($perc-100 * 0.9);
 		background-color: $dark-secondary;
 		
-		margin: $spacing-half;
+		margin: $spacing-double $spacing-half $spacing-one-half;
 		color: $dark-text;
 		box-shadow: inset 0 0 1rem 0.1rem $dark-accent;
 		border-radius: $size-half;

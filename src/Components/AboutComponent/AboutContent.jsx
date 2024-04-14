@@ -1,18 +1,44 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import styles from '@components/AboutComponent/about.module.scss'
+import { motion } from 'framer-motion'
 
-const AboutContent = (props) => {
-	const { children, className } = props;
+import styles from '@components/AboutComponent/about.module.scss'
+import Education from '@components/AboutComponent/Education'
+import Interests from '@components/AboutComponent/Interests'
+import Certification from '@components/AboutComponent/Certification'
+
+const AboutContent = forwardRef((props, ref) => {
+	const {data, className} = props
+
+	const getContent = (text) => {
+		
+		switch (text) {
+			case 'Education':
+				return <Education />
+			case 'Interests':
+				return <Interests />
+			case 'Achievements':
+				return <Certification />
+			default:
+				return null
+		}
+	}
+	
   return (
-	<section className={`${styles.content_box} ${className || ''}`}>
-		{children}
-	</section>
+	<motion.section 
+		className={`${styles.content_box} ${className || ''}`}
+		ref={ref}
+		initial={{ opacity: 0 }}
+		animate={{ opacity: 1 }}
+		transition={{ duration: 0.5 }}
+	>
+		{getContent(data.text)}
+	</motion.section>
   )
-}
+})
 
 AboutContent.propTypes = {
-  children: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export default AboutContent

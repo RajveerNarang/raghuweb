@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faHeart, faCertificate, faFile } from '@fortawesome/free-solid-svg-icons';
@@ -6,19 +6,33 @@ import { faGraduationCap, faHeart, faCertificate, faFile } from '@fortawesome/fr
 import styles from '@components/AboutComponent/about.module.scss'
 import AboutIconGrp from '@src/components/AboutComponent/AboutIconGrp';
 import AboutContent from '@src/components/AboutComponent/AboutContent';
-import aboutData from '@json/frontend/about.json'
 
 const About = () => {
-	const [currentIndex, setCurentIndex] = useState(0)
-	
-	const getIcon = (text) => {
-		switch (text) {
-		  case 'Education': return faGraduationCap;
-		  case 'Achievements': return faCertificate;
-		  case 'Interests': return faHeart;
-		  default: return null;
+	const [currentIndex, setCurrentIndex] = useState(0)
+	const refArray = useRef([])
+
+	const data = [
+		{
+			icon: faGraduationCap,
+			text: 'Education'
+		},
+		{
+			icon: faCertificate,
+			text: 'Achievements'
+		},
+		{
+			icon: faHeart,
+			text: 'Interests'
 		}
-	  }
+	]
+	const scrollToSection = (index) => {
+		refArray.current[index]?.scrollIntoView({ behavior: 'smooth' });
+	};
+	
+	  // Scroll to the section when currentIndex changes
+	  useEffect(() => {
+		scrollToSection(currentIndex);
+	}, [currentIndex]);
 
   return (
     <div className={`${styles.container}`}>
@@ -45,12 +59,12 @@ const About = () => {
 				transition={{ duration: 0.3 }}
 				className={styles.iconGrp}
 			>
-				{aboutData.map((item, index) => (
+				{data.map((item, index) => (
 					<AboutIconGrp 
 						key={index} 
-						icon={getIcon(item.text)}
+						icon={item.icon}
 						text={item.text} 
-						setCurentIndex={setCurentIndex} 
+						setCurrentIndex={setCurrentIndex} 
 						idx={index}
 						isCurrent={currentIndex === index}
 					/>
@@ -58,14 +72,13 @@ const About = () => {
 			</motion.div>
 		</div>
 		<div className={`${styles.contents}`}>
-			<AboutContent>
-				<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit ratione in, maxime maiores ducimus perferendis commodi sint omnis dolore laborum perspiciatis, odio praesentium qui, quos deleniti incidunt ut deserunt?</div>
-			</AboutContent>
-			<AboutContent>
-				<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit ratione in, maxime maiores ducimus perferendis 
-					
-					commodi sint omnis dolore laborum perspiciatis, odio praesentium qui, quos deleniti incidunt ut deserunt?</div>
-			</AboutContent>
+			{data.map((item, index) => (
+				<AboutContent 
+					key={index} 
+					data={item}
+					ref={(element) => (refArray.current[index] = element)}
+				/>
+			))}
 		</div>
     </div>
   )
