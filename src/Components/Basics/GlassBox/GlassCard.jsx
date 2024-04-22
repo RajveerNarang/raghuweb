@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import styles from '@components/Basics/GlassBox/glass.module.scss'
 
 const GlassCard = (props) => {
-	const { id, children, className } = props;
+	const { id, children, className, handleClick } = props;
   return (
-	<section id={id} className={`${styles.container} ${className || ''}`}>
+	<section id={id} className={`${styles.container} ${className || ''}`} onClick={handleClick}>
 		{children}
 	</section>
   )

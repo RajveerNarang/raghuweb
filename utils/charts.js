@@ -66,8 +66,15 @@ export const createBarChartOptions = () => ({
 		y: {
 			beginAtZero: true,
 			min: 0,
-			max: 100,
-			ticks: { color: '#fff8' },
+			max: 3,
+			ticks: { 
+				color: '#fff8',
+				callback: (val, index) => {
+					const labels = ['Novice', 'Intermediate', 'Advanced']
+					return index > 0? labels[index - 1] : null
+				},
+				maxTicksLimit: 4
+			},
 		},
 		x: { ticks: { color: '#fff8' } }
 	},

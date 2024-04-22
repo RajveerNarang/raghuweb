@@ -28,7 +28,7 @@ const AboutContent = forwardRef((props, ref) => {
 	<motion.section 
 		className={`${styles.content_box} ${className || ''}`}
 		ref={ref}
-		initial={{ opacity: 0 }}
+		initial={{ opacity: 0, y: 200 }}
 		animate={{ opacity: 1 }}
 		transition={{ duration: 0.5 }}
 	>

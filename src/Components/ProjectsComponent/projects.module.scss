@@ -6,7 +6,10 @@
 	gap: $spacing-half;
 
 	.animate {
+		text-align: center;
+		padding: $spacing-double;
 		animation: scaleIn 1s linear;
+		cursor: pointer;
 	}
 
 	.paraSpace {

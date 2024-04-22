@@ -1,0 +1,49 @@
+@import '@src/index.scss';
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: $perc-100;
+	height: $perc-100;
+	background-color: $dark-glasseffect-inset;
+	z-index: 20;
+  
+	.modal {
+	  position: absolute;
+	  background-color: $dark-secondary;
+	  border-radius: $size-half;
+	  width: $perc-50;
+	  height: inherit;
+	  color: $dark-text;
+	  box-shadow: inset 0 0 0 0.15rem $dark-primary,
+	  			inset 0 0 $size $dark-primary;
+	  
+	  z-index: 21;
+	  padding: $spacing;
+
+	  .header {
+		display: flex;
+		justify-content: space-between;
+		width: $perc-100;
+
+		border-bottom: 1px solid $dark-glasseffect;
+	  }
+  
+	  .close {
+		position: relative;
+		top: $spacing-half;
+		right: $spacing-half;
+		cursor: pointer;
+		
+		font-size: $size-one-half;
+		color: $dark-text;
+	  }
+	}
+}
+  

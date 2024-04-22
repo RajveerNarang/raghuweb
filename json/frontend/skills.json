@@ -2,101 +2,101 @@
 	{
 		"name": "HTML",
 		"category": "Frontend",
-		"level": 90
+		"level": 3
 	},
 	{
 		"name": "CSS",
 		"category": "Frontend",
-		"level": 88
+		"level": 3
 	},
 	{
 		"name": "Sass",
 		"category": "Frontend",
-		"level": 80
+		"level": 2
 	},
 	{
 		"name": "Tailwind CSS",
 		"category": "Frontend",
-		"level": 50
+		"level": 1
 	},
 	{
 		"name": "Bootstrap",
 		"category": "Frontend",
-		"level": 40
+		"level": 1
 	},
 	{
 		"name": "Javascript",
 		"category": "Frontend",
-		"level": 70
+		"level": 2
 	},
 	{
 		"name": "React",
 		"category": "Frontend",
-		"level": 75
+		"level": 2
 	},
 	{
 		"name": "NodeJs",
 		"category": "Backend",
-		"level": 85
+		"level": 3
 	},
 	{
 		"name": "Java",
 		"category": "Backend",
-		"level": 65
+		"level": 1
 	},
 	{
 		"name": "Python",
 		"category": "Backend",
-		"level": 65
+		"level": 1
 	},
 	{
 		"name": "ExpressJS",
 		"category": "Backend",
-		"level": 70
+		"level": 2
 	},
 	{
 		"name": "MongoDB",
 		"category": "Others",
-		"level": 70
+		"level": 2
 	},
 	{
 		"name": "Git",
 		"category": "Others",
-		"level": 90
+		"level": 3
 	},
 	{
 		"name": "Figma",
 		"category": "Others",
-		"level": 40
+		"level": 1
 	},
 	{
 		"name": "SketchBook",
 		"category": "Others",
-		"level": 30
+		"level": 1
 	},
 	{
 		"name": "jQuery",
 		"category": "Others",
-		"level": 70
+		"level": 1
 	},
 	{
 		"name": "Postman",
 		"category": "Others",
-		"level": 75
+		"level": 2
 	},
 	{
 		"name": "Blender",
 		"category": "Others",
-		"level": 40
+		"level": 1
 	},
 	{
 		"name": "Hibernate",
 		"category": "Backend",
-		"level": 25
+		"level": 1
 	},
 	{
 		"name": "Spring Boots",
 		"category": "Backend",
-		"level": 25
+		"level": 1
 	}
 ]
