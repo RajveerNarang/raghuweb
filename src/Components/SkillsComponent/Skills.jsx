@@ -7,6 +7,7 @@ import PieBarChart from '@components/Basics/Charts/PieBarChart';
 import BtnGroup from '@components/SkillsComponent/BtnGroup';
 
 import styles from "@components/SkillsComponent/skill.module.scss";
+import JourneyTree from '@components/SkillsComponent/JourneyTree';
 
 const Skills = () => {
 
@@ -18,7 +19,7 @@ const Skills = () => {
     {selectedCategory !== 'Journey' ? 
       <PieBarChart selectedCategory={selectedCategory} /> 
       : 
-      <LineChart selectedCategory={selectedCategory} />
+      <JourneyTree />
     }
   </div>
   )

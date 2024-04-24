@@ -1,15 +1,63 @@
 import React, { Fragment, useState } from 'react'
 import styles from '@components/ProjectsComponent/projects.module.scss'
 
-import projectData from '@json/frontend/projects.json'
+// import projectData from '@json/frontend/projects.json'
 import GlassCard from '@components/Basics/GlassBox/GlassCard'
 import Header from '@components/Basics/Variables/Header'
 import Paragraph from '@components/Basics/Variables/Paragraph'
-import Modal from '@components/Basics/Modal/Modal'
+import Project1 from '@components/ProjectsComponent/Project1'
+import Project2 from '@components/ProjectsComponent/Project2'
+import Project3 from '@components/ProjectsComponent/Project3'
 
 const Projects = () => {
 	const [currentIndex, setCurrentIndex] = useState(null)
 	const [isOpen, setIsOpen] = useState(false)
+
+	const projectData = [
+		{
+			heading: 'Project 1',
+		},
+		{
+			heading: 'Project 2',
+		},
+		{
+			heading: 'Project 3',
+
+		}
+	]
+
+	const getModal = (index) => {
+		switch (index) {
+			case 0:
+				return (
+					<Project1 
+						isCurrentOpen={index === currentIndex && isOpen} 
+						handleClose={handleClose}
+						heading = {projectData[index].heading}
+					/>
+				)
+			case 1:
+				return (
+					<Project2
+						isCurrentOpen={index === currentIndex && isOpen} 
+						handleClose={handleClose}
+						heading = {projectData[index].heading}
+					/>
+				)
+			
+			case 2:
+				return (
+					<Project3
+						isCurrentOpen={index === currentIndex && isOpen} 
+						handleClose={handleClose}
+						heading = {projectData[index].heading}
+					/>
+				)
+		
+			default:
+				return null;
+		}
+	}
 
 	const handleOpen = (index) => {
 		setIsOpen(true)
@@ -26,13 +74,7 @@ const Projects = () => {
 				<GlassCard id={`project${index}`} className={styles.animate} handleClick={() => handleOpen(index)}>
 					<Header level={3} text={item.heading} />
 				</GlassCard>
-				<Modal
-					isOpen={index === currentIndex && isOpen}
-					onClose={handleClose}
-					heading={item.heading}
-				>
-					<Paragraph className={styles.paraSpace} content={item.description} />
-				</Modal>
+				{getModal(index)}
 			</Fragment>
 		))}
 	</div>

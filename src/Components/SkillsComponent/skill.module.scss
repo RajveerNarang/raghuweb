@@ -24,7 +24,16 @@
 		}
 	}
 
-	.chartEx {
-		flex-grow: 1;
+	.date {
+		@include media-md {
+			color: $dark-primary;
+			font-size: $size-one-half;
+		}
+	}
+
+	.timelineContainer {
+		height: $perc-100;
+		width: $perc-100;
+		overflow-y: scroll;
 	}
 }

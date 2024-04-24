@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Event 1",
+		"description": "This is the first event on the timeline.",
+		"date": "January 2022"
+	},
+	{
+		"title": "Event 2",
+		"description": "This is the second event on the timeline.",
+		"date": "February 2022"
+	},
+	{
+		"title": "Event 3",
+		"description": "This is the third event on the timeline.",
+		"date": "March 2022"
+	},
+	{
+		"title": "Event 4",
+		"description": "This is the fourth event on the timeline.",
+		"date": "April 2022"
+	}
+]
