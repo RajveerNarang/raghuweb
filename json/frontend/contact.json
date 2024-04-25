@@ -4,8 +4,7 @@
 		"iconName": "faEnvelope",
 		"data": {
 			"content": "raghunandansharma615@gmail.com",
-			"tooltipData": "This is the data",
-			"link": "mailto:raghunandansharma615@gmail.com"
+			"link": "https://mail.google.com/mail/u/0/?fs=1&tf=1&view=cm&to=raghunandansharma615@gmail.com"
 		}
 	},
 	{
@@ -13,7 +12,6 @@
 		"iconName": "faLinkedin",
 		"data": {
 			"content": "raghunandan sharma",
-			"tooltipData": "This is the data",
 			"link": "https://www.linkedin.com/in/raghunandan-sharma/"
 		}
 	},
@@ -22,7 +20,6 @@
 		"iconName": "faGithub",
 		"data": {
 			"content": "Raghunandan Sharma",
-			"tooltipData": "This is the data",
 			"link": "https://github.com/Raghunandan1451"
 		}
 	},
@@ -31,8 +28,8 @@
 		"iconName": "faWhatsapp",
 		"data": {
 			"content": "+91 9814101383",
-			"tooltipData": "This is the data",
-			"link": "https://wa.me/9814101383"
+			"link": "https://web.whatsapp.com/send?phone=9814101383",
+			"link1": "https://wa.me/9814101383"
 		}
 	},
 	{
@@ -40,7 +37,6 @@
 		"iconName": "faInstagram",
 		"data": {
 			"content": "rick_lykos",
-			"tooltipData": "This is the data",
 			"link": "https://www.instagram.com/rick_lykos/"
 		}
 	},
@@ -49,7 +45,6 @@
 		"iconName": "faDiscord",
 		"data": {
 			"content": "Senshi Ryo#6474",
-			"tooltipData": "This is the data",
 			"link": "https://discord.com/users/li3kos"
 		}
 	},
@@ -58,7 +53,6 @@
 		"iconName": "faXTwitter",
 		"data": {
 			"content": "Raghunandan Sharma",
-			"tooltipData": "This is the data",
 			"link": "https://twitter.com/Rick_lykos"
 		}
 	}

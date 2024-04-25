@@ -9,8 +9,11 @@ import styles from '@components/ContactComponent/contact.module.scss'
 import contactData from '@json/frontend/contact.json'
 import Image from '@components/Basics/Image/Image'
 import dummyProfile from '@images/dummyProfile.jpg'
+import { useMediaQuery } from 'react-responsive'
 
 const Contact = () => {
+
+	const isDesktop = useMediaQuery({minWidth: 767})
 
   const getIcon = (iconName) => {
     switch (iconName) {
@@ -38,13 +41,21 @@ const Contact = () => {
     }
   }
 
+  const changeLink = (link1, link) => {
+	  if (!isDesktop && link1) {
+		  return link1;
+	  } else {
+		return link;
+	  }
+  }
+
   return (
 	<div className={`${styles.container}`}>
     <GlassCard id={'contactGlassCard'} className={`${styles.box}`}>
       <Image path={dummyProfile} alt={'Dummy Profile'} />
       {contactData ? contactData.map((item, index) => (
         <a 
-          href={item.data.link || '#'} 
+          href={changeLink(item.data.link1, item.data.link) || '#'} 
           key={index} 
           className={`${styles.items} ${getClassName(item.id)}`} 
           data-tooltip={item.data.tooltipData}

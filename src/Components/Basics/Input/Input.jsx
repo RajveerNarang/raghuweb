@@ -7,11 +7,12 @@ const Input = (props) => {
 		inputType, 
 		labelText, 
 		inputNameId,  
-		additionalStyle
+		additionalStyle,
+		inputValue,
+		handleChange
 	} = props
 
 	const [isFocused, setIsFocused] = useState(false);
-	const [inputValue, setInputValue] = useState('')
 
 	const handleFocus = () => {
 		setIsFocused(true)
@@ -19,10 +20,6 @@ const Input = (props) => {
 	const handleBlur = () => {
 		setIsFocused(false)
 	};
-
-	const handleChange = (e) => {
-		setInputValue(e.target.value)
-	}
 
 	return (
 	  <div className={`${styles.container}  ${isFocused || inputValue ? `${styles.focused}`: ''}`} style={{...additionalStyle}}>

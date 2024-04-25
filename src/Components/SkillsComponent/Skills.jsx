@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import 'chartjs-adapter-date-fns';
+// import 'chartjs-adapter-date-fns';
 
-
-import LineChart from '@components/Basics/Charts/LineChart'
 import PieBarChart from '@components/Basics/Charts/PieBarChart';
 import BtnGroup from '@components/SkillsComponent/BtnGroup';
 

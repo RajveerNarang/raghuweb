@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { faAddressCard, faCode, faGears, faHome, faPlus, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faAddressCard, faArrowRightToBracket, faCode, faGears, faHome, faPlus, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '@components/NavbarComponent/navbar.module.scss'
 import Button from '@components/Basics/Button/Button'
@@ -74,6 +74,16 @@ const MobileNav = () => {
 						name={'Projects'} 
 						iconName={faCode} 
 						className={`${isActive(location, '/projects') ? styles.active: '' }`} 
+					/>
+			</Link>
+			<Link 
+				to={`/login`} 
+				className={`${styles.navItem} ${isOpen ? styles.navItemShow : styles.navItemHide}`}>
+					<Button 
+						id={'login'}
+						name={'Login'} 
+						iconName={faArrowRightToBracket} 
+						className={`${isActive(location, '/login') ? styles.active: '' }`} 
 					/>
 			</Link>
 		</div>

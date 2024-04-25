@@ -9,7 +9,6 @@ const Contact = lazy(() => import('@components/ContactComponent/Contact'))
 const Skills = lazy(() => import('@components/SkillsComponent/Skills'))
 const Projects = lazy(() => import('@components/ProjectsComponent/Projects'))
 
-// use framer motion hint: https://www.youtube.com/watch?v=FdrEjwymzdY&ab_channel=PedroTech
 const Routing = ({ className }) => {
   return (
 	<div className={className}>

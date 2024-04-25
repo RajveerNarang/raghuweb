@@ -7,8 +7,8 @@ export const sendEmail = (req, res) => {
     let transporter = createTransport({
         service: 'Gmail',
         auth: {
-            user: 'your_email@gmail.com',
-            pass: 'your_password'
+            user: process.env.USER,
+            pass: process.env.PASSWORD
         }
     });
 
