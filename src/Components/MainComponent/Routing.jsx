@@ -13,7 +13,7 @@ const Routing = ({ className }) => {
   return (
 	<div className={className}>
 		<Routes>
-			<Route path='' 
+			<Route path={'/' || '/home'}
 				element={
 				<Suspense fallback={<Loader />}>
 					<Home />

@@ -1,13 +1,16 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { faAddressCard, faArrowRightToBracket, faCode, faGears, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faAddressCard, faArrowRightFromBracket, faArrowRightToBracket, faCode, faGears, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '@components/NavbarComponent/navbar.module.scss'
 import Button from '@components/Basics/Button/Button'
 import { isActive } from '@utils/navbar'
+import { getAccessData, removeAccessData } from '@utils/auth'
 
 const DesktopNav = () => {
 	const location = useLocation()
+	const data = getAccessData()
+
   return (
 	<>
 		<div className={`${styles.left}`}> 
@@ -53,14 +56,25 @@ const DesktopNav = () => {
 					className={`${isActive(location, '/projects') ? styles.active: '' }`}
 				/>
 			</Link>
-			<Link to={`/login`}>
-				<Button 
-					id={'login'}
-					name={'Login'} 
-					iconName={faArrowRightToBracket} 
-					className={`${isActive(location, '/login') ? styles.active: '' }`} 
-				/>
+			
+			{data?.isLoggedIn ? <Link 
+				to={`#`} >
+					<Button 
+						id={'logout'}
+						name={'Logout'} 
+						iconName={faArrowRightFromBracket}
+						onClick={() => removeAccessData()}
+					/>
+			</Link> : <Link 
+				to={`/login`} >
+					<Button 
+						id={'login'}
+						name={'Login'} 
+						iconName={faArrowRightToBracket} 
+						className={`${isActive(location, '/login') ? styles.active: '' }`} 
+					/>
 			</Link>
+			}
 		</div>
 	</>
   )

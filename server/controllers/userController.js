@@ -1,6 +1,5 @@
 // import User from '../models/userModel.js';
 import validator from 'validator';
-import jwt from 'jsonwebtoken';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -12,7 +11,7 @@ const __dirname = dirname(__filename);
 const userFilePath = path.join(__dirname, '../../json/db', 'userList.json');
 
 export const postUser = async (req, res) => {
-	const { email, username, isAdmin } = req.body;
+	const { email, username, role } = req.body;
 	// console.log(req.body)
 	if (!username && !email)
 		return res.status(400).json({ error: 'Both username and email are required' });
@@ -30,7 +29,7 @@ export const postUser = async (req, res) => {
 			userData.push({ 
 				username,
 				email, 
-				admin: Boolean(isAdmin) 
+				role: role || "user" 
 			});
 
 			fileData = JSON.stringify(userData, null, 2);
@@ -38,8 +37,13 @@ export const postUser = async (req, res) => {
 			// console.log(`Data has been added to file: ${userFilePath}`);
 			res.status(200).json({ message: 'User registered successfully', isLoggedIn: true });
 		} else {
-			const token = generateToken(userData);
-			res.status(200).json({ message: 'User logged in successfully', isLoggedIn: true, token });
+			const verifyCredits = await userData.some(user => user.username === username && user.email === email);
+			if (verifyCredits) {
+				const loggedUser = await userData.filter(user => user.username === username && user.email === email);
+				res.status(200).json({ message: 'User logged in successfully', isLoggedIn: true, role: loggedUser[0].role });
+			} else {
+				res.status(400).json({ error: 'Credentials not matched, please enter the correct credentials' });
+			}
 		}
 	} catch (err) {
 		if (err.code === 'ENOENT') {
@@ -62,13 +66,3 @@ export const getUser = (req, res) => {
 	}
 };
 
-// Function to simulate generating a JWT token
-const generateToken = (user) => {
-	const payload = {
-		username: user.username,
-		email: user.email,
-	};
-	const token = jwt.sign(payload, process.env.SECRET, { expiresIn: '1d' }); // Token expires in 1 day
-
-	return token;
-};

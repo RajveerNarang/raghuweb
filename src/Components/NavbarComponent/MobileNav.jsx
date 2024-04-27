@@ -5,6 +5,7 @@ import { faAddressCard, faArrowRightToBracket, faCode, faGears, faHome, faPlus, 
 import styles from '@components/NavbarComponent/navbar.module.scss'
 import Button from '@components/Basics/Button/Button'
 import { isActive } from '@utils/navbar'
+import { getAccessData } from '@utils/auth'
 
 const MobileNav = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -13,6 +14,8 @@ const MobileNav = () => {
 	const toggleNav = () => {
 		setIsOpen(!isOpen)
 	}
+
+	const data = getAccessData()
 
   return (
 	<>
@@ -76,7 +79,16 @@ const MobileNav = () => {
 						className={`${isActive(location, '/projects') ? styles.active: '' }`} 
 					/>
 			</Link>
-			<Link 
+			{data?.isLoggedIn ? <Link 
+				to={`#`} 
+				className={`${styles.navItem} ${isOpen ? styles.navItemShow : styles.navItemHide}`}>
+					<Button 
+						id={'logout'}
+						name={'Logout'} 
+						iconName={faArrowRightToBracket}
+						onClick={() => removeAccessData()}
+					/>
+			</Link> : <Link 
 				to={`/login`} 
 				className={`${styles.navItem} ${isOpen ? styles.navItemShow : styles.navItemHide}`}>
 					<Button 
@@ -86,6 +98,7 @@ const MobileNav = () => {
 						className={`${isActive(location, '/login') ? styles.active: '' }`} 
 					/>
 			</Link>
+			}
 		</div>
 	</>
   )

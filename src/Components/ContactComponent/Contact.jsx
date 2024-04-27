@@ -10,10 +10,12 @@ import contactData from '@json/frontend/contact.json'
 import Image from '@components/Basics/Image/Image'
 import dummyProfile from '@images/dummyProfile.jpg'
 import { useMediaQuery } from 'react-responsive'
+import { getAccessData } from '@utils/auth'
 
 const Contact = () => {
 
 	const isDesktop = useMediaQuery({minWidth: 767})
+	const data = getAccessData()
 
   const getIcon = (iconName) => {
     switch (iconName) {
@@ -53,18 +55,33 @@ const Contact = () => {
 	<div className={`${styles.container}`}>
     <GlassCard id={'contactGlassCard'} className={`${styles.box}`}>
       <Image path={dummyProfile} alt={'Dummy Profile'} />
-      {contactData ? contactData.map((item, index) => (
-        <a 
-          href={changeLink(item.data.link1, item.data.link) || '#'} 
-          key={index} 
-          className={`${styles.items} ${getClassName(item.id)}`} 
-          data-tooltip={item.data.tooltipData}
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          <Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
-        </a>
-      )): null}
+      {contactData ? contactData.map((item, index) => {
+		
+        if (item.id !== 'instagram' && item.id !== 'discord') {
+			return <a 
+				href={changeLink(item.data.link1, item.data.link) || '#'} 
+				key={index} 
+				className={`${styles.items} ${getClassName(item.id)}`} 
+				data-tooltip={item.data.tooltipData}
+				target="_blank" 
+				rel="noopener noreferrer"
+				>
+				<Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
+				</a> 
+			} else {
+			if (data?.isLoggedIn && data?.role === 'user') { 
+				return <a 
+				href={changeLink(item.data.link1, item.data.link) || '#'} 
+				key={index} 
+				className={`${styles.items} ${getClassName(item.id)}`} 
+				data-tooltip={item.data.tooltipData}
+				target="_blank" 
+				rel="noopener noreferrer"
+			>
+				<Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
+			</a>
+		}}
+      }): null}
       
     </GlassCard>
   </div>

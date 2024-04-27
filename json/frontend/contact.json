@@ -33,6 +33,14 @@
 		}
 	},
 	{
+		"id": "xtwitter",
+		"iconName": "faXTwitter",
+		"data": {
+			"content": "Raghunandan Sharma",
+			"link": "https://twitter.com/Rick_lykos"
+		}
+	},
+	{
 		"id": "instagram",
 		"iconName": "faInstagram",
 		"data": {
@@ -46,14 +54,6 @@
 		"data": {
 			"content": "Senshi Ryo#6474",
 			"link": "https://discord.com/users/li3kos"
-		}
-	},
-	{
-		"id": "xtwitter",
-		"iconName": "faXTwitter",
-		"data": {
-			"content": "Raghunandan Sharma",
-			"link": "https://twitter.com/Rick_lykos"
 		}
 	}
 ]

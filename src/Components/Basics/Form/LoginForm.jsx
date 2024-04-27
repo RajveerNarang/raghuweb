@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 import Input from '@components/Basics/Input/Input'
 import ButtonReshaped from '@components/Basics/Button/ButtonReshaped'
 
 import styles from '@components/Basics/Form/form.module.scss'
+import { setAccessData } from '@utils/auth'
 
 const LoginForm = () => {
-
+	const navigate = useNavigate()
 	const [formData, setFormData] = useState({
 		email: '',
 		username: ''
@@ -20,23 +22,20 @@ const LoginForm = () => {
 		  ...formData,
 		  [name]: value
 		})
-	  }
+	}
 	
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		try {
 			const response = await axios.post('/api/login', formData)
-			const token = response.data.token;
-
-			// Set the token in a cookie with a 1-day expiry
-			document.cookie = `token=${token}; expires=${new Date(Date.now() + 86400 * 1000).toUTCString()}; path=/`;
-		
+			setAccessData(response)
 
 			setFormData({
 				email: '',
 				username: ''
 			})
 			setError('')
+			navigate('/')
 		} catch (error) {
 			console.error('Login Failed', error.message)
 			error.response.data.error ? 

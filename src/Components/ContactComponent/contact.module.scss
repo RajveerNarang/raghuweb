@@ -14,7 +14,7 @@ $tt-rep: 5;
 		width: $perc-100;
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-evenly;
 		flex-direction: column;
 
 		padding: $spacing-double $spacing;
@@ -65,10 +65,6 @@ $tt-rep: 5;
 
 		@include media-md {
 			width: $perc-100;
-		}
-
-		@include media-xxl {
-			font-size: $size-one-half;
 		}
 	}
 	.gmail {
