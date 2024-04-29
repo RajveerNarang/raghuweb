@@ -61,7 +61,7 @@
 
 		font-size: calc($size-half * 2.5);
 
-		height: calc($perc-100 * 0.95);
+		height: $perc-100;
 		width: calc($perc-100 * 0.9);
 		background-color: $dark-secondary;
 		

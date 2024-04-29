@@ -5,7 +5,7 @@ import axios from 'axios'
 import Input from '@components/Basics/Input/Input'
 import ButtonReshaped from '@components/Basics/Button/ButtonReshaped'
 
-import styles from '@components/Basics/Form/form.module.scss'
+import styles from '@components/LoginComponent/login.module.scss'
 import { setAccessData } from '@utils/auth'
 
 const LoginForm = () => {

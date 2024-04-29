@@ -8,7 +8,7 @@ const Paragraph = ({content, className}) => {
 }
 
 Paragraph.propTypes = {
-  content: PropTypes.string.isRequired
+  content: PropTypes.node.isRequired
 }
 
 export default Paragraph

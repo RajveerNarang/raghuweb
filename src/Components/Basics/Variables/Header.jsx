@@ -10,7 +10,7 @@ const Header = ({level, text, className}) => {
 
 Header.propTypes = {
 	level: PropTypes.number.isRequired,
-	text: PropTypes.string.isRequired
+	text: PropTypes.node.isRequired
 }
 
 export default Header

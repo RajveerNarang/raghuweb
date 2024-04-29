@@ -1,10 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import styles from '@components/ProjectsComponent/projects.module.scss'
 
-// import projectData from '@json/frontend/projects.json'
 import GlassCard from '@components/Basics/GlassBox/GlassCard'
 import Header from '@components/Basics/Variables/Header'
-import Paragraph from '@components/Basics/Variables/Paragraph'
 import Project1 from '@components/ProjectsComponent/Project1'
 import Project2 from '@components/ProjectsComponent/Project2'
 import Project3 from '@components/ProjectsComponent/Project3'

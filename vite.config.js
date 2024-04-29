@@ -15,7 +15,6 @@ export default defineConfig({
       '@json': '/json',
       '@images': '/images',
       '@utils': '/utils',
-	  '@audio': '/audio',
 	  '@server': '/server',
     },
   },

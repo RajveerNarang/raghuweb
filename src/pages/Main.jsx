@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import styles from '@components/MainComponent/main.module.scss'
 
-import Navbar from '@components/NavbarComponent/Navbar'
+import Navbar from '@src/pages/Navbar'
 const Routing = lazy(() => import('@components/MainComponent/Routing'))
 import Stars from '@components/Basics/Canvas/Stars'
 

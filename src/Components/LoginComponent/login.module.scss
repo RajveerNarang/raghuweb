@@ -15,6 +15,31 @@
 		align-items: center;
 		flex-direction: column;
 		row-gap: $spacing-double;
+		
+		.form {
+			width: $perc-100;
+			gap: $spacing-double;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-end;
+
+			&_btn {
+				width: $perc-100;
+				background-color: $dark-glasseffect-inset;
+				box-shadow: 0 0 0 0.1rem $dark-glasseffect;
+				color: $dark-primary;
+
+				@include media-md {
+					width: $perc-25;
+				}
+			}
+			
+			.error {
+				color: #ff2b23;
+				width: $perc-100;
+			}
+		}
 
 		@include media-md {
 			width: $perc-50;

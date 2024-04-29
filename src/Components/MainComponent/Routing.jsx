@@ -2,12 +2,12 @@ import React, { Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import Loader from '@components/Basics/Loader/Loader';
-const Login = lazy(() => import('@components/LoginComponent/Login'));
-const Home = lazy(() => import('@components/HomeComponent/Home'))
-const About = lazy(() => import('@components/AboutComponent/About'))
-const Contact = lazy(() => import('@components/ContactComponent/Contact'))
-const Skills = lazy(() => import('@components/SkillsComponent/Skills'))
-const Projects = lazy(() => import('@components/ProjectsComponent/Projects'))
+const Login = lazy(() => import('@src/pages/Login'));
+const Home = lazy(() => import('@src/pages/Home'))
+const About = lazy(() => import('@src/pages/About'))
+const Contact = lazy(() => import('@src/pages/Contact'))
+const Skills = lazy(() => import('@src/pages/Skills'))
+const Projects = lazy(() => import('@src/pages/Projects'))
 
 const Routing = ({ className }) => {
   return (
