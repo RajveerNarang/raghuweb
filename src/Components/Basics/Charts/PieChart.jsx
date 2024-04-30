@@ -10,7 +10,7 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
-const PieChart2 = ({ selectedCategory }) => {
+const PieChart = ({ selectedCategory }) => {
 	
 	const pieData = pieDataFilter(skillData, selectedCategory);
 	const pieOptions = createPieChartOptions()
@@ -23,4 +23,4 @@ const PieChart2 = ({ selectedCategory }) => {
 	/>
 }
 
-export default PieChart2
+export default PieChart

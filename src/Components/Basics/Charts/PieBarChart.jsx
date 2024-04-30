@@ -2,8 +2,8 @@ import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 import styles from '@components/Basics/Charts/chart.module.scss'
-import BarChart2 from '@components/Basics/Charts/BarChart2'
-import PieChart2 from '@components/Basics/Charts/PieChart2'
+import BarChart from '@components/Basics/Charts/BarChart'
+import PieChart from '@components/Basics/Charts/PieChart'
 
 const PieBarChart = (props) => {
 
@@ -14,8 +14,8 @@ const PieBarChart = (props) => {
 	return (
 		<div className={`${styles.container} ${className || ''}`}>
 			{isDesktop ? 
-				<BarChart2 selectedCategory={selectedCategory} /> : 
-				<PieChart2 selectedCategory={selectedCategory} />
+				<BarChart selectedCategory={selectedCategory} /> : 
+				<PieChart selectedCategory={selectedCategory} />
 			}
 		</div>
 	)

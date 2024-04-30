@@ -35,7 +35,8 @@ export const postUser = async (req, res) => {
 			fileData = JSON.stringify(userData, null, 2);
 			fs.writeFileSync(userFilePath, fileData, 'utf8');
 			// console.log(`Data has been added to file: ${userFilePath}`);
-			res.status(200).json({ message: 'User registered successfully', isLoggedIn: true });
+			const loggedUser = await userData.filter(user => user.username === username && user.email === email);
+			res.status(200).json({ message: 'User registered successfully', isLoggedIn: true, role: loggedUser[0].role });
 		} else {
 			const verifyCredits = await userData.some(user => user.username === username && user.email === email);
 			if (verifyCredits) {

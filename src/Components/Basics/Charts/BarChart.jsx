@@ -9,7 +9,7 @@ import {
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
-const BarChart2 = ({selectedCategory}) => {
+const BarChart = ({selectedCategory}) => {
 	
 	const barData = barDataFilter(skillData, selectedCategory);
 	const barOptions = createBarChartOptions()
@@ -22,4 +22,4 @@ const BarChart2 = ({selectedCategory}) => {
 	/>
 }
 
-export default BarChart2
+export default BarChart
