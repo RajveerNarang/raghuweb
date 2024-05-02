@@ -10,7 +10,7 @@ const UnorderedList = (props) => {
 
 	const renderItems = (lists) => (lists.map((list, index) => (
 		<li key={index}>
-			{list.text}
+			{list.text || list}
 		</li>
 	)))
 	

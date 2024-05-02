@@ -9,24 +9,28 @@ import Project3 from '@components/ProjectsComponent/Project3'
 
 const Projects = () => {
 	const [currentIndex, setCurrentIndex] = useState(null)
+	const [selectedProject, setSelectedProject] = useState('')
 	const [isOpen, setIsOpen] = useState(false)
 
 	const projectData = [
 		{
+			projectName: 'project1',
 			heading: 'Project 1',
 		},
 		{
+			projectName: 'project2',
 			heading: 'Project 2',
 		},
 		{
+			projectName: 'project3',
 			heading: 'Project 3',
 
 		}
 	]
 
 	const getModal = (index) => {
-		switch (index) {
-			case 0:
+		switch (selectedProject) {
+			case 'project1':
 				return (
 					<Project1 
 						isCurrentOpen={index === currentIndex && isOpen} 
@@ -34,7 +38,7 @@ const Projects = () => {
 						heading = {projectData[index].heading}
 					/>
 				)
-			case 1:
+			case 'project2':
 				return (
 					<Project2
 						isCurrentOpen={index === currentIndex && isOpen} 
@@ -43,7 +47,7 @@ const Projects = () => {
 					/>
 				)
 			
-			case 2:
+			case 'project3':
 				return (
 					<Project3
 						isCurrentOpen={index === currentIndex && isOpen} 
@@ -57,9 +61,10 @@ const Projects = () => {
 		}
 	}
 
-	const handleOpen = (index) => {
+	const handleOpen = (index, projectName) => {
 		setIsOpen(true)
 		setCurrentIndex(index)
+		setSelectedProject(projectName)
 	}
 	const handleClose = () => {
 		setIsOpen(false)
@@ -69,7 +74,12 @@ const Projects = () => {
 	<div className={`${styles.container}`}>
 		{projectData.map((item, index) => (
 			<Fragment key={index}>
-				<GlassCard id={`project${index}`} className={styles.animate} handleClick={() => handleOpen(index)}>
+				<GlassCard 
+					id={`project${index}`} 
+					className={styles.animate} 
+					handleClick={() => handleOpen(index, projectName)}
+
+				>
 					<Header level={3} text={item.heading} />
 				</GlassCard>
 				{getModal(index)}

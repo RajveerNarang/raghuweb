@@ -57,13 +57,3 @@ export const postUser = async (req, res) => {
 		}
 	}
 };
-
-export const getUser = (req, res) => {
-	try {
-		const data = fs.readFileSync(userFilePath, 'utf8');
-		return res.status(200).json(JSON.parse(data));
-	} catch (err) {
-		return res.status(500).json({ error: 'Failed to read JSON data' });
-	}
-};
-
