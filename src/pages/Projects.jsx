@@ -14,15 +14,15 @@ const Projects = () => {
 
 	const projectData = [
 		{
-			projectName: 'project1',
+			projectId: 'project1',
 			heading: 'Project 1',
 		},
 		{
-			projectName: 'project2',
+			projectId: 'project2',
 			heading: 'Project 2',
 		},
 		{
-			projectName: 'project3',
+			projectId: 'project3',
 			heading: 'Project 3',
 
 		}
@@ -35,7 +35,7 @@ const Projects = () => {
 					<Project1 
 						isCurrentOpen={index === currentIndex && isOpen} 
 						handleClose={handleClose}
-						heading = {projectData[index].heading}
+						heading = {projectData[currentIndex].heading}
 					/>
 				)
 			case 'project2':
@@ -43,7 +43,7 @@ const Projects = () => {
 					<Project2
 						isCurrentOpen={index === currentIndex && isOpen} 
 						handleClose={handleClose}
-						heading = {projectData[index].heading}
+						heading = {projectData[currentIndex].heading}
 					/>
 				)
 			
@@ -52,7 +52,7 @@ const Projects = () => {
 					<Project3
 						isCurrentOpen={index === currentIndex && isOpen} 
 						handleClose={handleClose}
-						heading = {projectData[index].heading}
+						heading = {projectData[currentIndex].heading}
 					/>
 				)
 		
@@ -61,10 +61,10 @@ const Projects = () => {
 		}
 	}
 
-	const handleOpen = (index, projectName) => {
+	const handleOpen = (index, projectId) => {
 		setIsOpen(true)
 		setCurrentIndex(index)
-		setSelectedProject(projectName)
+		setSelectedProject(projectId)
 	}
 	const handleClose = () => {
 		setIsOpen(false)
@@ -77,7 +77,7 @@ const Projects = () => {
 				<GlassCard 
 					id={`project${index}`} 
 					className={styles.animate} 
-					handleClick={() => handleOpen(index, projectName)}
+					handleClick={() => handleOpen(index, item.projectId)}
 
 				>
 					<Header level={3} text={item.heading} />

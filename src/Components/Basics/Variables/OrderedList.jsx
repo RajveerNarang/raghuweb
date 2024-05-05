@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 
 const OrderedList = (props) => {
 
-	const {lists, className} = props
+	const {lists, className, openModal} = props
 	if (!lists || lists === undefined) {
 		return null
 	}
 	const renderItems = (lists) => (lists.map((list, index) => (
-		<li key={index}>
+		<li key={index} onClick={() => openModal(index)}>
 			{list.text || list}
 		</li>
 	)))

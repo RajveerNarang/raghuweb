@@ -40,10 +40,14 @@ $xl-rep: 6;
 			grid-template-columns: repeat(auto-fill, minmax(calc($grid-min-width * 0.6), 1fr));
 			gap: $spacing-half;
 			text-align: center;
-		}
+			cursor: pointer;
 
-		&_item {
-			flex-grow: 1;
+			li {
+				border: {
+					bottom: 1px solid $dark-text;
+					right: 1px solid $dark-text;
+				};
+			}
 		}
 	}
 
