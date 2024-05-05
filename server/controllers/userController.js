@@ -23,7 +23,7 @@ export const postUser = async (req, res) => {
 		let fileData = fs.readFileSync(userFilePath, 'utf8');
 		let userData = JSON.parse(fileData);
 
-		const userExists = await userData.some(user => user.username === username || user.email === email);;
+		const userExists = await userData.some(user => user.username === username || user.email === email);
 
 		if (!userExists) {
 			userData.push({ 

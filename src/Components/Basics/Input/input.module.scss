@@ -25,7 +25,7 @@
 	  z-index: 2;
 	}
   
-	.input {
+	.input, .textarea {
 	  width: $perc-100;
 	  padding: 0.3rem;
 	  
@@ -40,5 +40,8 @@
 	  outline: none;
 	  background-color: transparent;
 	  color: $dark-text;
+	}
+	.textarea {
+		resize: none;
 	}
 }
