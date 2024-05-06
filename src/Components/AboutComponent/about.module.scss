@@ -55,9 +55,8 @@
 		left: $spacing;
 
 		display: flex;
-		align-items: center;
-		justify-content: center;
 		text-align: center;
+		flex-direction: column;
 
 		font-size: calc($size-half * 2.5);
 
@@ -70,12 +69,23 @@
 		box-shadow: inset 0 0 1rem 0.1rem $dark-accent;
 		border-radius: $size-half;
 		padding: $spacing $spacing-double;
+
+		overflow-y: scroll;
 		
 		@include media-md {
 			left: calc($spacing-one-half * 2);
 		}
 		@include media-xxl {
 			height: calc($perc-100 * 0.97);
+		}
+	}
+
+	.scale{
+		scale: 0.9;
+		&_list {
+			li {
+				scale: 0.8;
+			}
 		}
 	}
 }
