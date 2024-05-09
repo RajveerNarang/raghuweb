@@ -1,0 +1,70 @@
+[
+	{
+		"heading": "Intership",
+		"lists": [
+			{
+				"bold": "Role",
+				"text": "Intern"
+			},
+			{
+				"bold": "Location",
+				"text": "Remote"
+			},
+			{
+				"bold": "Duration",
+				"text": "Jan, 2022 - Jul, 2022"
+			}
+		]
+	},
+	{
+		"heading": "Developer",
+		"lists": [
+			{
+				"bold": "Role",
+				"text": "Drupal Full Stack Developer"
+			},
+			{
+				"bold": "Location",
+				"text": "Remote"
+			},
+			{
+				"bold": "Duration",
+				"text": "Aug, 2022 - Jan, 2023"
+			}
+		]
+	},
+	{
+		"heading": "Associate Trainee",
+		"lists": [
+			{
+				"bold": "Role",
+				"text": "Associate"
+			},
+			{
+				"bold": "Location",
+				"text": "Remote"
+			},
+			{
+				"bold": "Duration",
+				"text": "Feb, 2023 - Aug, 2023"
+			}
+		]
+	},
+	{
+		"heading": "Associate",
+		"lists": [
+			{
+				"bold": "Role",
+				"text": "Associate"
+			},
+			{
+				"bold": "Location",
+				"text": "Remote"
+			},
+			{
+				"bold": "Duration",
+				"text": "Sep, 2023 - present"
+			}
+		]
+	}
+]

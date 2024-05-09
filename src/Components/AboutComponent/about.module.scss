@@ -34,16 +34,28 @@
 			font-size: $size-one-half; 
 			background-color: transparent;
 			cursor: pointer;
+			position: relative;
+			
+			// span {
+			// 	opacity: 0;
+			// 	position: absolute;
+			// 	left: calc($spacing-half * -1);
+			// 	top: calc($spacing-one-half * -1);
+			// 	pointer-events: none;
+			// 	font-size: $size;
+			// }
+
+			// &:hover {
+			// 	span {
+			// 		opacity: 1;
+			// 	}
+			// }
 		}
 
 		.active {
 			color: $dark-primary;
 		}
 
-		span {
-			opacity: 0;
-			position: absolute;
-		}
 	}
 	.contents {
 		flex: 1;
@@ -55,7 +67,6 @@
 		left: $spacing;
 
 		display: flex;
-		text-align: center;
 		flex-direction: column;
 
 		font-size: calc($size-half * 2.5);
@@ -87,5 +98,8 @@
 				scale: 0.8;
 			}
 		}
+	}
+	.text_center {
+		text-align: center;
 	}
 }

@@ -6,7 +6,9 @@ import styles from '@components/AboutComponent/about.module.scss'
 import PropTypes from 'prop-types';
 
 const AboutIconGrp = (props) => {
-	const {idx, icon, text, setCurrentIndex, isCurrent} = props
+	const {idx, icon, 
+		// text, 
+		setCurrentIndex, isCurrent} = props
   return (
 	<>
 		<motion.button
@@ -16,7 +18,7 @@ const AboutIconGrp = (props) => {
 			className={`${styles.iconBtn} ${isCurrent ? `${styles.active}` : ''}`}
 		>
 			<FontAwesomeIcon icon={icon} />
-			<span>{text}</span>
+			{/* <span>{text}</span> */}
 		</motion.button>
 
 	</>
@@ -26,7 +28,7 @@ const AboutIconGrp = (props) => {
 AboutIconGrp.propTypes = {
 	idx: PropTypes.number.isRequired,
 	icon: PropTypes.object.isRequired,
-	text: PropTypes.string.isRequired,
+	// text: PropTypes.string.isRequired,
 	setCurrentIndex: PropTypes.func.isRequired,
 	isCurrent: PropTypes.bool.isRequired
 }
