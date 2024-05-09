@@ -81,6 +81,11 @@ p {
 	grid-template-columns: repeat(auto-fill, minmax(calc($grid-min-width * 0.6), 1fr));
 	gap: $spacing-half;
 }
+
+.spacing {
+	margin: $spacing 0;
+}
+
 ::-webkit-scrollbar {
 	display: none;
 }

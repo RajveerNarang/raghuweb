@@ -8,7 +8,7 @@ import styles from '@components/Basics/Modal/modal.module.scss'
 import Header from '@components/Basics/Variables/Header'
 
 const Modal = (props) => {
-	const { isOpen, onClose, children, heading, className } = props
+	const { isOpen, onClose, children, heading, className, level } = props
 	if (!isOpen) return null;
 
 	const handleOverlayClick = (event) => {
@@ -32,7 +32,7 @@ const Modal = (props) => {
 		  transition={{ duration: 0.3 }}
 	>
 		<div className={`${styles.header}`}>
-			<Header level={2} text={heading} />	
+			<Header level={level || 2} text={heading} />	
 			<FontAwesomeIcon icon={faXmark} className={`${styles.close}`} onClick={onClose}/>
 		</div>
         {children}
