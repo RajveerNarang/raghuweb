@@ -14,7 +14,10 @@ const OrderedList = (props) => {
 	)))
 	
   return (
-	<ol className={className || ''}>
+	<ol style={{
+		margin: '1rem 0',
+		cursor: 'pointer'
+	}} className={className || ''}>
 		{renderItems(lists)}
 	</ol>
   )

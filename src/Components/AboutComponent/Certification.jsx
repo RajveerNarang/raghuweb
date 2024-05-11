@@ -10,6 +10,7 @@ import Paragraph from '@components/Basics/Variables/Paragraph'
 import ImageModal from '@components/AboutComponent/ImageModal'
 
 import styles from '@components/AboutComponent/about.module.scss'
+import { useMediaQuery } from 'react-responsive'
 
 const pdfFiles = [
 	{
@@ -34,6 +35,7 @@ const Certification = () => {
 
 	const [isOpen, setIsOpen] = useState(false)
 	const [currentIndex, setCurrentIndex] = useState(null)
+	const isDesktop = useMediaQuery({minWidth: 767})
 	
 	const handleOpen = (index) => {
 		setIsOpen(true)
@@ -44,8 +46,8 @@ const Certification = () => {
 	}
   return (
 	<>
-		<Paragraph className={`${styles.text_center} spacing`} content="Presented here are my certificates and achievements, reflecting my commitment to ongoing growth and development. I anticipate this collection will expand with each new experience and opportunity I encounter." />
-		<OrderedList className={`${styles.grid}`} lists={pdfFiles} openModal={handleOpen} />
+		<Paragraph className={`${styles.text_center}`} content="Presented here are my certificates and achievements, reflecting my commitment to ongoing growth and development. I anticipate this collection will expand with each new experience and opportunity I encounter." />
+		<OrderedList className={`${isDesktop ? styles.grid : 'grid'} ${styles.text_center}`} lists={pdfFiles} openModal={handleOpen} />
 		{pdfFiles.map((files, index) => (
 			<ImageModal 
 			key={index}
@@ -55,7 +57,7 @@ const Certification = () => {
 			path = {files.file}
 		/>
 		))}
-		
+		<Paragraph bold="Storybook Exploration: " content="I was entrusted with the responsibility of investigating Storybook's capabilities, particularly focusing on actions and controls, to determine its feasibility for integration with our Drupal website. Through this exploration, I was able to gain a comprehensive understanding of the technology and its potential benefits and shared my findings with the team." />
 	</>
   )
 }
