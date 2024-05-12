@@ -1,6 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 
-function Stars({limit}) {
+/**
+ * Renders a canvas with stars based on the given limit.
+ *
+ * @param {number} limit - The number of stars to render on the canvas.
+ * @return {JSX.Element} The canvas element with stars.
+ */
+const Stars = ({limit}) => {
 
 	const starRef = useRef(null)
 
@@ -16,6 +22,12 @@ function Stars({limit}) {
 		let animationFrameId
 		let stars = []
 		
+		/**
+		 * Draws stars on a canvas based on the given frame count.
+		 *
+		 * @param {number} frameCount - The current frame count.
+		 * @return {Array<string>} An array of 'Success' strings, one for each star drawn.
+		 */
 		const draw = (frameCount) => {
 			stars.map((star, index) => {
 				if (index % 3 === 0) {
@@ -45,6 +57,13 @@ function Stars({limit}) {
 			})
 		}
 
+		/**
+		 * Sets the size of the canvas to the window's inner width and height.
+		 * Initializes an empty array for stars.
+		 * Generates random margins for each star within the canvas bounds.
+		 *
+		 * @return {void} This function does not return anything.
+		 */
 		const setSize = () => {
 			canvas.width = window.innerWidth
 			canvas.height = window.innerHeight
@@ -62,6 +81,13 @@ function Stars({limit}) {
 
 		setSize()
 
+		/**
+		 * Renders the animation frame by recursively calling itself, clearing the canvas,
+		 * setting the size of the canvas to the window's inner width and height, and
+		 * generating random margins for each star within the canvas bounds.
+		 *
+		 * @return {void} This function does not return anything.
+		 */
 		const render = () => {
 			animationFrameId = requestAnimationFrame(render)
 			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
@@ -81,7 +107,6 @@ function Stars({limit}) {
 		}
 			
 	}, [limit]);
-	
 
 	return <canvas ref={starRef} style={{ zIndex: -10 }} ></canvas>;
 }

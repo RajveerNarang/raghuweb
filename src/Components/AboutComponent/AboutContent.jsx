@@ -10,6 +10,12 @@ import Certification from '@components/AboutComponent/Certification'
 const AboutContent = forwardRef((props, ref) => {
 	const {data, className} = props
 
+	/**
+	 * A function that returns JSX components based on the provided text.
+	 *
+	 * @param {string} text - The text used to determine which component to render.
+	 * @return {JSX} The JSX component based on the text provided.
+	 */
 	const getContent = (text) => {
 		
 		switch (text) {
@@ -24,21 +30,21 @@ const AboutContent = forwardRef((props, ref) => {
 		}
 	}
 	
-  return (
-	<motion.section 
-		className={`${styles.content_box} ${className || ''}`}
-		ref={ref}
-		initial={{ opacity: 0, y: 200 }}
-		animate={{ opacity: 1 }}
-		transition={{ duration: 0.5 }}
-	>
-		{getContent(data.text)}
-	</motion.section>
-  )
+	return (
+		<motion.section 
+			className={`${styles.content_box} ${className || ''}`}
+			ref={ref}
+			initial={{ opacity: 0, y: 200 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+		>
+			{getContent(data.text)}
+		</motion.section>
+	)
 })
 
 AboutContent.propTypes = {
-  data: PropTypes.object.isRequired
+	data: PropTypes.object.isRequired
 };
 
 export default AboutContent

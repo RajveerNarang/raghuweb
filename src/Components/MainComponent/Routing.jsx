@@ -9,8 +9,13 @@ const Contact = lazy(() => import('@src/pages/Contact'))
 const Skills = lazy(() => import('@src/pages/Skills'))
 const Projects = lazy(() => import('@src/pages/Projects'))
 
-const Routing = ({ className }) => {
-  return (
+/**
+ * Renders the routing component.
+ *
+ * @param {string} className - The CSS class name for the component.
+ * @return {JSX.Element} The rendered routing component.
+ */
+const Routing = ({ className }) => (
 	<div className={className}>
 		<Routes>
 			<Route path={'/' || '/home'}
@@ -57,7 +62,6 @@ const Routing = ({ className }) => {
 			/>
 		</Routes>
 	</div>
-  )
-}
+)
 
 export default Routing

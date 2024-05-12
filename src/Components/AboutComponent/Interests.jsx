@@ -13,8 +13,13 @@ const rInt = [
 		text: "I feel that my proficiency in piano is limited to the basics because I was introduced to it during my childhood but had to abandon it due to certain situations. Subsequently, I pursued relearning the piano for personal fulfillment or as a potential leisure activity."
 	}
 ]
-const Interests = () => {
-  return (
+
+/**
+ * Renders the Interests component with paragraphs detailing the user's diverse interests including watching anime, playing games, cooking/baking, and random tasks. Also includes a StyledList component.
+ *
+ * @return {JSX.Element} The rendered Interests component
+ */
+const Interests = () => (
 	<>
 		<Paragraph className={`spacing`} content="In this section, I'm excited to share my diverse range of interests and passions. From my highest to lowest pursuits, I'm showcasing my explorations and expressions in various creative outlets" />
 		<Paragraph bold="Watching Anime: " content="As an anime fan, I enjoy a wide range of genres, but Yaoi and Yuri aren't my thing. On the other hand, I'm hooked on Shounen and Seinen shows, which often feature epic stories and complex characters. With a 45% chance of watching anime on any given day, you might just catch me bingeing my favorite shows!" />
@@ -23,7 +28,6 @@ const Interests = () => {
 		<Paragraph className={`spacing`} bold="Random: " content="Anything can be included in this based on mood and there is a 10% chance of actually doing it. Tasks I have completed so far include:" />
 		<StyledList className={`${styles.scale}`} lists={rInt}  />
 	</>
-  )
-}
+)
 
 export default Interests

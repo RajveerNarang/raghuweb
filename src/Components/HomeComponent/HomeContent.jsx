@@ -10,20 +10,36 @@ import Methodologies from '@components/HomeComponent/Methodologies'
 import Notice from '@components/HomeComponent/Notice'
 import Contact from '@components/HomeComponent/Contact'
 
+const lists = [
+	'Technologies Utilized',
+	'Methodologies Employed',
+	'Important Notice',
+	'Contact'
+]
+/**
+ * Renders the content of the home page.
+ *
+ * @return {JSX.Element} The rendered home content.
+ */
 const HomeContent = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [currentIndex, setCurrentIndex] = useState(null)
 
-	const lists = [
-		'Technologies Utilized',
-		'Methodologies Employed',
-		'Important Notice',
-		'Contact'
-	]
+	/**
+	 * Opens the component by setting the `isOpen` state to `true` and the `currentIndex` state to the provided `index`.
+	 *
+	 * @param {number} index - The index of the component being opened.
+	 * @return {void} This function does not return anything.
+	 */
 	const handleOpen = (index) => {
 		setIsOpen(true)
 		setCurrentIndex(index)
 	}
+	/**
+	* Closes the component by setting the `isOpen` state to `false`.
+	*
+	* @return {void} This function does not return anything.
+	*/
 	const handleClose = () => {
 		setIsOpen(false)
 	}
@@ -59,17 +75,17 @@ const HomeContent = () => {
 		}
 	}
 
-  return (
-	<>
-		<GlassCard id={'homeGlassCard'} className={`${styles.box}`}>
-			<Header text={"Greetings Visitor!"} level={2} />
-			<Paragraph className={'spacing'} content="This platform is designed to share insights and experiences from my journey. It's a place where I express myself and showcase my work. From technical tutorials to personal reflections, you'll find a variety of topics covered here."/>
+	return (
+		<>
+			<GlassCard id={'homeGlassCard'} className={`${styles.box}`}>
+				<Header text={"Greetings Visitor!"} level={2} />
+				<Paragraph className={'spacing'} content="This platform is designed to share insights and experiences from my journey. It's a place where I express myself and showcase my work. From technical tutorials to personal reflections, you'll find a variety of topics covered here."/>
 
-			<OrderedList className={styles.list_group} lists={lists} openModal={handleOpen} />
-		</GlassCard>
-		{getModal(currentIndex)}
-	</>
-  )
+				<OrderedList className={styles.list_group} lists={lists} openModal={handleOpen} />
+			</GlassCard>
+			{getModal(currentIndex)}
+		</>
+	)
 }
 
 export default HomeContent

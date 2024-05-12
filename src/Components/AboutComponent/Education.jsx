@@ -22,9 +22,12 @@ const graduation = [
 	}
 ]
 
-const Education = () => {
-
-  return (
+/**
+ * Renders the Education component with educational background and professional experience details.
+ *
+ * @return {JSX.Element} The JSX element representing the Education component.
+ */
+const Education = () => (
 	<>
 		<Paragraph className={`${styles.spacing} ${styles.text_center}`} content="Allow me to provide a concise overview of my educational background and professional experience, where I have assumed various roles across different domains." />
 		<Header className={`${styles.text_center}`} text="Bachelor of Engineering in Computer Science and Engineering" level={4} />
@@ -40,7 +43,6 @@ const Education = () => {
 			))}
 		</div>
 	</>
-  )
-}
+)
 
 export default Education

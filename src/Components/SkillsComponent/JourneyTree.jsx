@@ -11,8 +11,12 @@ import Header from '@components/Basics/Variables/Header';
 import Paragraph from '@components/Basics/Variables/Paragraph';
 
 
-const JourneyTree = () => {
-  return (
+/**
+ * Renders a timeline of the developer's journey using the VerticalTimeline component.
+ *
+ * @return {JSX.Element} The JSX element representing the timeline.
+ */
+const JourneyTree = () => (
 	<div className={`${styles.timelineContainer}`}>
 		<VerticalTimeline lineColor='#ff5c00'>
 			{
@@ -32,7 +36,6 @@ const JourneyTree = () => {
 			}
 		</VerticalTimeline>
 	</div>
-  )
-}
+)
 
 export default JourneyTree
