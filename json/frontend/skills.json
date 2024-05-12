@@ -37,16 +37,16 @@
 	{
 		"name": "NodeJs",
 		"category": "Backend",
-		"level": 3
+		"level": 2
 	},
 	{
 		"name": "Java",
-		"category": "Backend",
+		"category": "Others",
 		"level": 1
 	},
 	{
 		"name": "Python",
-		"category": "Backend",
+		"category": "Others",
 		"level": 1
 	},
 	{
@@ -56,7 +56,7 @@
 	},
 	{
 		"name": "MongoDB",
-		"category": "Others",
+		"category": "Backend",
 		"level": 2
 	},
 	{
@@ -76,18 +76,13 @@
 	},
 	{
 		"name": "jQuery",
-		"category": "Others",
+		"category": "Frontend",
 		"level": 1
 	},
 	{
 		"name": "Postman",
 		"category": "Others",
 		"level": 2
-	},
-	{
-		"name": "Blender",
-		"category": "Others",
-		"level": 1
 	},
 	{
 		"name": "Hibernate",
