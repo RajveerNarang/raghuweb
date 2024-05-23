@@ -3,23 +3,24 @@ import styles from '@components/ProjectsComponent/projects.module.scss'
 
 import GlassCard from '@components/Basics/GlassBox/GlassCard'
 import Header from '@components/Basics/Variables/Header'
-import Project1 from '@components/ProjectsComponent/Project1'
-import Project2 from '@components/ProjectsComponent/Project2'
-import Project3 from '@components/ProjectsComponent/Project3'
+import ProjectsMapping from '../components/ProjectsComponent/ProjectsMapping'
 
 const projectData = [
 	{
+		projectId: 'project0',
+		heading: 'Japan Client',
+	},
+	{
 		projectId: 'project1',
-		heading: 'Project 1',
+		heading: 'Howdy Chat App',
 	},
 	{
 		projectId: 'project2',
-		heading: 'Project 2',
+		heading: 'AIO Lists',
 	},
 	{
 		projectId: 'project3',
-		heading: 'Project 3',
-
+		heading: 'Space Shooting',
 	}
 ]
 
@@ -32,45 +33,6 @@ const Projects = () => {
 	const [currentIndex, setCurrentIndex] = useState(null)
 	const [selectedProject, setSelectedProject] = useState('')
 	const [isOpen, setIsOpen] = useState(false)
-
-	/**
-	 * Renders a modal component based on the selected project.
-	 *
-	 * @param {number} index - The index of the project.
-	 * @return {JSX.Element} The rendered modal component.
-	 */
-	const getModal = (index) => {
-		switch (selectedProject) {
-			case 'project1':
-				return (
-					<Project1 
-						isCurrentOpen={index === currentIndex && isOpen} 
-						handleClose={handleClose}
-						heading = {projectData[currentIndex].heading}
-					/>
-				)
-			case 'project2':
-				return (
-					<Project2
-						isCurrentOpen={index === currentIndex && isOpen} 
-						handleClose={handleClose}
-						heading = {projectData[currentIndex].heading}
-					/>
-				)
-			
-			case 'project3':
-				return (
-					<Project3
-						isCurrentOpen={index === currentIndex && isOpen} 
-						handleClose={handleClose}
-						heading = {projectData[currentIndex].heading}
-					/>
-				)
-		
-			default:
-				return null;
-		}
-	}
 
 	/**
 	 * Handles the opening of a modal by setting the state variables isOpen, currentIndex, and selectedProject.
@@ -106,7 +68,12 @@ const Projects = () => {
 					>
 						<Header level={3} text={item.heading} />
 					</GlassCard>
-					{getModal(index)}
+					<ProjectsMapping
+						isCurrentOpen={index === currentIndex && isOpen}
+						projectData={projectData}
+						selectedProject={selectedProject}
+						handleClose={handleClose}
+					/>
 				</Fragment>
 			))}
 		</div>
