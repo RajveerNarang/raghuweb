@@ -51,7 +51,7 @@ const Technologies = (props) => {
 			heading={heading}
 		>
 			<Paragraph content="I applied various methodologies and techniques, such as adopting a mobile-first approach, emphasizing component reusability, and leveraging absolute paths. Additionally, I integrated cutting-edge technologies to enhance the functionality and performance of the platform." />
-			<UnorderedList className={styles.list_group} lists={lists}/>
+			<UnorderedList className={`grid ${styles.list_group}`} lists={lists}/>
 		</Modal>
 	)
 }

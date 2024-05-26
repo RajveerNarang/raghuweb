@@ -8,7 +8,7 @@ const ProjectsMapping = (props) => {
 	const {isCurrentOpen, projectData, selectedProject, handleClose} = props
 
 	switch (selectedProject) {
-		case 'project0':
+		case 'japanClient':
 			return (
 				<Project1 
 					isCurrentOpen={isCurrentOpen} 
@@ -16,7 +16,7 @@ const ProjectsMapping = (props) => {
 					heading = {projectData[0].heading}
 				/>
 			)
-		case 'project1':
+		case 'howdy':
 			return (
 				<Project2
 					isCurrentOpen={isCurrentOpen} 
@@ -25,7 +25,7 @@ const ProjectsMapping = (props) => {
 				/>
 			)
 		
-		case 'project2':
+		case 'aioList':
 			return (
 				<Project3
 					isCurrentOpen={isCurrentOpen} 
@@ -34,7 +34,7 @@ const ProjectsMapping = (props) => {
 				/>
 			)
 		
-		case 'project3':
+		case 'spaceShoot':
 			return (
 				<Project4
 					isCurrentOpen={isCurrentOpen} 

@@ -14,7 +14,7 @@ const lists = [
 	'Technologies Utilized',
 	'Methodologies Employed',
 	'Important Notice',
-	'Contact'
+	'Feedback'
 ]
 /**
  * Renders the content of the home page.
@@ -81,7 +81,7 @@ const HomeContent = () => {
 				<Header text={"Greetings Visitor!"} level={2} />
 				<Paragraph className={'spacing'} content="This platform is designed to share insights and experiences from my journey. It's a place where I express myself and showcase my work. From technical tutorials to personal reflections, you'll find a variety of topics covered here."/>
 
-				<OrderedList className={styles.list_group} lists={lists} openModal={handleOpen} />
+				<OrderedList className={`${styles.list_group} grid`} lists={lists} openModal={handleOpen} />
 			</GlassCard>
 			{getModal(currentIndex)}
 		</>

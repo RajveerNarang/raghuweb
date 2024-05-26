@@ -7,19 +7,19 @@ import ProjectsMapping from '../components/ProjectsComponent/ProjectsMapping'
 
 const projectData = [
 	{
-		projectId: 'project0',
+		projectId: 'japanClient',
 		heading: 'Japan Client',
 	},
 	{
-		projectId: 'project1',
+		projectId: 'howdy',
 		heading: 'Howdy Chat App',
 	},
 	{
-		projectId: 'project2',
+		projectId: 'aioList',
 		heading: 'AIO Lists',
 	},
 	{
-		projectId: 'project3',
+		projectId: 'spaceShoot',
 		heading: 'Space Shooting',
 	}
 ]
