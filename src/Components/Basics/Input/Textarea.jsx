@@ -51,7 +51,6 @@ const Textarea = (props) => {
 		<label htmlFor={inputNameId} >{labelText}</label>
 		<textarea
 			rows={rows || 4}
-			// columns={columns || 50}
 		  type={inputType}
 		  id={inputNameId}
 		  name={inputNameId}

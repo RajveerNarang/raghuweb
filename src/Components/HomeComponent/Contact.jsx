@@ -55,7 +55,7 @@ const Contact = (props) => {
 
 			setFormData({
 				username: '',
-				feedback: ''
+				message: ''
 			})
 			setError('')
 			setSuccess(response.message)
@@ -86,8 +86,8 @@ const Contact = (props) => {
 				/>
 				<Textarea 
 					inputType="textarea" 
-					inputNameId="feedback" 
-					labelText="Feedback" 
+					inputNameId="message" 
+					labelText="Message" 
 					inputValue={formData.message}
 					handleChange={handleInputChange}
 				/>
