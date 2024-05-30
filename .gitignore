@@ -4,6 +4,7 @@
 /node_modules
 /server/node_modules
 server/.env
+server/serviceAccountKey.json
 /.pnp
 .pnp.js
 

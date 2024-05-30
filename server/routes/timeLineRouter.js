@@ -1,5 +1,5 @@
 import express from 'express';
-import { getJourney, postJourney } from "../controllers/journeyController.js";
+import { getJourney, postJourney } from "../controllers/timeLineController.js";
 
 const router = express.Router();
 
