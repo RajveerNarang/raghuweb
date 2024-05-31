@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrochip } from '@fortawesome/free-solid-svg-icons';
 
-import timelineList from '@json/db/timelineList'
-
 import styles from '@components/SkillsComponent/skill.module.scss'
 import Header from '@components/Basics/Variables/Header';
 import Paragraph from '@components/Basics/Variables/Paragraph';
+import axios from 'axios';
+import { sortDataByDate } from '@utils/timeline';
 
 
 /**
@@ -16,7 +16,24 @@ import Paragraph from '@components/Basics/Variables/Paragraph';
  *
  * @return {JSX.Element} The JSX element representing the timeline.
  */
-const JourneyTree = () => (
+const JourneyTree = () => {
+	
+	const [timelineList, setTimelineList] = useState([])
+
+	useEffect(() => {
+		const fetchData = (async () => {
+			try {
+				const resp = await axios.get('/api/journey')
+				const sortedData = sortDataByDate(resp.data);
+				setTimelineList(sortedData)
+			} catch (error) {
+				console.error(error.message)
+			}
+		})
+		fetchData()
+	}, [])
+
+	return (
 	<div className={`${styles.timelineContainer}`}>
 		<VerticalTimeline lineColor='#ff5c00'>
 			{
@@ -36,6 +53,6 @@ const JourneyTree = () => (
 			}
 		</VerticalTimeline>
 	</div>
-)
+)}
 
 export default JourneyTree

@@ -1,8 +1,13 @@
+@import '@src/index.scss';
+
 .container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-direction: column;
+	color: $dark-text;
+	border: 1px solid $dark-accent;
+	border-radius: $size-half;
 	
 	font: {
 		style: italic;

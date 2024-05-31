@@ -51,7 +51,7 @@ const Contact = (props) => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		try {
-			const response = await axios.post('/api/sendMessage', formData)
+			const response = await axios.post('/api/message', formData)
 
 			setFormData({
 				username: '',

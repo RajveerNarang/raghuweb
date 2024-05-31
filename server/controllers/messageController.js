@@ -13,7 +13,7 @@ export const postMessage = async (req, res) => {
 		username || messageIndex++;
 
 		await db.collection('feedback').add({ 
-			finalUsername,
+			username: finalUsername,
 			message, 
 		});
 		
@@ -25,8 +25,9 @@ export const postMessage = async (req, res) => {
 
 export const getMessages = async (req, res) => {
 	try {
-		const data = await db.collection('feedback').get();
-		return res.status(200).json(JSON.parse(data));
+		const snapshot = await db.collection('feedback').get();
+		const feedback = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+		return res.status(200).json(feedback);
 	} catch (err) {
 		return res.status(500).json({ error: 'Failed to read JSON data' });
 	}

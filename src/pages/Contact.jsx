@@ -78,33 +78,33 @@ const Contact = () => {
 	return (
 		<div className={`${styles.container}`}>
 			<GlassCard id={'contactGlassCard'} className={`${styles.box}`}>
-			<Image path={dummyProfile} alt={'Dummy Profile'} />
-			{contactData ? contactData.map((item, index) => {
-				if (item.id !== 'instagram' && item.id !== 'discord') {
-					return <a 
-						href={changeLink(item.data.link1, item.data.link) || '#'} 
-						key={index} 
-						className={`${styles.items} ${getClassName(item.id)}`} 
-						data-tooltip={item.data.tooltipData}
-						target="_blank" 
-						rel="noopener noreferrer"
-						>
-						<Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
-						</a> 
-					} else {
-					if (data?.isLoggedIn && data?.role === 'user') { 
+				<Image path={dummyProfile} alt={'Dummy Profile'} />
+				{contactData ? contactData.map((item, index) => {
+					if (item.id !== 'instagram' && item.id !== 'discord') {
 						return <a 
-						href={changeLink(item.data.link1, item.data.link) || '#'} 
-						key={index} 
-						className={`${styles.items} ${getClassName(item.id)}`} 
-						data-tooltip={item.data.tooltipData}
-						target="_blank" 
-						rel="noopener noreferrer"
-					>
-						<Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
-					</a>
-				}}
-			}): null}
+							href={changeLink(item.data.link1, item.data.link) || '#'} 
+							key={index} 
+							className={`${styles.items} ${getClassName(item.id)}`} 
+							data-tooltip={item.data.tooltipData}
+							target="_blank" 
+							rel="noopener noreferrer"
+							>
+							<Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
+							</a> 
+					} else {
+						if (data?.isLoggedIn && (data?.role === 'user' || data?.role === 'admin')) {
+							return <a 
+							href={changeLink(item.data.link1, item.data.link) || '#'} 
+							key={index} 
+							className={`${styles.items} ${getClassName(item.id)}`} 
+							data-tooltip={item.data.tooltipData}
+							target="_blank" 
+							rel="noopener noreferrer"
+						>
+							<Container id={item.id} content={item.data.content} iconName={getIcon(item.iconName)} />
+						</a>
+					}}
+				}): null}
 			</GlassCard>
 		</div>
 	)

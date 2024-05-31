@@ -32,5 +32,5 @@ export const getAccessData = () => {
 
 export const removeAccessData = () => {
 	localStorage.removeItem('accessData');
-	// window.location.reload();
+	window.location.reload();
 }

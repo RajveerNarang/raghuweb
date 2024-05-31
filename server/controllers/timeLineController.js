@@ -19,8 +19,9 @@ export const postJourney = async (req, res) => {
 
 export const getJourney = async (req, res) => {
 	try {
-		const data = await db.collection('journey').get();
-		return res.status(200).json(JSON.parse(data));
+		const snapshot = await db.collection('journey').get();
+		const journey = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+		return res.status(200).json(journey);
 	} catch (err) {
 		return res.status(500).json({ error: 'Failed to read JSON data' });
 	}
