@@ -27,7 +27,7 @@ const JourneyTree = () => {
 				const sortedData = sortDataByDate(resp.data);
 				setTimelineList(sortedData)
 			} catch (error) {
-				console.error(error.message)
+				console.error(error, error.message)
 			}
 		})
 		fetchData()

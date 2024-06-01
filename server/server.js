@@ -1,6 +1,8 @@
 import { config } from 'dotenv';
 
 import express, { json } from 'express';
+import cors from 'cors'
+import { https } from 'firebase-functions';
 
 import userRouter from './routes/userRouter.js';
 import quoteRouter from './routes/quoteRouter.js';
@@ -11,6 +13,7 @@ config();
 // initialApp();
 
 const server = express();
+server.use(cors())
 server.use(json());
 
 server.use('/api/login', userRouter)
@@ -24,3 +27,4 @@ server.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
 
+export const api = https.onRequest(server)
