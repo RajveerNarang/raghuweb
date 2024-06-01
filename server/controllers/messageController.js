@@ -1,4 +1,4 @@
-import db from '../fireBaseAdmin.js';
+import Feedback from '../models/feedbackModel.js'
 
 let messageIndex = 1;
 
@@ -12,11 +12,12 @@ export const postMessage = async (req, res) => {
 		let finalUsername = username || `Anonymous-${messageIndex}`;
 		username || messageIndex++;
 
-		await db.collection('feedback').add({ 
+		const newFeedback = new Feedback({
 			username: finalUsername,
-			message, 
+			message
 		});
-		
+		await newFeedback.save()
+
 		res.status(200).json({ message: 'Message sent successfully'});
 	} catch (err) {
 		return res.status(500).json({error: err.message});
@@ -25,8 +26,7 @@ export const postMessage = async (req, res) => {
 
 export const getMessages = async (req, res) => {
 	try {
-		const snapshot = await db.collection('feedback').get();
-		const feedback = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+		const feedback = await Feedback.find();
 		return res.status(200).json(feedback);
 	} catch (err) {
 		return res.status(500).json({ error: 'Failed to read JSON data' });
