@@ -37,10 +37,9 @@
     "server:dev": "cd server && yarn server",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "vite build",
-    "test": "vite test",
-    "eject": "vite eject",
-    "serve": "vite serve"
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
